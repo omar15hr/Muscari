@@ -6,13 +6,15 @@
 
 
 1. Clonar el repositorio.
-2. Crear una copia del ```.env.template``` y renombrarlo a ```.env``` y cambiar las variables de entorno.
-3. Instalar dependencias ```npm install```
-4. Levantar la base de datos ```docker compose up -d```
-5. Correr las migraciones de Primsa ```npx prisma migrate dev```
-6. Ejecutar seed ```npm run seed```
-7. Correr el proyecto ```npm run dev```
-8. Limpiar el localStorage del navegador.
+## En el nombre_rama colocar nombre y apellido ##
+2. Usar```git clone -b nombre_rama https://github.com/omar15hr/Muscari.git```
+3. Crear una copia del ```.env.template``` y renombrarlo a ```.env``` y cambiar las variables de entorno.
+4. Instalar dependencias ```npm install```
+5. Levantar la base de datos ```docker compose up -d```
+6. Correr las migraciones de Primsa ```npx prisma migrate dev```
+7. Ejecutar seed ```npm run seed```
+8. Correr el proyecto ```npm run dev```
+9. Limpiar el localStorage del navegador.
 
 
 
