@@ -11,6 +11,7 @@ interface State {
     city: string;
     country: string;
     phone: string;
+    
   };
 
   // Methods
