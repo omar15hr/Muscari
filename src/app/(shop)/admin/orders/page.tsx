@@ -11,8 +11,9 @@ import { IoCardOutline } from "react-icons/io5";
 export default async function OrdersPage() {
   const { ok, orders = [] } = await getPaginatedOrders();
 
+
   if (!ok) {
-    redirect("/auth/login");
+     redirect("/auth/login");
   }
 
   return (
