@@ -44,6 +44,13 @@ export const LoginForm = () => {
         name="password"
       />
 
+      <Link 
+        href="/auth/reset-password" 
+        className="text-center hover:underline decoration-1 underline-offset-2'"
+      >
+        ¿Olvidaste tu contraseña?
+      </Link>
+
       <div
         className="flex h-8 items-end space-x-1"
         aria-live="polite"

@@ -1,14 +1,12 @@
 
 
-
-
 export * from './products/product-grid/ProductGrid';
 export * from './products/product-grid/ProductGridItem';
 
 export * from './orders/OrderStatus';
 
 
-export * from './paypal/PaypalButton'
+export * from './paypal/PaypalButton';
 
 
 export * from './providers/Providers';
