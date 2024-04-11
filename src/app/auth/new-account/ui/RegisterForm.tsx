@@ -54,7 +54,7 @@ export const RegisterForm = () => {
       <input
         className={
           clsx(
-            "px-5 py-2 border bg-gray-200 rounded mb-5",
+            "px-5 py-2 border bg-gray-300 rounded mb-5",
             {
               'border-red-500': errors.name
             }
@@ -69,7 +69,7 @@ export const RegisterForm = () => {
       <input
         className={
           clsx(
-            "px-5 py-2 border bg-gray-200 rounded mb-5",
+            "px-5 py-2 border bg-gray-300 rounded mb-5",
             {
               'border-red-500': errors.email
             }
@@ -83,7 +83,7 @@ export const RegisterForm = () => {
       <input
         className={
           clsx(
-            "px-5 py-2 border bg-gray-200 rounded mb-5",
+            "px-5 py-2 border bg-gray-300 rounded mb-5",
             {
               'border-red-500': errors.password
             }
