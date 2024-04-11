@@ -74,7 +74,7 @@ model User {
   role          Role      @default(user)
   image         String?
 
-  resetPasswordToken       String?   @unique
+  resetPasswordToken String? @unique
   resetPasswordTokenExpiry DateTime?
 
   address UserAddress?

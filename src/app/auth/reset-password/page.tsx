@@ -8,7 +8,9 @@ export default function ResetPasswordPage() {
 
     <h1 className={ `${ titleFont.className } text-4xl mb-5` }>Cambio de contraseña</h1>
 
-      <ResetPasswordForm />
+  
+    <ResetPasswordForm />
+    <p className="my-5">Ingresa tu correo electrónico para recibir información del cambio de contraseña.</p>
     </div>
   );
 }

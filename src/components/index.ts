@@ -1,4 +1,4 @@
-
+export * from './email-template/email-template'
 
 export * from './products/product-grid/ProductGrid';
 export * from './products/product-grid/ProductGridItem';
