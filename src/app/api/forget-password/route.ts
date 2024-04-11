@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
       expiresIn: 86400,
     });
 
-    const forgetUrl = `http://localhost:3000/reset-password?token=${token}`;
+    const forgetUrl = `http://localhost:3000/auth/change-password?token=${token}`;
 
     // @ts-ignore
     await resend.emails.send({

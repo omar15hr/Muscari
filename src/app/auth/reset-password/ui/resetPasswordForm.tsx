@@ -1,11 +1,10 @@
 'use client'
 
-import { Form } from '@/components/form'
-import { useAuthFetch } from '@/hooks/useAuthFetch'
-import { useLoading } from '@/hooks/useLoading'
-import { IoInformationOutline } from 'react-icons/io5'
+import { Form } from '@/components/form';
+import { useAuthFetch } from '@/hooks/useAuthFetch';
+import { useLoading } from '@/hooks/useLoading';
 
-export default function LoginPage() {
+export default function ResetPasswordForm() {
 
   const { finishLoading, isLoading, startLoading } = useLoading()
   const authFetch = useAuthFetch()
@@ -24,7 +23,7 @@ export default function LoginPage() {
     <>
       <Form
         title=''
-        description='Formulario para recuperar tu contraseña'
+        description='Ingresa el correo de tu cuenta'
         onSubmit={forgetPassword}
       >
         <div className='my-[8px] flex flex-col gap-4'>
@@ -35,6 +34,8 @@ export default function LoginPage() {
           />
         </div>
         <Form.SubmitButton
+          buttonText='Recuperar Contraseña'
+          isLoading={isLoading}
         />
         <Form.Footer
           description='Volver al inicio'
