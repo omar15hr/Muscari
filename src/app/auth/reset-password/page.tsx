@@ -1,5 +1,6 @@
-import { ResetPasswordForm } from "./ui/resetPasswordForm";
+
 import { titleFont } from '@/config/fonts';
+import { ResetPasswordForm } from './ui/ResetPasswordForm';
 
 
 export default function ResetPasswordPage() {

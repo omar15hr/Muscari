@@ -41,9 +41,9 @@ export async function POST(request: NextRequest) {
     // @ts-ignore
     await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
-      to: "omarhrn@gmail.com",
+      to: email,
       subject: "Cambio de Contraseña",
-      react: "<h1>Hola mundo</h1>",
+      react: EmailTemplate({ buttonUrl: forgetUrl }),
     });
 
     return NextResponse.json(
