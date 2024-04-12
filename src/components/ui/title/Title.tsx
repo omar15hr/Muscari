@@ -20,7 +20,6 @@ export const Title = ({ title, subtitle, className }: Props) => {
           <h3 className="text-xl mb-5">{ subtitle }</h3>
         )
       }
-
     </div>
   )
 }

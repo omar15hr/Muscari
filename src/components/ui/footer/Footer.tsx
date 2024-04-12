@@ -8,8 +8,8 @@ export const Footer = () => {
       <Link
         href='/'
       >
-        <span className={`${ titleFont.className } antialiased font-bold `}>OH </span>
-        <span>| Sports </span>
+        <span className={`${ titleFont.className } antialiased font-bold `}>Muscari </span>
+        <span>| Clothing </span>
         <span>© { new Date().getFullYear() }</span>
       </Link>
 
