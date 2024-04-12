@@ -1,13 +1,16 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
-interface FilterState {
-  title: string;
-  minPrice: number;
-}
-
-
-export const useFiltersStore = create<FilterState>((set) => ({
-    
-  title: 'all',
-  minPrice: 0,
-}));
+interface useFiltersState {
+    filters: {
+      // title: string,
+      minPrice: number
+    };
+    setFilters: ( newMinPrice: number) => void;
+  }
+  
+  export const useFiltersStore = create<useFiltersState>((set) => ({
+    filters: {
+      minPrice: 0
+    },  
+    setFilters: ( newMinPrice ) => set({ filters:{ minPrice: newMinPrice } }),
+  }));

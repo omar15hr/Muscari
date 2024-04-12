@@ -3,7 +3,8 @@
 import { Product } from '@/interfaces';
 import { ProductGridItem } from './ProductGridItem';
 import { useState } from 'react';
-import { useFiltersStore } from '@/store';
+
+import styles from "@/components/filters/styles.module.scss";
 
 interface Props {
   products: Product[];
@@ -53,9 +54,9 @@ export const ProductGrid = ({ products }: Props) => {
 
   return (
     <div className='grid grid-col'>
-      <section >
+      <section className={styles.filters} >
 
-        <div>
+        <div className='mb-10'>
           <label htmlFor="price">Precio a partir de:</label>
           <input
             type='range'
@@ -68,7 +69,7 @@ export const ProductGrid = ({ products }: Props) => {
           <span>${filters.minPrice}</span>
         </div>
 
-        <div>
+        <div className='mb-10'>
           <label htmlFor="title">Título</label>
           <select id="filters-title" className="bg-gray-200" onChange={handleChangeTitle} >
             <option className="bg-gray-300" value="all">Todos</option>
@@ -94,5 +95,3 @@ export const ProductGrid = ({ products }: Props) => {
     </div>
   );
 };
-
-{/* className={styles.filters} */ }
