@@ -35,11 +35,11 @@ export default async function Home({ searchParams }: Props) {
         className="mb-2"
       />
 
-      <ProductGrid 
+      {/* <ProductGrid 
         products={ products }
-      />
+      /> */}
 
-      <Pagination totalPages={ totalPages } />
+      {/* <Pagination totalPages={ totalPages } /> */}
       
     </>
   );

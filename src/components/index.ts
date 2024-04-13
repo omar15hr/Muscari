@@ -1,7 +1,7 @@
 export * from './email-template/email-template'
 
-export * from './products/product-grid/ProductGrid';
-export * from './products/product-grid/ProductGridItem';
+export * from './products/product-grid-men/ProductGrid';
+export * from './products/product-grid-men/ProductGridItem';
 
 export * from './orders/OrderStatus';
 
@@ -26,5 +26,3 @@ export * from './ui/pagination/Pagination'
 export * from './ui/sidebar/Sidebar';
 export * from './ui/title/Title';
 export * from './ui/top-menu/TopMenu';
-
-export * from './filters/Filters';

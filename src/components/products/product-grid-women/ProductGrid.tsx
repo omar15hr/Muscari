@@ -11,7 +11,7 @@ interface Props {
 }
 
 
-export const ProductGrid = ({ products }: Props) => {
+export const ProductGridWomen = ({ products }: Props) => {
 
 
   const [filters, setFilters] = useState({
@@ -72,10 +72,14 @@ export const ProductGrid = ({ products }: Props) => {
         <div className='mb-10'>
           <select id="filters-title" className='btn btn-secondary dropdown-toggle' onChange={handleChangeTitle} >
             <option value="all">Todos</option>
-            <option value="Shirts">Shirts</option>
-            <option value="Hoodie">Hoodie</option>
-            <option value="Jacket">Jacket</option>
-            <option value="Hat">Hat</option>
+            <option value="Polera">Polera</option>
+            <option value="Poleron">Poleron</option>
+            <option value="Jeans">Jeans</option>
+            <option value="Camisas">Vestidos</option>
+            <option value="Camisas">Faldas</option>
+            <option value="Sweaters">Sweaters</option>
+            <option value="Chaqueta">Chaqueta</option>
+            <option value="Jockey">Jockey</option>
           </select>
 
         </div>

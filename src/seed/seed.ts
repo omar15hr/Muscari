@@ -71,7 +71,7 @@ export const initialData: SeedData = {
       slug: "mens_chill_crew_neck_sweatshirt",
       type: 'shirts',
       tags: [ 'sweatshirt' ],
-      title: "Men’s Chill Crew Neck Sweatshirt",
+      title: "Polera deportiva manga larga para hombre",
       gender: 'men'
     },
     {
@@ -86,7 +86,7 @@ export const initialData: SeedData = {
       slug: "men_quilted_shirt_jacket",
       type: 'shirts',
       tags: [ 'jacket' ],
-      title: "Men's Quilted Shirt Jacket",
+      title: "Chaqueta para hombre",
       gender: 'men'
     },
 
@@ -102,7 +102,7 @@ export const initialData: SeedData = {
       slug: "men_raven_lightweight_zip_up_bomber_jacket",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Raven Lightweight Zip Up Bomber Jacket",
+      title: "Chaqueta ligera con cierre para hombre",
       gender: 'men'
     },
 
@@ -118,7 +118,7 @@ export const initialData: SeedData = {
       slug: "men_turbine_long_sleeve_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Turbine Long Sleeve Tee",
+      title: "Polera manga larga para hombre",
       gender: 'men'
     },
     {
@@ -133,7 +133,7 @@ export const initialData: SeedData = {
       slug: "men_turbine_short_sleeve_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Turbine Short Sleeve Tee",
+      title: "Polera manga corta para hombre",
       gender: 'men'
     },
     {
@@ -148,7 +148,7 @@ export const initialData: SeedData = {
       slug: "men_cybertruck_owl_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Cybertruck Owl Tee",
+      title: "Polera manga corta con cyberbúho para hombre",
       gender: 'men'
     },
     {
@@ -163,7 +163,7 @@ export const initialData: SeedData = {
       slug: "men_solar_roof_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Solar Roof Tee",
+      title: "Polera manga corta con dibujo de panel solar",
       gender: 'men'
     },
     {
@@ -178,7 +178,7 @@ export const initialData: SeedData = {
       slug: "men_let_the_sun_shine_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Let the Sun Shine Tee",
+      title: "Polera manga corta Let the Sun Shine para hombre",
       gender: 'men'
     },
     {
@@ -193,7 +193,7 @@ export const initialData: SeedData = {
       slug: "men_3d_large_wordmark_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's 3D Large Wordmark Tee",
+      title: "Polera manga corta para hombre",
       gender: 'men'
     },
     {
@@ -208,7 +208,7 @@ export const initialData: SeedData = {
       slug: "men_3d_t_logo_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's 3D T Logo Tee",
+      title: "Polera manga corta con logo 3D",
       gender: 'men'
     },
     {
@@ -223,7 +223,7 @@ export const initialData: SeedData = {
       slug: "men_3d_small_wordmark_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men’s 3D Small Wordmark Tee",
+      title: "Polera manga corta con logo 3D pequeño",
       gender: 'men'
     },
     {
@@ -238,7 +238,7 @@ export const initialData: SeedData = {
       slug: "men_plaid_mode_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Plaid Mode Tee",
+      title: "Polera manga corta con dibujo de cuadros para hombre",
       gender: 'men'
     },
     {
@@ -253,7 +253,7 @@ export const initialData: SeedData = {
       slug: "men_powerwall_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Powerwall Tee",
+      title: "Polera manga corta Powerwall para hombre",
       gender: 'men'
     },
     {
@@ -268,7 +268,7 @@ export const initialData: SeedData = {
       slug: "men_battery_day_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Battery Day Tee",
+      title: "Polera manga corta Battery Day para hombre",
       gender: 'men'
     },
     {
@@ -283,7 +283,7 @@ export const initialData: SeedData = {
       slug: "men_cybertruck_bulletproof_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men’s Cybertruck Bulletproof Tee",
+      title: "Polera manga corta Cybertruck Bulletproof para hombre",
       gender: 'men'
     },
     {
@@ -298,7 +298,7 @@ export const initialData: SeedData = {
       slug: "men_haha_yes_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Haha Yes Tee",
+      title: "Polera manga corta Haha Yes para hombre",
       gender: 'men'
     },
     {
@@ -313,7 +313,7 @@ export const initialData: SeedData = {
       slug: "men_s3xy_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's S3XY Tee",
+      title: "Polera manga corta S3XY paa hombre",
       gender: 'men'
     },
     {
@@ -328,7 +328,7 @@ export const initialData: SeedData = {
       slug: "men_3d_wordmark_long_sleeve_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's 3D Wordmark Long Sleeve Tee",
+      title: "Polera manga larga logo 3D para hombre",
       gender: 'men'
     },
     {
@@ -343,7 +343,7 @@ export const initialData: SeedData = {
       slug: "men_3d_t_logo_long_sleeve_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's 3D T Logo Long Sleeve Tee",
+      title: "Polera manga larga T logo 3D para hombre",
       gender: 'men'
     },
     {
@@ -358,7 +358,7 @@ export const initialData: SeedData = {
       slug: "men_raven_lightweight_hoodie",
       type: 'hoodies',
       tags: [ 'hoodie' ],
-      title: "Men's Raven Lightweight Hoodie",
+      title: "Poleron para hombre",
       gender: 'men'
     },
     {
@@ -373,8 +373,8 @@ export const initialData: SeedData = {
       slug: "chill_pullover_hoodie",
       type: 'hoodies',
       tags: [ 'hoodie' ],
-      title: "Chill Pullover Hoodie",
-      gender: 'unisex'
+      title: "Poleron para hombre",
+      gender: 'men'
     },
     {
       description: "Introducing the Tesla Chill Collection. The Men's Chill Full Zip Hoodie has a premium, heavyweight exterior and soft fleece interior for comfort in any season. The hoodie features subtle thermoplastic polyurethane Tesla logos on the left chest and sleeve, a double layer single seam hood and pockets with custom matte zipper pulls. Made from 60% cotton and 40% recycled polyester.",
@@ -388,7 +388,7 @@ export const initialData: SeedData = {
       slug: "men_chill_full_zip_hoodie",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Chill Full Zip Hoodie",
+      title: "Poleron con cierre para hombre",
       gender: 'men'
     },
     {
@@ -403,7 +403,7 @@ export const initialData: SeedData = {
       slug: "men_chill_quarter_zip_pullover_-_gray",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Chill Quarter Zip Pullover - Gray",
+      title: "Poleron con cierre corto para hombre",
       gender: 'men'
     },
     {
@@ -418,7 +418,7 @@ export const initialData: SeedData = {
       slug: "men_chill_quarter_zip_pullover_-_white",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Chill Quarter Zip Pullover - White",
+      title: "Poleron con cierre corto para hombre",
       gender: 'men'
     },
     {
@@ -433,8 +433,8 @@ export const initialData: SeedData = {
       slug: "3d_large_wordmark_pullover_hoodie",
       type: 'hoodies',
       tags: [ 'hoodie' ],
-      title: "3D Large Wordmark Pullover Hoodie",
-      gender: 'unisex'
+      title: "Poleron con logo 3d para hombre",
+      gender: 'men'
     },
     {
       description: "As with the iconic Tesla logo, the Cybertruck Graffiti Hoodie is a classic in the making. Unisex style featuring soft fleece and an adjustable, jersey-lined hood for comfortable coverage.",
@@ -448,8 +448,8 @@ export const initialData: SeedData = {
       slug: "cybertruck_graffiti_hoodie",
       type: 'hoodies',
       tags: [ 'hoodie' ],
-      title: "Cybertruck Graffiti Hoodie",
-      gender: 'unisex'
+      title: "Poleron Cybertruck Graffiti para hombre",
+      gender: 'men'
     },
     {
       description: "The Relaxed T Logo Hat is a classic silhouette combined with modern details, featuring a 3D T logo and a custom metal buckle closure. The ultrasoft design is flexible and abrasion resistant, while the inner sweatband includes quilted padding for extra comfort and moisture wicking. The visor is fully made from recycled plastic bottles. 100% Cotton.",
@@ -463,8 +463,8 @@ export const initialData: SeedData = {
       slug: "relaxed_t_logo_hat",
       type: 'hats',
       tags: [ 'hats' ],
-      title: "Relaxed T Logo Hat",
-      gender: 'unisex'
+      title: "Jockey Relaxed T Logo",
+      gender: 'men'
     },
     {
       description: "The Relaxed T Logo Hat is a classic silhouette combined with modern details, featuring a 3D T logo and a custom metal buckle closure. The ultrasoft design is flexible and abrasion resistant, while the inner sweatband includes quilted padding for extra comfort and moisture wicking. The visor is fully made from recycled plastic bottles. 100% Cotton.",
@@ -478,8 +478,8 @@ export const initialData: SeedData = {
       slug: "thermal_cuffed_beanie",
       type: 'hats',
       tags: [ 'hats' ],
-      title: "Thermal Cuffed Beanie",
-      gender: 'unisex'
+      title: "Gorro Cuffed Beanie",
+      gender: 'men'
     },
     {
       description: "The Women's Cropped Puffer Jacket features a uniquely cropped silhouette for the perfect, modern style while on the go during the cozy season ahead. The puffer features subtle silicone injected Tesla logos below the back collar and on the right sleeve, custom matte metal zipper pulls and a soft, fleece lined collar. Made from 87% nylon and 13% polyurethane.",

@@ -2,6 +2,8 @@ export const revalidate = 60; // 60 segundos
 
 import { getPaginatedProductsWithImages } from '@/actions';
 import { Pagination, ProductGrid, Title } from '@/components';
+import { ProductGridKids } from '@/components/products/product-grid-kids/ProductGrid';
+import { ProductGridWomen } from '@/components/products/product-grid-women/ProductGrid';
 
 import { Gender } from '@prisma/client';
 import { redirect } from 'next/navigation';
@@ -50,16 +52,20 @@ export default async function GenderByPage({ params, searchParams }: Props) {
   return (
     <>
       <Title
-        title={`Artículos de ${ labels[gender] }`}
+        title={`Artículos ${ labels[gender] }`}
         subtitle="Todos los productos"
         className="mb-2"
       />
 
-      <ProductGrid 
-        products={ products }
-      />
+      {
+        labels[gender] === labels['women']
+        ? <ProductGridWomen products={ products }/>
+        : labels[gender] === labels['men']
+        ? <ProductGrid products={ products }/>
+        : <ProductGridKids products={ products }/>
+      }
 
-      <Pagination totalPages={ totalPages }  />
+      {/* <Pagination totalPages={ totalPages }  /> */}
       
     </>
   );

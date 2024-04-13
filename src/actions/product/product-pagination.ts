@@ -12,7 +12,7 @@ interface PaginationOptions {
 export const getPaginatedProductsWithImages = async ({
   
   page = 1,
-  take = 20,
+  take = 50,
   gender,
 }: PaginationOptions) => {
   if (isNaN(Number(page))) page = 1;
