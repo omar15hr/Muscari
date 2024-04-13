@@ -14,12 +14,12 @@ interface Props {
 export const ProductGrid = ({ products }: Props) => {
 
 
-  const [ filters, setFilters ] = useState({
+  const [filters, setFilters] = useState({
     title: `all`,
     minPrice: 0
   });
 
-  const [ minPrice, setMinPrice ] = useState(0);
+  const [minPrice, setMinPrice] = useState(0);
 
 
   const filterProducts = (products: Product[]) => {
@@ -36,7 +36,7 @@ export const ProductGrid = ({ products }: Props) => {
 
   const filteredProducts = filterProducts(products);
 
-  const handleChangeMinPrice = (event:any) => {
+  const handleChangeMinPrice = (event: any) => {
     setMinPrice(event.target.value);
 
     setFilters((prevState: any) => ({
@@ -45,7 +45,7 @@ export const ProductGrid = ({ products }: Props) => {
     }))
   };
 
-  const handleChangeTitle = (event:any) => {
+  const handleChangeTitle = (event: any) => {
     setFilters((prevState: any) => ({
       ...prevState,
       title: event.target.value
@@ -70,18 +70,18 @@ export const ProductGrid = ({ products }: Props) => {
         </div>
 
         <div className='mb-10'>
-          <label htmlFor="title">Título</label>
-          <select id="filters-title" className="bg-gray-200" onChange={handleChangeTitle} >
-            <option className="bg-gray-300" value="all">Todos</option>
-            <option className="bg-gray-300" value="Shirts">Shirts</option>
-            <option className="bg-gray-300" value="Hoodie">Hoodie</option>
-            <option className="bg-gray-300" value="Jacket">Jacket</option>
-            <option className="bg-gray-300" value="Hat">Hat</option>
+          <select id="filters-title" className='btn btn-secondary dropdown-toggle' onChange={handleChangeTitle} >
+            <option value="all">Todos</option>
+            <option value="Shirts">Shirts</option>
+            <option value="Hoodie">Hoodie</option>
+            <option value="Jacket">Jacket</option>
+            <option value="Hat">Hat</option>
           </select>
+
         </div>
       </section>
 
-      
+
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 mb-10">
         {
           filteredProducts.map(product => (
