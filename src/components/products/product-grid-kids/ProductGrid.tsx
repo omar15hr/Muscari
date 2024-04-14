@@ -73,10 +73,8 @@ export const ProductGridKids = ({ products }: Props) => {
           <select id="filters-title" className='btn btn-secondary dropdown-toggle' onChange={handleChangeTitle} >
             <option value="all">Todos</option>
             <option value="Polera">Polera</option>
-            <option value="Poleron">Poleron</option>
-            <option value="Jeans">Jeans</option>
-            <option value="Camisas">Bodies</option>
-            <option value="Camisas">Faldas</option>
+            <option value="Bodie">Bodies</option>
+            <option value="Chaqueta">Chaqueta</option>
           </select>
 
         </div>

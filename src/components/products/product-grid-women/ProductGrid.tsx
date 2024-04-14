@@ -74,12 +74,8 @@ export const ProductGridWomen = ({ products }: Props) => {
             <option value="all">Todos</option>
             <option value="Polera">Polera</option>
             <option value="Poleron">Poleron</option>
-            <option value="Jeans">Jeans</option>
-            <option value="Camisas">Vestidos</option>
-            <option value="Camisas">Faldas</option>
-            <option value="Sweaters">Sweaters</option>
             <option value="Chaqueta">Chaqueta</option>
-            <option value="Jockey">Jockey</option>
+            <option value="Sweater">Sweater</option>
           </select>
 
         </div>
