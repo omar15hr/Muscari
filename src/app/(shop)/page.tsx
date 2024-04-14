@@ -4,7 +4,10 @@ export const revalidate = 60; // 60 segundos
 import { redirect } from 'next/navigation';
 
 import { getPaginatedProductsWithImages } from '@/actions';
-import { Pagination, ProductGrid, Title } from '@/components';
+import FirstPromo from '@/components/ui/promo-section/FirstPromo';
+import ProductFeatures from '@/components/ui/promo-section/Product-Features';
+import CardsPromo from '@/components/ui/promo-section/CardsPromo';
+import SocialMedia from '@/components/ui/promo-section/SocialMedia';
 
 
 
@@ -24,23 +27,17 @@ export default async function Home({ searchParams }: Props) {
 
   if ( products.length === 0 ) {
     redirect('/');
-  }
+  };
 
 
   return (
-    <>
-      <Title
-        title="Tienda"
-        subtitle="Todos los productos"
-        className="mb-2"
-      />
+    <div>
 
-      {/* <ProductGrid 
-        products={ products }
-      /> */}
-
-      {/* <Pagination totalPages={ totalPages } /> */}
+      <FirstPromo />
+      <ProductFeatures />
+      <CardsPromo />
+      <SocialMedia />
       
-    </>
+    </div>
   );
 }
