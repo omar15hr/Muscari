@@ -1,6 +1,4 @@
 
-// [1,2,3,4,5,..., 7]
-// [1,2,3,...,48, 49, 50]
 export const generatePaginationNumbers = ( currentPage: number, totalPages: number) => {
 
   // Si el numero total de páginas es 7 o menos

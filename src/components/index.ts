@@ -1,7 +1,7 @@
 export * from './email-template/email-template'
 
-export * from './products/product-grid/ProductGrid';
-export * from './products/product-grid/ProductGridItem';
+export * from './products/product-grid-men/ProductGrid';
+export * from './products/product-grid-men/ProductGridItem';
 
 export * from './orders/OrderStatus';
 

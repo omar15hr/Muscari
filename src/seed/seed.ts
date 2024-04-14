@@ -39,7 +39,7 @@ export const initialData: SeedData = {
 
   users: [
     {
-      email: 'omarhrn@gmail.com',
+      email: 'omar@google.com',
       name: 'Omar Hernandez',
       password: bcryptjs.hashSync('123456'),
       role: 'admin'
@@ -66,12 +66,12 @@ export const initialData: SeedData = {
         '1740176-00-A_1.jpg',
       ],
       inStock: 7,
-      price: 35.000,
+      price: 75,
       sizes: [ 'XS', 'S', 'M', 'L', 'XL', 'XXL' ],
       slug: "mens_chill_crew_neck_sweatshirt",
       type: 'shirts',
       tags: [ 'sweatshirt' ],
-      title: "Men’s Chill Crew Neck Sweatshirt",
+      title: "Polera deportiva manga larga para hombre",
       gender: 'men'
     },
     {
@@ -81,12 +81,12 @@ export const initialData: SeedData = {
         '1740507-00-A_1.jpg',
       ],
       inStock: 5,
-      price: 50.000,
+      price: 200,
       sizes: [ 'XS', 'S', 'M', 'XL', 'XXL' ],
       slug: "men_quilted_shirt_jacket",
       type: 'shirts',
       tags: [ 'jacket' ],
-      title: "Men's Quilted Shirt Jacket",
+      title: "Chaqueta para hombre",
       gender: 'men'
     },
 
@@ -97,12 +97,12 @@ export const initialData: SeedData = {
         '1740250-00-A_1.jpg'
       ],
       inStock: 10,
-      price: 30.000,
+      price: 130,
       sizes: [ 'S', 'M', 'L', 'XL', 'XXL' ],
       slug: "men_raven_lightweight_zip_up_bomber_jacket",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Raven Lightweight Zip Up Bomber Jacket",
+      title: "Chaqueta ligera con cierre para hombre",
       gender: 'men'
     },
 
@@ -113,12 +113,12 @@ export const initialData: SeedData = {
         '1740280-00-A_1.jpg',
       ],
       inStock: 50,
-      price: 45.000,
+      price: 45,
       sizes: [ 'XS', 'S', 'M', 'L' ],
       slug: "men_turbine_long_sleeve_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Turbine Long Sleeve Tee",
+      title: "Polera manga larga para hombre",
       gender: 'men'
     },
     {
@@ -128,12 +128,12 @@ export const initialData: SeedData = {
         '1741416-00-A_1.jpg',
       ],
       inStock: 50,
-      price: 40.000,
+      price: 40,
       sizes: [ 'M', 'L', 'XL', 'XXL' ],
       slug: "men_turbine_short_sleeve_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Turbine Short Sleeve Tee",
+      title: "Polera manga corta para hombre",
       gender: 'men'
     },
     {
@@ -143,12 +143,12 @@ export const initialData: SeedData = {
         '7654393-00-A_3.jpg',
       ],
       inStock: 0,
-      price: 35.000,
+      price: 35,
       sizes: [ 'M', 'L', 'XL', 'XXL' ],
       slug: "men_cybertruck_owl_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Cybertruck Owl Tee",
+      title: "Polera manga corta con cyberbúho para hombre",
       gender: 'men'
     },
     {
@@ -158,12 +158,12 @@ export const initialData: SeedData = {
         '1703767-00-A_1.jpg',
       ],
       inStock: 15,
-      price: 35.000,
+      price: 35,
       sizes: [ 'S', 'M', 'L', 'XL' ],
       slug: "men_solar_roof_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Solar Roof Tee",
+      title: "Polera manga corta con dibujo de panel solar",
       gender: 'men'
     },
     {
@@ -173,12 +173,12 @@ export const initialData: SeedData = {
         '1700280-00-A_1.jpg',
       ],
       inStock: 17,
-      price: 35.000,
+      price: 35,
       sizes: [ 'XS', 'S', 'XL', 'XXL' ],
       slug: "men_let_the_sun_shine_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Let the Sun Shine Tee",
+      title: "Polera manga corta Let the Sun Shine para hombre",
       gender: 'men'
     },
     {
@@ -188,12 +188,12 @@ export const initialData: SeedData = {
         '8764734-00-A_1.jpg',
       ],
       inStock: 12,
-      price: 35.000,
+      price: 35,
       sizes: [ 'XS', 'S', 'M' ],
       slug: "men_3d_large_wordmark_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's 3D Large Wordmark Tee",
+      title: "Polera manga corta para hombre",
       gender: 'men'
     },
     {
@@ -203,12 +203,12 @@ export const initialData: SeedData = {
         '7652426-00-A_1.jpg',
       ],
       inStock: 5,
-      price: 35.000,
+      price: 35,
       sizes: [ 'XS', 'S' ],
       slug: "men_3d_t_logo_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's 3D T Logo Tee",
+      title: "Polera manga corta con logo 3D",
       gender: 'men'
     },
     {
@@ -218,12 +218,12 @@ export const initialData: SeedData = {
         '8528839-00-A_2.jpg',
       ],
       inStock: 2,
-      price: 35.000,
+      price: 35,
       sizes: [ 'XS', 'S', 'M' ],
       slug: "men_3d_small_wordmark_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men’s 3D Small Wordmark Tee",
+      title: "Polera manga corta con logo 3D pequeño",
       gender: 'men'
     },
     {
@@ -233,12 +233,12 @@ export const initialData: SeedData = {
         '1549268-00-A_2.jpg',
       ],
       inStock: 82,
-      price: 35.000,
+      price: 35,
       sizes: [ 'XS', 'S', 'M', 'L', 'XL', 'XXL' ],
       slug: "men_plaid_mode_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Plaid Mode Tee",
+      title: "Polera manga corta con dibujo de cuadros para hombre",
       gender: 'men'
     },
     {
@@ -248,12 +248,12 @@ export const initialData: SeedData = {
         '9877034-00-A_2.jpg',
       ],
       inStock: 24,
-      price: 35.000,
+      price: 35,
       sizes: [ 'XL', 'XXL' ],
       slug: "men_powerwall_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Powerwall Tee",
+      title: "Polera manga corta Powerwall para hombre",
       gender: 'men'
     },
     {
@@ -263,12 +263,12 @@ export const initialData: SeedData = {
         '1633802-00-A_2.jpg',
       ],
       inStock: 5,
-      price: 30.000,
+      price: 30,
       sizes: [ 'XS', 'S', 'XXL' ],
       slug: "men_battery_day_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Battery Day Tee",
+      title: "Polera manga corta Battery Day para hombre",
       gender: 'men'
     },
     {
@@ -278,12 +278,12 @@ export const initialData: SeedData = {
         '7654399-00-A_1.jpg',
       ],
       inStock: 150,
-      price: 30.000,
+      price: 30,
       sizes: [ 'M', 'L' ],
       slug: "men_cybertruck_bulletproof_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men’s Cybertruck Bulletproof Tee",
+      title: "Polera manga corta Cybertruck Bulletproof para hombre",
       gender: 'men'
     },
     {
@@ -293,12 +293,12 @@ export const initialData: SeedData = {
         '7652410-00-A_1_2000.jpg',
       ],
       inStock: 10,
-      price: 35.000,
+      price: 35,
       sizes: [ 'XS', 'S', 'M', 'L', 'XL', 'XXL' ],
       slug: "men_haha_yes_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Haha Yes Tee",
+      title: "Polera manga corta Haha Yes para hombre",
       gender: 'men'
     },
     {
@@ -308,12 +308,12 @@ export const initialData: SeedData = {
         '8764600-00-A_2.jpg',
       ],
       inStock: 34,
-      price: 35.000,
+      price: 35,
       sizes: [ 'XS', 'S', 'M', 'L' ],
       slug: "men_s3xy_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's S3XY Tee",
+      title: "Polera manga corta S3XY paa hombre",
       gender: 'men'
     },
     {
@@ -323,12 +323,12 @@ export const initialData: SeedData = {
         '8764813-00-A_1.jpg',
       ],
       inStock: 15,
-      price: 40.000,
+      price: 40,
       sizes: [ 'XL', 'XXL' ],
       slug: "men_3d_wordmark_long_sleeve_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's 3D Wordmark Long Sleeve Tee",
+      title: "Polera manga larga logo 3D para hombre",
       gender: 'men'
     },
     {
@@ -338,12 +338,12 @@ export const initialData: SeedData = {
         '8529198-00-A_1.jpg',
       ],
       inStock: 12,
-      price: 40.000,
+      price: 40,
       sizes: [ 'XS', 'XXL' ],
       slug: "men_3d_t_logo_long_sleeve_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's 3D T Logo Long Sleeve Tee",
+      title: "Polera manga larga T logo 3D para hombre",
       gender: 'men'
     },
     {
@@ -353,12 +353,12 @@ export const initialData: SeedData = {
         '1740245-00-A_1.jpg',
       ],
       inStock: 10,
-      price: 45.000,
+      price: 115,
       sizes: [ 'XS', 'S', 'M', 'L', 'XL', 'XXL' ],
       slug: "men_raven_lightweight_hoodie",
       type: 'hoodies',
       tags: [ 'hoodie' ],
-      title: "Men's Raven Lightweight Hoodie",
+      title: "Poleron para hombre",
       gender: 'men'
     },
     {
@@ -368,13 +368,13 @@ export const initialData: SeedData = {
         '1740051-00-A_1.jpg',
       ],
       inStock: 10,
-      price: 30.000,
+      price: 130,
       sizes: [ 'XS', 'S', 'M', 'L', 'XL', 'XXL' ],
       slug: "chill_pullover_hoodie",
       type: 'hoodies',
       tags: [ 'hoodie' ],
-      title: "Chill Pullover Hoodie",
-      gender: 'unisex'
+      title: "Poleron para hombre",
+      gender: 'men'
     },
     {
       description: "Introducing the Tesla Chill Collection. The Men's Chill Full Zip Hoodie has a premium, heavyweight exterior and soft fleece interior for comfort in any season. The hoodie features subtle thermoplastic polyurethane Tesla logos on the left chest and sleeve, a double layer single seam hood and pockets with custom matte zipper pulls. Made from 60% cotton and 40% recycled polyester.",
@@ -383,12 +383,12 @@ export const initialData: SeedData = {
         '1741111-00-A_1.jpg',
       ],
       inStock: 100,
-      price: 85.000,
+      price: 85,
       sizes: [ 'XS', 'L', 'XL', 'XXL' ],
       slug: "men_chill_full_zip_hoodie",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Chill Full Zip Hoodie",
+      title: "Poleron con cierre para hombre",
       gender: 'men'
     },
     {
@@ -398,12 +398,12 @@ export const initialData: SeedData = {
         '1740140-00-A_1.jpg',
       ],
       inStock: 7,
-      price: 85.000,
+      price: 85,
       sizes: [ 'XS', 'S', 'M' ],
       slug: "men_chill_quarter_zip_pullover_-_gray",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Chill Quarter Zip Pullover - Gray",
+      title: "Poleron con cierre corto para hombre",
       gender: 'men'
     },
     {
@@ -413,12 +413,12 @@ export const initialData: SeedData = {
         '1740145-00-A_1.jpg',
       ],
       inStock: 15,
-      price: 85.000,
+      price: 85,
       sizes: [ 'XS', 'S', 'M', 'L' ],
       slug: "men_chill_quarter_zip_pullover_-_white",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Men's Chill Quarter Zip Pullover - White",
+      title: "Poleron con cierre corto para hombre",
       gender: 'men'
     },
     {
@@ -428,13 +428,13 @@ export const initialData: SeedData = {
         '8529107-00-A_1.jpg',
       ],
       inStock: 15,
-      price: 70.000,
+      price: 70,
       sizes: [ 'XS', 'S', 'XL', 'XXL' ],
       slug: "3d_large_wordmark_pullover_hoodie",
       type: 'hoodies',
       tags: [ 'hoodie' ],
-      title: "3D Large Wordmark Pullover Hoodie",
-      gender: 'unisex'
+      title: "Poleron con logo 3d para hombre",
+      gender: 'men'
     },
     {
       description: "As with the iconic Tesla logo, the Cybertruck Graffiti Hoodie is a classic in the making. Unisex style featuring soft fleece and an adjustable, jersey-lined hood for comfortable coverage.",
@@ -443,13 +443,13 @@ export const initialData: SeedData = {
         '7654420-00-A_1_2000.jpg',
       ],
       inStock: 13,
-      price: 60.000,
+      price: 60,
       sizes: [ 'XS', 'S', 'M', 'L', 'XL', 'XXL' ],
       slug: "cybertruck_graffiti_hoodie",
       type: 'hoodies',
       tags: [ 'hoodie' ],
-      title: "Cybertruck Graffiti Hoodie",
-      gender: 'unisex'
+      title: "Poleron Cybertruck Graffiti para hombre",
+      gender: 'men'
     },
     {
       description: "The Relaxed T Logo Hat is a classic silhouette combined with modern details, featuring a 3D T logo and a custom metal buckle closure. The ultrasoft design is flexible and abrasion resistant, while the inner sweatband includes quilted padding for extra comfort and moisture wicking. The visor is fully made from recycled plastic bottles. 100% Cotton.",
@@ -458,13 +458,13 @@ export const initialData: SeedData = {
         '1657932-00-A_1.jpg',
       ],
       inStock: 11,
-      price: 30.000,
+      price: 30,
       sizes: [ 'XS', 'S', 'M', 'L', 'XL', 'XXL' ],
       slug: "relaxed_t_logo_hat",
       type: 'hats',
       tags: [ 'hats' ],
-      title: "Relaxed T Logo Hat",
-      gender: 'unisex'
+      title: "Jockey Relaxed T Logo",
+      gender: 'men'
     },
     {
       description: "The Relaxed T Logo Hat is a classic silhouette combined with modern details, featuring a 3D T logo and a custom metal buckle closure. The ultrasoft design is flexible and abrasion resistant, while the inner sweatband includes quilted padding for extra comfort and moisture wicking. The visor is fully made from recycled plastic bottles. 100% Cotton.",
@@ -473,13 +473,13 @@ export const initialData: SeedData = {
         '1740417-00-A_1.jpg',
       ],
       inStock: 13,
-      price: 35.000,
+      price: 35,
       sizes: [ 'XS', 'S', 'M', 'L', 'XL', 'XXL' ],
       slug: "thermal_cuffed_beanie",
       type: 'hats',
       tags: [ 'hats' ],
-      title: "Thermal Cuffed Beanie",
-      gender: 'unisex'
+      title: "Gorro Cuffed Beanie",
+      gender: 'men'
     },
     {
       description: "The Women's Cropped Puffer Jacket features a uniquely cropped silhouette for the perfect, modern style while on the go during the cozy season ahead. The puffer features subtle silicone injected Tesla logos below the back collar and on the right sleeve, custom matte metal zipper pulls and a soft, fleece lined collar. Made from 87% nylon and 13% polyurethane.",
@@ -488,12 +488,12 @@ export const initialData: SeedData = {
         '1740535-00-A_1.jpg',
       ],
       inStock: 85,
-      price: 45.000,
+      price: 225,
       sizes: [ 'XS', 'S', 'M' ],
       slug: "women_cropped_puffer_jacket",
       type: 'hoodies',
       tags: [ 'hoodie' ],
-      title: "Women's Cropped Puffer Jacket",
+      title: "Chaqueta con cierre para mujer",
       gender: 'women'
     },
     {
@@ -503,12 +503,12 @@ export const initialData: SeedData = {
         '1740226-00-A_1.jpg',
       ],
       inStock: 10,
-      price: 30.000,
+      price: 130,
       sizes: [ 'XS', 'S', 'M', 'XXL' ],
       slug: "women_chill_half_zip_cropped_hoodie",
       type: 'hoodies',
       tags: [ 'hoodie' ],
-      title: "Women's Chill Half Zip Cropped Hoodie",
+      title: "Poleron con cierre corto para mujer",
       gender: 'women'
     },
     {
@@ -518,12 +518,12 @@ export const initialData: SeedData = {
         '1740260-00-A_1.jpg',
       ],
       inStock: 9,
-      price: 40.000,
+      price: 110,
       sizes: [ 'XS', 'S', 'M', 'L', 'XL', 'XXL' ],
       slug: "women_raven_slouchy_crew_sweatshirt",
       type: 'hoodies',
       tags: [ 'hoodie' ],
-      title: "Women's Raven Slouchy Crew Sweatshirt",
+      title: "Sweater para mujer",
       gender: 'women'
     },
     {
@@ -533,12 +533,12 @@ export const initialData: SeedData = {
         '1740290-00-A_1.jpg',
       ],
       inStock: 10,
-      price: 45.000,
+      price: 45,
       sizes: [ 'XS', 'S', 'M', 'L', 'XL', 'XXL' ],
       slug: "women_turbine_cropped_long_sleeve_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Women's Turbine Cropped Long Sleeve Tee",
+      title: "Polera manga larga para mujer",
       gender: 'women'
     },
     {
@@ -548,12 +548,12 @@ export const initialData: SeedData = {
         '1741441-00-A_1.jpg',
       ],
       inStock: 0,
-      price: 40.000,
+      price: 40,
       sizes: [ 'XS', 'S' ],
       slug: "women_turbine_cropped_short_sleeve_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Women's Turbine Cropped Short Sleeve Tee",
+      title: "Polera manga corta para mujer",
       gender: 'women'
     },
     {
@@ -563,12 +563,12 @@ export const initialData: SeedData = {
         '8765090-00-A_1.jpg',
       ],
       inStock: 30,
-      price: 35.000,
+      price: 35,
       sizes: [ 'XS', 'S', 'M', 'L', 'XL', 'XXL' ],
       slug: "women_t_logo_short_sleeve_scoop_neck_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Women's T Logo Short Sleeve Scoop Neck Tee",
+      title: "Polera manga corta con T logo para mujer",
       gender: 'women'
     },
     {
@@ -578,12 +578,12 @@ export const initialData: SeedData = {
         '8765100-00-A_1.jpg',
       ],
       inStock: 16,
-      price: 40.000,
+      price: 40,
       sizes: [ 'XS', 'S', 'L', 'XL', 'XXL' ],
       slug: "women_t_logo_long_sleeve_scoop_neck_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Women's T Logo Long Sleeve Scoop Neck Tee",
+      title: "Polera manga larga con T logo para mujer",
       gender: 'women'
     },
     {
@@ -593,12 +593,12 @@ export const initialData: SeedData = {
         '8765120-00-A_1.jpg',
       ],
       inStock: 18,
-      price: 35.000,
+      price: 35,
       sizes: [ 'XS', 'S', 'M', 'L', 'XL', 'XXL' ],
       slug: "women_small_wordmark_short_sleeve_v-neck_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Women's Small Wordmark Short Sleeve V-Neck Tee",
+      title: "Polera cuello en V para mujer",
       gender: 'women'
     },
     {
@@ -608,12 +608,12 @@ export const initialData: SeedData = {
         '8765115-00-A_1.jpg',
       ],
       inStock: 5,
-      price: 35.000,
+      price: 35,
       sizes: [ 'XL', 'XXL' ],
       slug: "women_large_wordmark_short_sleeve_crew_neck_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Women's Large Wordmark Short Sleeve Crew Neck Tee",
+      title: "Polera manga corta para mujer",
       gender: 'women'
     },
     {
@@ -623,12 +623,12 @@ export const initialData: SeedData = {
         '1549275-00-A_1.jpg',
       ],
       inStock: 16,
-      price: 35.000,
+      price: 35,
       sizes: [ 'S', 'M' ],
       slug: "women_plaid_mode_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Women's Plaid Mode Tee",
+      title: "Polera manga corta con dibujo de cuadros para mujer",
       gender: 'women'
     },
     {
@@ -638,12 +638,12 @@ export const initialData: SeedData = {
         '9877040-00-A_1.jpg',
       ],
       inStock: 10,
-      price: 30.000,
+      price: 130,
       sizes: [ 'XS', 'S', 'M', 'L', 'XL', 'XXL' ],
       slug: "women_powerwall_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Women’s Powerwall Tee",
+      title: "Polera manga corta cuello en V para mujer",
       gender: 'women'
     },
     {
@@ -653,12 +653,12 @@ export const initialData: SeedData = {
         '5645680-00-A_3.jpg',
       ],
       inStock: 3,
-      price: 90.000,
+      price: 90,
       sizes: [ 'M', 'L', 'XL', 'XXL' ],
       slug: "women_corp_jacket",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Women's Corp Jacket",
+      title: "Chaqueta para mujer",
       gender: 'women'
     },
     {
@@ -668,12 +668,12 @@ export const initialData: SeedData = {
         '1740270-00-A_1.jpg',
       ],
       inStock: 162,
-      price: 50.000,
+      price: 100,
       sizes: [ 'XS', 'S', 'M', 'L', 'XL', 'XXL' ],
       slug: "women_raven_joggers",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Women's Raven Joggers",
+      title: "Jogger para mujer",
       gender: 'women'
     },
     {
@@ -683,12 +683,12 @@ export const initialData: SeedData = {
         '1742694-00-A_3.jpg',
       ],
       inStock: 10,
-      price: 30.000,
+      price: 30,
       sizes: [ 'XS', 'S', 'M' ],
       slug: "kids_cybertruck_long_sleeve_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Kids Cybertruck Long Sleeve Tee",
+      title: "Polera manga larga Cybertruck para niños",
       gender: 'kid'
     },
     {
@@ -698,12 +698,12 @@ export const initialData: SeedData = {
         '8529312-00-A_1.jpg',
       ],
       inStock: 0,
-      price: 25.000,
+      price: 25,
       sizes: [ 'XS', 'S', 'M' ],
       slug: "kids_scribble_t_logo_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Kids Scribble T Logo Tee",
+      title: "Polera con T logo para niños",
       gender: 'kid'
     },
     {
@@ -713,12 +713,12 @@ export const initialData: SeedData = {
         '8529342-00-A_1.jpg',
       ],
       inStock: 10,
-      price: 25.000,
+      price: 25,
       sizes: [ 'XS', 'S', 'M' ],
       slug: "kids_cybertruck_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Kids Cybertruck Tee",
+      title: "Polera para Cybertruck para niños",
       gender: 'kid'
     },
     {
@@ -728,12 +728,12 @@ export const initialData: SeedData = {
         '8529354-00-A_1.jpg',
       ],
       inStock: 10,
-      price: 30.000,
+      price: 30,
       sizes: [ 'XS', 'S', 'M' ],
       slug: "kids_racing_stripe_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Kids Racing Stripe Tee",
+      title: "Polera Racing para niños",
       gender: 'kid'
     },
     {
@@ -743,12 +743,12 @@ export const initialData: SeedData = {
         '7652465-00-A_1.jpg',
       ],
       inStock: 10,
-      price: 30.000,
+      price: 30,
       sizes: [ 'XS', 'S', 'M' ],
       slug: "kids_3d_t_logo_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Kids 3D T Logo Tee",
+      title: "Polera con logo 3D para niños",
       gender: 'kid'
     },
     {
@@ -758,12 +758,12 @@ export const initialData: SeedData = {
         '100042307_alt_2000.jpg',
       ],
       inStock: 10,
-      price: 30.000,
+      price: 30,
       sizes: [ 'XS', 'S', 'M' ],
       slug: "kids_checkered_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Kids Checkered Tee",
+      title: "Polera con dibujo de cuadros para niños",
       gender: 'kid'
     },
     {
@@ -773,12 +773,12 @@ export const initialData: SeedData = {
         '1473809-00-A_alt.jpg',
       ],
       inStock: 16,
-      price: 25.000,
+      price: 25,
       sizes: [ 'XS', 'S' ],
       slug: "made_on_earth_by_humans_onesie",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Made on Earth by Humans Onesie",
+      title: "Bodie Made on Earth para niños",
       gender: 'kid'
     },
     {
@@ -788,12 +788,12 @@ export const initialData: SeedData = {
         '8529387-00-A_1.jpg',
       ],
       inStock: 0,
-      price: 30.000,
+      price: 30,
       sizes: [ 'XS', 'S' ],
       slug: "scribble_t_logo_onesie",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Scribble T Logo Onesie",
+      title: "Bodie con T logo para niños",
       gender: 'kid'
     },
     {
@@ -803,12 +803,12 @@ export const initialData: SeedData = {
         '1473829-00-A_2_2000.jpg',
       ],
       inStock: 10,
-      price: 30.000,
+      price: 30,
       sizes: [ 'XS', 'S' ],
       slug: "zero_emissions_(almost)_onesie",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Zero Emissions (Almost) Onesie",
+      title: "Bodie Zero Emissions para niños",
       gender: 'kid'
     },
     {
@@ -818,12 +818,12 @@ export const initialData: SeedData = {
         '1742702-00-A_1.jpg',
       ],
       inStock: 10,
-      price: 65.000,
+      price: 65,
       sizes: [ 'XS', 'S', 'M' ],
       slug: "kids_cyberquad_bomber_jacket",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Kids Cyberquad Bomber Jacket",
+      title: "Chaqueta Cyberquad Bomber para niños",
       gender: 'kid'
     },
     {
@@ -833,12 +833,12 @@ export const initialData: SeedData = {
         '1506211-00-A_1_2000.jpg',
       ],
       inStock: 10,
-      price: 30.000,
+      price: 30,
       sizes: [ 'XS', 'S', 'M' ],
       slug: "kids_corp_jacket",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Kids Corp Jacket",
+      title: "Chaqueta Corp para niños",
       gender: 'kid'
     },
   ]
