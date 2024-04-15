@@ -1,46 +1,43 @@
 export const revalidate = 60; // 60 segundos
 
 
-import { redirect } from 'next/navigation';
 
 import { getPaginatedProductsWithImages } from '@/actions';
-import { Pagination, ProductGrid, Title } from '@/components';
-
+import { redirect } from 'next/navigation';
+import CardsPromo from '@/components/ui/promo-section/CardsPromo';
+import FirstPromo from '@/components/ui/promo-section/FirstPromo';
+import ProductFeatures from '@/components/ui/promo-section/Product-Features';
+import SocialMedia from '@/components/ui/promo-section/SocialMedia';
+import { HeroParallaxDemo } from '@/components/ui/promo-section/ParallaxDemo';
 
 
 interface Props {
   searchParams: {
-    page?: string; 
+    page?: string;
   }
 }
 
 
 export default async function Home({ searchParams }: Props) {
 
-  const page = searchParams.page ? parseInt( searchParams.page ) : 1;
+  const page = searchParams.page ? parseInt(searchParams.page) : 1;
+  const { products } = await getPaginatedProductsWithImages({ page });
 
-  const { products, currentPage, totalPages } = await getPaginatedProductsWithImages({ page });
 
-
-  if ( products.length === 0 ) {
+  if (products.length === 0) {
     redirect('/');
-  }
+  };
 
 
   return (
-    <>
-      <Title
-        title="Tienda"
-        subtitle="Todos los productos"
-        className="mb-2"
-      />
+    <div>
 
-      {/* <ProductGrid 
-        products={ products }
-      /> */}
+      <HeroParallaxDemo />
+      <FirstPromo />
+      <ProductFeatures />
+      <CardsPromo />
+      <SocialMedia />
 
-      {/* <Pagination totalPages={ totalPages } /> */}
-      
-    </>
+    </div>
   );
 }
