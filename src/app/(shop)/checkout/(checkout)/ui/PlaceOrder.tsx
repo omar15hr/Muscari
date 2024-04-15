@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
-import clsx from 'clsx';
+import clsx from 'clsx'; 
 
 import { placeOrder } from '@/actions';
 import { useAddressStore, useCartStore } from "@/store";
