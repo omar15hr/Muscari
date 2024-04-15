@@ -1,10 +1,10 @@
 const features = [
-  { name: 'Origin', description: 'Designed by Good Goods, Inc.' },
-  { name: 'Material', description: 'Solid walnut base with rare earth magnets and powder coated steel card cover' },
-  { name: 'Dimensions', description: '6.25" x 3.55" x 1.15"' },
-  { name: 'Finish', description: 'Hand sanded and finished with natural oil' },
-  { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
-  { name: 'Considerations', description: 'Made from natural materials. Grain and color vary with each item.' },
+  { name: 'Origin', description: 'Diseñado por Good Goods, Inc.' },
+  { name: 'Material', description: 'Base de nogal macizo con imanes de tierras raras y cubierta de tarjeta de acero con recubrimiento en polvo' },
+  { name: 'Dimensiones', description: '6.25" x 3.55" x 1.15"' },
+  { name: 'Acabado', description: 'Lijado a mano y acabado con aceite natural.' },
+  { name: 'Incluye', description: 'Bandeja para tarjetas de madera y 3 paquetes de recambio.' },
+  { name: 'Consideraciones', description: 'Fabricado con materiales naturales. El grano y el color varían con cada artículo.' },
 ]
 
 export default function ProductFeatures() {
@@ -16,29 +16,28 @@ export default function ProductFeatures() {
           <img
             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
             alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray-100 shadow-md"
           />
           <img
             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
             alt="Top down view of walnut card tray with embedded magnets and card groove."
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray-100 shadow-md"
           />
           <img
             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
             alt="Side of walnut card tray with card groove and recessed card area."
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray-100 shadow-md"
           />
           <img
             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
             alt="Walnut card tray filled with cards and card angled in dedicated groove."
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray-100 shadow-md"
           />
         </div>
         <div>
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Technical Specifications</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Conoce nuestros productos</h2>
           <p className="mt-4 text-gray-500">
-            The walnut wood card tray is precision milled to perfectly fit a stack of Focus cards. The powder coated
-            steel divider separates active cards from new ones, or can be used to archive important task lists.
+          En Muscari Clothing, nos apasionan los textiles de alta calidad. Nos enorgullecemos de ofrecer una amplia gama de productos para satisfacer todas tus necesidades, desde ropa suave y acogedora hasta telas duraderas.
           </p>
 
           <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
