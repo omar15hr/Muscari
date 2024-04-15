@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 
 import Link from "next/link";
-import { IoSearchOutline, IoCartOutline } from "react-icons/io5";
+import { IoMailOutline ,IoCartOutline } from "react-icons/io5";
 
 import { titleFont } from "@/config/fonts";
 import { useCartStore, useUIStore } from "@/store";
@@ -58,8 +58,8 @@ export const TopMenu = () => {
 
       {/* Search, Cart, Menu */}
       <div className="flex items-center">
-        <Link href="/search" className="mx-2">
-          <IoSearchOutline className="w-5 h-5" />
+        <Link href="/contact" className="mx-2">
+          <IoMailOutline />
         </Link>
 
         <Link href={
