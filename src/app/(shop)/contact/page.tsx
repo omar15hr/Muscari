@@ -1,22 +1,15 @@
-import { auth } from "@/auth.config";
-import { Title } from "@/components";
-import { redirect } from "next/navigation";
 
-export default async function ContactPage() {
-  const session = await auth();
+import { titleFont } from '@/config/fonts';
+import ContactForm from './ui/ContactForm';
 
-  if (!session?.user) {
-    // redirect('/auth/login?returnTo=/perfil');
-    redirect("/");
-  }
 
+export default function ResetPasswordPage() {
   return (
-    <div>
-      <Title title="Formulario de contacto" />
+    <div className="flex min-h-screen flex-col items-center justify-between p-24">
 
-      <pre>{JSON.stringify(session.user, null, 2)}</pre>
+      <h1 className={ `${ titleFont.className } text-4xl mb-10` }>Formulario de contacto</h1>
+      <ContactForm />
 
-      <h3 className="text-3xl mb-10">{ session.user.role  }</h3>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 'use client'
 
-import { Footer, Input, SubmitButton } from './components'
-import { createContext, useState } from 'react'
+import { Footer, Input, SubmitButton, Select } from './components';
+import { createContext, useState } from 'react';
 
 type FormValues = Record<string, string>
 
@@ -30,7 +30,7 @@ export function Form ({ title, children, onSubmit, description }: FormProps) {
   return (
     <FormContext.Provider value={{ formValues, setFormValues }}>
       <form onSubmit={handleSubmit} className='flex flex-col'>
-        <div className='mb-5'>
+        <div className='mb-5 text-xl'>
           <h2>{title}</h2>
           {description && <p>{description}</p>}
         </div>
