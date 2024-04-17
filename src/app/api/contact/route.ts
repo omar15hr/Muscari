@@ -1,7 +1,7 @@
-import { EmailContactTemplate } from './../../../components/email-template/email-contact-template';
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import jwt from 'jsonwebtoken';
+import { EmailContactTemplate } from "@/components";
 import prisma from "@/lib/prisma";
 import { messages } from "@/utils/messages";
 
@@ -9,9 +9,9 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
-    const body: { email: string } = await request.json();
+    const body: { email: string, name: string } = await request.json();
 
-    const { email } = body;
+    const { email, name } = body;
 
     const userFind = await prisma.user.findUnique({
       where: {
@@ -42,8 +42,8 @@ export async function POST(request: NextRequest) {
     await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
       to: email,
-      subject: "Ticket de Contacto",
-      react: EmailContactTemplate({ buttonUrl: forgetUrl }),
+      subject: "Ticket de contacto",
+      react: EmailContactTemplate({ name }),
     });
 
     return NextResponse.json(

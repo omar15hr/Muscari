@@ -1,35 +1,43 @@
 import { z } from "zod";
 
-const plans = ["free", "basic", "medium", "pro"] as const;
+const contactReason = ["consulta", "cuenta", "errorPago", "devolucionProducto", "otro"] as const;
 
-export type Plans = (typeof plans)[number];
+export type Plans = (typeof contactReason)[number];
 
 export const mappedPlans: { [key in Plans]: string } = {
-  basic: "Consulta",
-  pro: "Cuenta",
-  free: "Error al realizar pago",
-  medium: "Devolución de producto",
+  consulta: "Consulta",
+  cuenta: "Cuenta",
+  errorPago: "Error al realizar pago",
+  devolucionProducto: "Devolución de producto",
+  otro: "Otro",
 }
 
 export const userSchema = z.object({
   name: z
     .string()
     .min(3, {
-      message: "Name must be at least 3 characters long",
+      message: "El nombre debe ser de más de 3 caracteres.",
     })
-    .max(200, {
-      message: "Name must be less than 200 characters long",
+    .max(30, {
+      message: "El nombre debe ser de menos de 30 caracteres.",
+    }),
+  lastName: z
+    .string()
+    .min(3, {
+      message: "El apellido debe ser de más de 3 caracteres.",
+    })
+    .max(30, {
+      message: "El apellido debe ser de menos de 30 caracteres.",
     }),
   email: z.string().email({
-    message: "Please enter a valid email",
+    message: "Por favor, ingrese una dirección de correo válida.",
   }),
-  weight: z.string().refine((weight) => !isNaN(parseFloat(weight)), {
-    message: "Weight must be a number",
+  contactReason: z.enum(contactReason, {
+    errorMap: () => ({ message: "Por favor, seleccione un motivo de contacto" }),
   }),
-  dateOfBirth: z.string().refine(dob => new Date(dob).toString() !== "Invalid Date", {
-    message: "Please enter a valid date of birth"
-  }),
-  plan: z.enum(plans, {
-    errorMap: () => ({ message: "Please select a plan" }),
-  }),
+  comment: z
+    .string()
+    .max(300, {
+      message: "El comentario debe ser de menos de 300 caracteres.",
+    }),
 })

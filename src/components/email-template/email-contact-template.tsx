@@ -1,11 +1,11 @@
 import * as React from 'react'
 
 interface EmailTemplateProps {
-  buttonUrl: string
+  name: string
 }
 
 export const EmailContactTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
-  buttonUrl
+  name
 }) => (
   <div
     style={{
@@ -16,6 +16,7 @@ export const EmailContactTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
     }}
   >
     <span style={{ textAlign: 'justify' }}>
+      Hola {name}. <br /><br />
       Tu solicitud ha sido enviada con éxito. Para añadir comentarios adicionales, por favor responde a este mensaje.
       <br /><br />
       Saludos. El equipo de Muscari Clothing
