@@ -6,6 +6,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { userSchema, mappedPlans } from "../validations/userSchema";
 import { useAuthFetch } from "@/hooks/useAuthFetch";
+import { useRouter } from "next/router";
 
 
 type Inputs = {
@@ -19,7 +20,6 @@ type Inputs = {
 
 
 export default function ContactForm() {
-
 
   const authFetch = useAuthFetch();
 
@@ -44,9 +44,9 @@ export default function ContactForm() {
       endpoint: 'contact',
       formData
     });
-    
+
   };
-  
+
 
 
   return (
