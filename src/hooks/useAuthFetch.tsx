@@ -11,7 +11,7 @@ interface AuthFetchProps {
 }
 
 export function useAuthFetch () {
-  const router = useRouter()
+  const router = useRouter();
 
   const authRouter = async ({
     endpoint,

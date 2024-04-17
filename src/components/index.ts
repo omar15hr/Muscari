@@ -1,4 +1,5 @@
-export * from './email-template/email-template'
+export * from './email-template/email-template';
+export * from './email-template/email-contact-template';
 
 export * from './products/product-grid-men/ProductGrid';
 export * from './products/product-grid-men/ProductGridItem';
