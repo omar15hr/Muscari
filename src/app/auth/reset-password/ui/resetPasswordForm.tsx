@@ -6,17 +6,17 @@ import { useLoading } from '@/hooks/useLoading';
 
 export default function ResetPasswordForm() {
 
-  const { finishLoading, isLoading, startLoading } = useLoading()
-  const authFetch = useAuthFetch()
+  const { finishLoading, isLoading, startLoading } = useLoading();
+  const authFetch = useAuthFetch();
 
 
   const forgetPassword = async (formData: any) => {
-    startLoading()
+    startLoading();
     await authFetch({
       endpoint: 'forget-password',
       formData
-    })
-    finishLoading()
+    });
+    finishLoading();
   }
 
   return (

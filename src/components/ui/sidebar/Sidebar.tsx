@@ -12,6 +12,7 @@ import {
   IoSearchOutline,
   IoShirtOutline,
   IoTicketOutline,
+  IoMailOutline,
 } from "react-icons/io5";
 
 import { useUIStore } from "@/store";
@@ -74,8 +75,8 @@ export const Sidebar = () => {
               onClick={() => closeMenu()}
               className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
             >
-              <IoPersonOutline size={30} />
-              <span className="ml-3 text-xl">Perfil</span>
+              <IoPersonOutline size={20} />
+              <span className="ml-3 text-l">Perfil</span>
             </Link>
 
             <Link
@@ -83,8 +84,16 @@ export const Sidebar = () => {
               onClick={() => closeMenu()}
               className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
             >
-              <IoTicketOutline size={30} />
-              <span className="ml-3 text-xl">Ordenes</span>
+              <IoTicketOutline size={20} />
+              <span className="ml-3 text-l">Ordenes</span>
+            </Link>
+            <Link
+              href="/contact"
+              onClick={() => closeMenu()}
+              className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+            >
+              <IoMailOutline size={20} />
+              <span className="ml-3 text-l">Contáctanos</span>
             </Link>
           </>
         )}
@@ -94,8 +103,8 @@ export const Sidebar = () => {
             className="flex w-full items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
             onClick={() => logout()}
           >
-            <IoLogOutOutline size={30} />
-            <span className="ml-3 text-xl">Salir</span>
+            <IoLogOutOutline size={20} />
+            <span className="ml-3 text-l">Salir</span>
           </button>
         )}
 
@@ -105,8 +114,8 @@ export const Sidebar = () => {
             className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
             onClick={() => closeMenu()}
           >
-            <IoLogInOutline size={30} />
-            <span className="ml-3 text-xl">Ingresar</span>
+            <IoLogInOutline size={20} />
+            <span className="ml-3 text-l">Ingresar</span>
           </Link>
         )}
 
@@ -120,8 +129,8 @@ export const Sidebar = () => {
               onClick={() => closeMenu()}
               className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
             >
-              <IoShirtOutline size={30} />
-              <span className="ml-3 text-xl">Productos</span>
+              <IoShirtOutline size={20} />
+              <span className="ml-3 text-l">Productos</span>
             </Link>
 
             <Link
@@ -129,8 +138,8 @@ export const Sidebar = () => {
               onClick={() => closeMenu()}
               className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
             >
-              <IoTicketOutline size={30} />
-              <span className="ml-3 text-xl">Ordenes</span>
+              <IoTicketOutline size={20} />
+              <span className="ml-3 text-l">Ordenes</span>
             </Link>
 
             <Link
@@ -138,8 +147,8 @@ export const Sidebar = () => {
               onClick={() => closeMenu()}
               className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
             >
-              <IoPeopleOutline size={30} />
-              <span className="ml-3 text-xl">Usuarios</span>
+              <IoPeopleOutline size={20} />
+              <span className="ml-3 text-l">Usuarios</span>
             </Link>
           </>
         )}

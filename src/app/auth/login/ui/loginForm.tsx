@@ -33,6 +33,7 @@ export const LoginForm = () => {
         className="px-5 py-2 border bg-gray-300 rounded mb-5"
         type="email"
         name="email"
+        placeholder='Ingrese su correo electrónico'
       />
 
       <label htmlFor="email">Contraseña</label>
@@ -40,6 +41,7 @@ export const LoginForm = () => {
         className="px-5 py-2 border bg-gray-300 rounded mb-5"
         type="password"
         name="password"
+        placeholder='Ingrese su contraseña'
       />
 
       <Link 
