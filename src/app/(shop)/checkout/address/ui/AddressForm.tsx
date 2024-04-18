@@ -168,8 +168,8 @@ export const AddressForm = ({ countries, userStoredAddress = {} }: Props) => {
           type="submit"
           // className="btn-primary flex w-full sm:w-1/2 justify-center "
           className={ clsx({
-            'btn-primary': isValid,
-            'btn-disabled': !isValid,
+            'flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600': isValid,
+            'flex w-full justify-center rounded-md bg-gray-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600': !isValid,
           })}
         >
           Siguiente

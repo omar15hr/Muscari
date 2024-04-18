@@ -40,13 +40,13 @@ export const initialData: SeedData = {
   users: [
     {
       email: 'omarhrn@gmail.com',
-      name: 'Omar Hernandez',
+      name: 'Fernando Herrera',
       password: bcryptjs.hashSync('123456'),
       role: 'admin'
     },
     {
-      email: 'brina@google.com',
-      name: 'Brina Hernandez',
+      email: 'melissa@google.com',
+      name: 'Melissa Flores',
       password: bcryptjs.hashSync('123456'),
       role: 'user'
     },
@@ -71,7 +71,7 @@ export const initialData: SeedData = {
       slug: "mens_chill_crew_neck_sweatshirt",
       type: 'shirts',
       tags: [ 'sweatshirt' ],
-      title: "Polera deportiva manga larga para hombre",
+      title: "Men’s Chill Crew Neck Sweatshirt",
       gender: 'men'
     },
     {
@@ -86,7 +86,7 @@ export const initialData: SeedData = {
       slug: "men_quilted_shirt_jacket",
       type: 'shirts',
       tags: [ 'jacket' ],
-      title: "Chaqueta para hombre",
+      title: "Men's Quilted Shirt Jacket",
       gender: 'men'
     },
 
@@ -102,7 +102,7 @@ export const initialData: SeedData = {
       slug: "men_raven_lightweight_zip_up_bomber_jacket",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Chaqueta ligera con cierre para hombre",
+      title: "Men's Raven Lightweight Zip Up Bomber Jacket",
       gender: 'men'
     },
 
@@ -118,7 +118,7 @@ export const initialData: SeedData = {
       slug: "men_turbine_long_sleeve_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga larga para hombre",
+      title: "Men's Turbine Long Sleeve Tee",
       gender: 'men'
     },
     {
@@ -133,7 +133,7 @@ export const initialData: SeedData = {
       slug: "men_turbine_short_sleeve_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga corta para hombre",
+      title: "Men's Turbine Short Sleeve Tee",
       gender: 'men'
     },
     {
@@ -148,7 +148,7 @@ export const initialData: SeedData = {
       slug: "men_cybertruck_owl_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga corta con cyberbúho para hombre",
+      title: "Men's Cybertruck Owl Tee",
       gender: 'men'
     },
     {
@@ -163,7 +163,7 @@ export const initialData: SeedData = {
       slug: "men_solar_roof_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga corta con dibujo de panel solar",
+      title: "Men's Solar Roof Tee",
       gender: 'men'
     },
     {
@@ -178,7 +178,7 @@ export const initialData: SeedData = {
       slug: "men_let_the_sun_shine_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga corta Let the Sun Shine para hombre",
+      title: "Men's Let the Sun Shine Tee",
       gender: 'men'
     },
     {
@@ -193,7 +193,7 @@ export const initialData: SeedData = {
       slug: "men_3d_large_wordmark_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga corta para hombre",
+      title: "Men's 3D Large Wordmark Tee",
       gender: 'men'
     },
     {
@@ -208,7 +208,7 @@ export const initialData: SeedData = {
       slug: "men_3d_t_logo_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga corta con logo 3D",
+      title: "Men's 3D T Logo Tee",
       gender: 'men'
     },
     {
@@ -223,7 +223,7 @@ export const initialData: SeedData = {
       slug: "men_3d_small_wordmark_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga corta con logo 3D pequeño",
+      title: "Men’s 3D Small Wordmark Tee",
       gender: 'men'
     },
     {
@@ -238,7 +238,7 @@ export const initialData: SeedData = {
       slug: "men_plaid_mode_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga corta con dibujo de cuadros para hombre",
+      title: "Men's Plaid Mode Tee",
       gender: 'men'
     },
     {
@@ -253,7 +253,7 @@ export const initialData: SeedData = {
       slug: "men_powerwall_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga corta Powerwall para hombre",
+      title: "Men's Powerwall Tee",
       gender: 'men'
     },
     {
@@ -268,7 +268,7 @@ export const initialData: SeedData = {
       slug: "men_battery_day_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga corta Battery Day para hombre",
+      title: "Men's Battery Day Tee",
       gender: 'men'
     },
     {
@@ -283,7 +283,7 @@ export const initialData: SeedData = {
       slug: "men_cybertruck_bulletproof_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga corta Cybertruck Bulletproof para hombre",
+      title: "Men’s Cybertruck Bulletproof Tee",
       gender: 'men'
     },
     {
@@ -298,7 +298,7 @@ export const initialData: SeedData = {
       slug: "men_haha_yes_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga corta Haha Yes para hombre",
+      title: "Men's Haha Yes Tee",
       gender: 'men'
     },
     {
@@ -313,7 +313,7 @@ export const initialData: SeedData = {
       slug: "men_s3xy_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga corta S3XY paa hombre",
+      title: "Men's S3XY Tee",
       gender: 'men'
     },
     {
@@ -328,7 +328,7 @@ export const initialData: SeedData = {
       slug: "men_3d_wordmark_long_sleeve_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga larga logo 3D para hombre",
+      title: "Men's 3D Wordmark Long Sleeve Tee",
       gender: 'men'
     },
     {
@@ -343,7 +343,7 @@ export const initialData: SeedData = {
       slug: "men_3d_t_logo_long_sleeve_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga larga T logo 3D para hombre",
+      title: "Men's 3D T Logo Long Sleeve Tee",
       gender: 'men'
     },
     {
@@ -358,7 +358,7 @@ export const initialData: SeedData = {
       slug: "men_raven_lightweight_hoodie",
       type: 'hoodies',
       tags: [ 'hoodie' ],
-      title: "Poleron para hombre",
+      title: "Men's Raven Lightweight Hoodie",
       gender: 'men'
     },
     {
@@ -373,8 +373,8 @@ export const initialData: SeedData = {
       slug: "chill_pullover_hoodie",
       type: 'hoodies',
       tags: [ 'hoodie' ],
-      title: "Poleron para hombre",
-      gender: 'men'
+      title: "Chill Pullover Hoodie",
+      gender: 'unisex'
     },
     {
       description: "Introducing the Tesla Chill Collection. The Men's Chill Full Zip Hoodie has a premium, heavyweight exterior and soft fleece interior for comfort in any season. The hoodie features subtle thermoplastic polyurethane Tesla logos on the left chest and sleeve, a double layer single seam hood and pockets with custom matte zipper pulls. Made from 60% cotton and 40% recycled polyester.",
@@ -388,7 +388,7 @@ export const initialData: SeedData = {
       slug: "men_chill_full_zip_hoodie",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Poleron con cierre para hombre",
+      title: "Men's Chill Full Zip Hoodie",
       gender: 'men'
     },
     {
@@ -403,7 +403,7 @@ export const initialData: SeedData = {
       slug: "men_chill_quarter_zip_pullover_-_gray",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Poleron con cierre corto para hombre",
+      title: "Men's Chill Quarter Zip Pullover - Gray",
       gender: 'men'
     },
     {
@@ -418,7 +418,7 @@ export const initialData: SeedData = {
       slug: "men_chill_quarter_zip_pullover_-_white",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Poleron con cierre corto para hombre",
+      title: "Men's Chill Quarter Zip Pullover - White",
       gender: 'men'
     },
     {
@@ -433,8 +433,8 @@ export const initialData: SeedData = {
       slug: "3d_large_wordmark_pullover_hoodie",
       type: 'hoodies',
       tags: [ 'hoodie' ],
-      title: "Poleron con logo 3d para hombre",
-      gender: 'men'
+      title: "3D Large Wordmark Pullover Hoodie",
+      gender: 'unisex'
     },
     {
       description: "As with the iconic Tesla logo, the Cybertruck Graffiti Hoodie is a classic in the making. Unisex style featuring soft fleece and an adjustable, jersey-lined hood for comfortable coverage.",
@@ -448,8 +448,8 @@ export const initialData: SeedData = {
       slug: "cybertruck_graffiti_hoodie",
       type: 'hoodies',
       tags: [ 'hoodie' ],
-      title: "Poleron Cybertruck Graffiti para hombre",
-      gender: 'men'
+      title: "Cybertruck Graffiti Hoodie",
+      gender: 'unisex'
     },
     {
       description: "The Relaxed T Logo Hat is a classic silhouette combined with modern details, featuring a 3D T logo and a custom metal buckle closure. The ultrasoft design is flexible and abrasion resistant, while the inner sweatband includes quilted padding for extra comfort and moisture wicking. The visor is fully made from recycled plastic bottles. 100% Cotton.",
@@ -463,8 +463,8 @@ export const initialData: SeedData = {
       slug: "relaxed_t_logo_hat",
       type: 'hats',
       tags: [ 'hats' ],
-      title: "Jockey Relaxed T Logo",
-      gender: 'men'
+      title: "Relaxed T Logo Hat",
+      gender: 'unisex'
     },
     {
       description: "The Relaxed T Logo Hat is a classic silhouette combined with modern details, featuring a 3D T logo and a custom metal buckle closure. The ultrasoft design is flexible and abrasion resistant, while the inner sweatband includes quilted padding for extra comfort and moisture wicking. The visor is fully made from recycled plastic bottles. 100% Cotton.",
@@ -478,8 +478,8 @@ export const initialData: SeedData = {
       slug: "thermal_cuffed_beanie",
       type: 'hats',
       tags: [ 'hats' ],
-      title: "Gorro Cuffed Beanie",
-      gender: 'men'
+      title: "Thermal Cuffed Beanie",
+      gender: 'unisex'
     },
     {
       description: "The Women's Cropped Puffer Jacket features a uniquely cropped silhouette for the perfect, modern style while on the go during the cozy season ahead. The puffer features subtle silicone injected Tesla logos below the back collar and on the right sleeve, custom matte metal zipper pulls and a soft, fleece lined collar. Made from 87% nylon and 13% polyurethane.",
@@ -493,7 +493,7 @@ export const initialData: SeedData = {
       slug: "women_cropped_puffer_jacket",
       type: 'hoodies',
       tags: [ 'hoodie' ],
-      title: "Chaqueta con cierre para mujer",
+      title: "Women's Cropped Puffer Jacket",
       gender: 'women'
     },
     {
@@ -508,7 +508,7 @@ export const initialData: SeedData = {
       slug: "women_chill_half_zip_cropped_hoodie",
       type: 'hoodies',
       tags: [ 'hoodie' ],
-      title: "Poleron con cierre corto para mujer",
+      title: "Women's Chill Half Zip Cropped Hoodie",
       gender: 'women'
     },
     {
@@ -523,7 +523,7 @@ export const initialData: SeedData = {
       slug: "women_raven_slouchy_crew_sweatshirt",
       type: 'hoodies',
       tags: [ 'hoodie' ],
-      title: "Sweater para mujer",
+      title: "Women's Raven Slouchy Crew Sweatshirt",
       gender: 'women'
     },
     {
@@ -538,7 +538,7 @@ export const initialData: SeedData = {
       slug: "women_turbine_cropped_long_sleeve_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga larga para mujer",
+      title: "Women's Turbine Cropped Long Sleeve Tee",
       gender: 'women'
     },
     {
@@ -553,7 +553,7 @@ export const initialData: SeedData = {
       slug: "women_turbine_cropped_short_sleeve_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga corta para mujer",
+      title: "Women's Turbine Cropped Short Sleeve Tee",
       gender: 'women'
     },
     {
@@ -568,7 +568,7 @@ export const initialData: SeedData = {
       slug: "women_t_logo_short_sleeve_scoop_neck_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga corta con T logo para mujer",
+      title: "Women's T Logo Short Sleeve Scoop Neck Tee",
       gender: 'women'
     },
     {
@@ -583,7 +583,7 @@ export const initialData: SeedData = {
       slug: "women_t_logo_long_sleeve_scoop_neck_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga larga con T logo para mujer",
+      title: "Women's T Logo Long Sleeve Scoop Neck Tee",
       gender: 'women'
     },
     {
@@ -598,7 +598,7 @@ export const initialData: SeedData = {
       slug: "women_small_wordmark_short_sleeve_v-neck_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera cuello en V para mujer",
+      title: "Women's Small Wordmark Short Sleeve V-Neck Tee",
       gender: 'women'
     },
     {
@@ -613,7 +613,7 @@ export const initialData: SeedData = {
       slug: "women_large_wordmark_short_sleeve_crew_neck_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga corta para mujer",
+      title: "Women's Large Wordmark Short Sleeve Crew Neck Tee",
       gender: 'women'
     },
     {
@@ -628,7 +628,7 @@ export const initialData: SeedData = {
       slug: "women_plaid_mode_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga corta con dibujo de cuadros para mujer",
+      title: "Women's Plaid Mode Tee",
       gender: 'women'
     },
     {
@@ -643,7 +643,7 @@ export const initialData: SeedData = {
       slug: "women_powerwall_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga corta cuello en V para mujer",
+      title: "Women’s Powerwall Tee",
       gender: 'women'
     },
     {
@@ -658,7 +658,7 @@ export const initialData: SeedData = {
       slug: "women_corp_jacket",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Chaqueta para mujer",
+      title: "Women's Corp Jacket",
       gender: 'women'
     },
     {
@@ -673,7 +673,7 @@ export const initialData: SeedData = {
       slug: "women_raven_joggers",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Jogger para mujer",
+      title: "Women's Raven Joggers",
       gender: 'women'
     },
     {
@@ -688,7 +688,7 @@ export const initialData: SeedData = {
       slug: "kids_cybertruck_long_sleeve_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera manga larga Cybertruck para niños",
+      title: "Kids Cybertruck Long Sleeve Tee",
       gender: 'kid'
     },
     {
@@ -703,7 +703,7 @@ export const initialData: SeedData = {
       slug: "kids_scribble_t_logo_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera con T logo para niños",
+      title: "Kids Scribble T Logo Tee",
       gender: 'kid'
     },
     {
@@ -718,7 +718,7 @@ export const initialData: SeedData = {
       slug: "kids_cybertruck_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera para Cybertruck para niños",
+      title: "Kids Cybertruck Tee",
       gender: 'kid'
     },
     {
@@ -733,7 +733,7 @@ export const initialData: SeedData = {
       slug: "kids_racing_stripe_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera Racing para niños",
+      title: "Kids Racing Stripe Tee",
       gender: 'kid'
     },
     {
@@ -748,7 +748,7 @@ export const initialData: SeedData = {
       slug: "kids_3d_t_logo_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera con logo 3D para niños",
+      title: "Kids 3D T Logo Tee",
       gender: 'kid'
     },
     {
@@ -763,7 +763,7 @@ export const initialData: SeedData = {
       slug: "kids_checkered_tee",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Polera con dibujo de cuadros para niños",
+      title: "Kids Checkered Tee",
       gender: 'kid'
     },
     {
@@ -778,7 +778,7 @@ export const initialData: SeedData = {
       slug: "made_on_earth_by_humans_onesie",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Bodie Made on Earth para niños",
+      title: "Made on Earth by Humans Onesie",
       gender: 'kid'
     },
     {
@@ -793,7 +793,7 @@ export const initialData: SeedData = {
       slug: "scribble_t_logo_onesie",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Bodie con T logo para niños",
+      title: "Scribble T Logo Onesie",
       gender: 'kid'
     },
     {
@@ -808,7 +808,7 @@ export const initialData: SeedData = {
       slug: "zero_emissions_(almost)_onesie",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Bodie Zero Emissions para niños",
+      title: "Zero Emissions (Almost) Onesie",
       gender: 'kid'
     },
     {
@@ -823,7 +823,7 @@ export const initialData: SeedData = {
       slug: "kids_cyberquad_bomber_jacket",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Chaqueta Cyberquad Bomber para niños",
+      title: "Kids Cyberquad Bomber Jacket",
       gender: 'kid'
     },
     {
@@ -838,7 +838,7 @@ export const initialData: SeedData = {
       slug: "kids_corp_jacket",
       type: 'shirts',
       tags: [ 'shirt' ],
-      title: "Chaqueta Corp para niños",
+      title: "Kids Corp Jacket",
       gender: 'kid'
     },
   ]

@@ -78,7 +78,7 @@ export const LoginForm = () => {
         <div className="flex-1 border-t border-gray-500"></div>
       </div>
 
-      <Link href="/auth/new-account" className="btn-secondary text-center">
+      <Link href="/auth/new-account" className="flex w-full justify-center rounded-md bg-gray-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600 text-center">
         Crear una nueva cuenta
       </Link>
     </form>
@@ -92,8 +92,8 @@ function LoginButton() {
     <button 
       type="submit" 
       className={ clsx({
-        "btn-primary": !pending,
-        "btn-disabled": pending
+        "flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600": !pending,
+        "flex w-full justify-center rounded-md bg-gray-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600": pending
       })}
       disabled={ pending }
       >
