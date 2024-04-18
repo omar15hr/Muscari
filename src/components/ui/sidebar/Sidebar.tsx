@@ -97,6 +97,36 @@ export const Sidebar = () => {
             </Link>
           </>
         )}
+        
+        {true && (
+          <Link
+            href="/gender/men"
+            className=" block md:hidden flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+            onClick={() => closeMenu()}
+          >
+            <span className="ml-3 text-l">Hombre</span>
+          </Link>
+        )}
+
+        {true && (
+          <Link
+            href="/gender/women"
+            className=" block md:hidden flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+            onClick={() => closeMenu()}
+          >
+            <span className="ml-3 text-l">Mujer</span>
+          </Link>
+        )}
+
+        {true && (
+          <Link
+            href="/gender/kid"
+            className=" block md:hidden flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+            onClick={() => closeMenu()}
+          >
+            <span className="ml-3 text-l">Niñ@s</span>
+          </Link>
+        )}
 
         {isAuthenticated && (
           <button
