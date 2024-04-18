@@ -38,8 +38,8 @@ export default function ResetPasswordForm() {
           isLoading={isLoading}
         />
         <Form.Footer
-          description='Volver al inicio'
-          textLink='Inicio'
+          description=''
+          textLink='Volver a inicio de sesión'
           link='/auth/login'
         />
       </Form>

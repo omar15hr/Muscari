@@ -61,7 +61,7 @@ export const AddToCart = ({ product }: Props) => {
       <QuantitySelector quantity={quantity} onQuantityChanged={setQuantity} />
 
       {/* Button */}
-      <button onClick={addToCart} className="btn-primary my-5">
+      <button onClick={addToCart} className="flex w-30 justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 my-5">
         Agregar al carrito
       </button>
     </>
