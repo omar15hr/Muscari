@@ -29,13 +29,14 @@ export const TopMenu = () => {
         <span>
           <img src="logo/muscari-logo.jpg" className={styles.logo} alt="muscari-logo" />
         </span>
-        <span className={`${titleFont.className} antialiased font-bold`}>Muscari</span>
-        <span> | Clothing</span>
+        <span className={`${titleFont.className} antialiased font-bold hidden sm:inline-block`}>Muscari</span>
+        <span className=" hidden sm:block" > | Clothing</span>
+        <span className=" block sm:hidden"> <span className={`${titleFont.className} block antialiased font-bold `}>Muscari</span>| Clothing</span>
       </Link>
 
 
       {/* Center Menu */}
-      <div className="hidden sm:block">
+      <div className=" hidden md:block">
         <Link
           className="m-2 p-2 rounded-md transition-all hover:bg-gray-100"
           href="/gender/men"
