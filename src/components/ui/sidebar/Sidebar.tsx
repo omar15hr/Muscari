@@ -13,6 +13,7 @@ import {
   IoShirtOutline,
   IoTicketOutline,
   IoMailOutline,
+  IoHeartOutline,
 } from "react-icons/io5";
 
 import { useUIStore } from "@/store";
@@ -77,6 +78,15 @@ export const Sidebar = () => {
             >
               <IoPersonOutline size={20} />
               <span className="ml-3 text-l">Perfil</span>
+            </Link>
+
+            <Link
+              href="/favorites"
+              onClick={() => closeMenu()}
+              className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+            >
+              <IoHeartOutline size={20} />
+              <span className="ml-3 text-l">Favoritos</span>
             </Link>
 
             <Link

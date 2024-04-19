@@ -5,6 +5,7 @@ import { useState } from "react";
 import { QuantitySelector, SizeSelector } from "@/components";
 import type { CartProduct, Product, Size } from "@/interfaces";
 import { useCartStore } from '@/store';
+import { IoCartOutline, IoHeartOutline } from "react-icons/io5";
 
 interface Props {
   product: Product;
@@ -60,10 +61,11 @@ export const AddToCart = ({ product }: Props) => {
       {/* Selector de Cantidad */}
       <QuantitySelector quantity={quantity} onQuantityChanged={setQuantity} />
 
-      {/* Button */}
+      {/* Button para carrito */}
       <button onClick={addToCart} className="flex w-30 justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 my-5">
-        Agregar al carrito
+      <IoCartOutline size={20}/> <span className="mx-2">Agregar al carrito</span>
       </button>
+
     </>
   );
 };

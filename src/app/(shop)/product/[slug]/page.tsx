@@ -13,6 +13,7 @@ import {
 } from "@/components";
 import { getProductBySlug } from "@/actions";
 import { AddToCart } from './ui/AddToCart';
+import { AddToFavorite } from "./ui/AddToFavorite";
 
 interface Props {
   params: {
@@ -83,6 +84,7 @@ export default async function ProductBySlugPage({ params }: Props) {
         <p className="text-lg mb-5">${product.price}</p>
 
         <AddToCart product={ product } />
+        <AddToFavorite product={ product } />
 
         {/* Descripción */}
         <h3 className="font-bold text-sm">Descripción</h3>

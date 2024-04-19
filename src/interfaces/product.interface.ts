@@ -22,6 +22,13 @@ export interface CartProduct {
   image: string;
 }
 
+export interface FavoriteProduct {
+  id: string;
+  slug: string;
+  title: string;
+  image: string;
+}
+
 
 export interface ProductImage {
   id: number;
