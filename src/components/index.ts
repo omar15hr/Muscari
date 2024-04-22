@@ -21,9 +21,21 @@ export * from './product/quantity-selector/QuantitySelector';
 export * from './product/size-selector/SizeSelector';
 export * from './product/stock-label/StockLabel';
 
+
+export * from './tabs-sizes/TabsDefault';
+export * from './tabs-sizes/TabsLongTee';
+export * from './tabs-sizes/TabsHoodie';
+export * from './tabs-sizes/TabsSweatshirt';
+export * from './tabs-sizes/TabsOnesie';
+
+export * from './table-sizes/CmTable';
+export * from './table-sizes/InTable';
+
 export * from './ui/footer/Footer';
 export * from './ui/not-found/PageNotFound';
 export * from './ui/pagination/Pagination'
 export * from './ui/sidebar/Sidebar';
 export * from './ui/title/Title';
 export * from './ui/top-menu/TopMenu';
+
+

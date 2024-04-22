@@ -56,7 +56,7 @@ export const ProductGridKids = ({ products }: Props) => {
     <div className='grid grid-col'>
       <section className={styles.filters} >
 
-        <div className='mb-10'>
+        <div className='mb-10 mx-5'>
           <label htmlFor="price">Precio a partir de:</label>
           <input
             type='range'
@@ -69,12 +69,12 @@ export const ProductGridKids = ({ products }: Props) => {
           <span>${filters.minPrice}</span>
         </div>
 
-        <div className='mb-10'>
+        <div className='mb-10 mr-5'>
           <select id="filters-title" className='btn btn-secondary dropdown-toggle' onChange={handleChangeTitle} >
             <option value="all">Todos</option>
-            <option value="Polera">Polera</option>
-            <option value="Bodie">Bodies</option>
-            <option value="Chaqueta">Chaqueta</option>
+            <option value="Tee">Polera</option>
+            <option value="Onesie">Bodies</option>
+            <option value="Jacket">Chaqueta</option>
           </select>
 
         </div>

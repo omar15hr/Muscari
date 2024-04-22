@@ -7,9 +7,12 @@ import { titleFont } from "@/config/fonts";
 import {
   ProductMobileSlideshow,
   ProductSlideshow,
-  QuantitySelector,
-  SizeSelector,
   StockLabel,
+  TabsDefault,
+  TabsHoodie,
+  TabsLongTee,
+  TabsOnesie,
+  TabsSweatshirt,
 } from "@/components";
 import { getProductBySlug } from "@/actions";
 import { AddToCart } from './ui/AddToCart';
@@ -41,7 +44,7 @@ export async function generateMetadata(
       title: product?.title ?? "Producto no encontrado",
       description: product?.description ?? "",
       // images: [], // https://misitioweb.com/products/image.png
-      images: [ `/products/${ product?.images[1] }`],
+      images: [`/products/${product?.images[1]}`],
     },
   };
 }
@@ -83,12 +86,59 @@ export default async function ProductBySlugPage({ params }: Props) {
 
         <p className="text-lg mb-5">${product.price}</p>
 
-        <AddToCart product={ product } />
-        <AddToFavorite product={ product } />
+        <AddToCart product={product} />
+        <AddToFavorite product={product} />
 
         {/* Descripción */}
         <h3 className="font-bold text-sm">Descripción</h3>
         <p className="font-light">{product.description}</p>
+
+        {
+          // GUIA DE TALLAS PARA HOMBRES
+          !product.title.includes('Long')
+            && !product.title.includes('Hoodie')
+            && !product.title.includes('Sweatshirt')
+            && product.gender === 'men'
+            ? <TabsDefault />
+            : product.title.includes('Long') && product.gender === 'men'
+              ? <TabsLongTee />
+              : product.title.includes('Hoodie') && product.gender === 'men'
+                ? <TabsHoodie />
+                : product.title.includes('Sweatshirt') && product.gender === 'men'
+                  ? <TabsSweatshirt />
+
+
+
+                  // GUIA DE TALLAS PARA MUJERES
+                  : !product.title.includes('Long')
+                    && !product.title.includes('Jacket')
+                    && !product.title.includes('Sweatshirt')
+                    && product.gender === 'women'
+                    ? <TabsDefault />
+                    : product.title.includes('Long') && product.gender === 'women'
+                      ? <TabsLongTee />
+                      : product.title.includes('Jacket') && product.gender === 'women'
+                        ? <TabsHoodie />
+                        : product.title.includes('Sweatshirt') && product.gender === 'women'
+                          ? <TabsSweatshirt />
+
+
+
+                          // GUIA DE TALLAS PARA NIÑOS
+                          : !product.title.includes('Long')
+                          && !product.title.includes('Jacket')
+                          && !product.title.includes('Onesie')
+                          && product.gender === 'kid'
+                          ? <TabsDefault />
+                          : product.title.includes('Long') && product.gender === 'kid'
+                            ? <TabsLongTee />
+                            : product.title.includes('Jacket') && product.gender === 'kid'
+                              ? <TabsHoodie />
+                              : product.title.includes('Onesie') && product.gender === 'kid'
+                                ? <TabsOnesie />
+                                : ''
+        }
+
       </div>
     </div>
   );

@@ -374,7 +374,7 @@ export const initialData: SeedData = {
       type: 'hoodies',
       tags: [ 'hoodie' ],
       title: "Chill Pullover Hoodie",
-      gender: 'unisex'
+      gender: 'men'
     },
     {
       description: "Introducing the Tesla Chill Collection. The Men's Chill Full Zip Hoodie has a premium, heavyweight exterior and soft fleece interior for comfort in any season. The hoodie features subtle thermoplastic polyurethane Tesla logos on the left chest and sleeve, a double layer single seam hood and pockets with custom matte zipper pulls. Made from 60% cotton and 40% recycled polyester.",
@@ -434,7 +434,7 @@ export const initialData: SeedData = {
       type: 'hoodies',
       tags: [ 'hoodie' ],
       title: "3D Large Wordmark Pullover Hoodie",
-      gender: 'unisex'
+      gender: 'men'
     },
     {
       description: "As with the iconic Tesla logo, the Cybertruck Graffiti Hoodie is a classic in the making. Unisex style featuring soft fleece and an adjustable, jersey-lined hood for comfortable coverage.",
@@ -449,7 +449,7 @@ export const initialData: SeedData = {
       type: 'hoodies',
       tags: [ 'hoodie' ],
       title: "Cybertruck Graffiti Hoodie",
-      gender: 'unisex'
+      gender: 'men'
     },
     {
       description: "The Relaxed T Logo Hat is a classic silhouette combined with modern details, featuring a 3D T logo and a custom metal buckle closure. The ultrasoft design is flexible and abrasion resistant, while the inner sweatband includes quilted padding for extra comfort and moisture wicking. The visor is fully made from recycled plastic bottles. 100% Cotton.",
@@ -464,7 +464,7 @@ export const initialData: SeedData = {
       type: 'hats',
       tags: [ 'hats' ],
       title: "Relaxed T Logo Hat",
-      gender: 'unisex'
+      gender: 'men'
     },
     {
       description: "The Relaxed T Logo Hat is a classic silhouette combined with modern details, featuring a 3D T logo and a custom metal buckle closure. The ultrasoft design is flexible and abrasion resistant, while the inner sweatband includes quilted padding for extra comfort and moisture wicking. The visor is fully made from recycled plastic bottles. 100% Cotton.",
@@ -479,7 +479,7 @@ export const initialData: SeedData = {
       type: 'hats',
       tags: [ 'hats' ],
       title: "Thermal Cuffed Beanie",
-      gender: 'unisex'
+      gender: 'men'
     },
     {
       description: "The Women's Cropped Puffer Jacket features a uniquely cropped silhouette for the perfect, modern style while on the go during the cozy season ahead. The puffer features subtle silicone injected Tesla logos below the back collar and on the right sleeve, custom matte metal zipper pulls and a soft, fleece lined collar. Made from 87% nylon and 13% polyurethane.",
