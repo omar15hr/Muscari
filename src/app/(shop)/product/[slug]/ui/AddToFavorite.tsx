@@ -23,8 +23,8 @@ export const AddToFavorite = ({ product }: Props) => {
   const [quantity, setQuantity] = useState<number>(1);
   const [posted, setPosted] = useState(false);
 
-  let prueba = productsInFavorites.filter((favorite) => favorite.id === product.id);
-  let prueba2 = prueba[0];
+  let selectProductInFavorite = productsInFavorites.filter((favorite) => favorite.id === product.id);
+  let uniqueProductInFavorite = selectProductInFavorite[0];
 
   useEffect(() => {
     setIsFavorite(!isFavorite);
@@ -82,7 +82,7 @@ export const AddToFavorite = ({ product }: Props) => {
   return (
     <>
       {
-        productsInFavorites.includes(prueba2)
+        productsInFavorites.includes(uniqueProductInFavorite)
           ? <button onClick={removeToFavorite} className="flex w-30 justify-center rounded-md bg-red-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 my-5">
           <IoHeartSharp size={20} /> <span className="mx-2">Quitar de favoritos</span>
         </button>
