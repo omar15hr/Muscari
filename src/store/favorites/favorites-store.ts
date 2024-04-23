@@ -3,7 +3,7 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 interface State {
-  favorite: FavoriteProduct[]; 
+  favorite: FavoriteProduct[];
 
   getTotalItems: () => number;
   addProductToFavorites: (product: FavoriteProduct) => void;

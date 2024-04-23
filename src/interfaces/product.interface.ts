@@ -26,6 +26,8 @@ export interface FavoriteProduct {
   id: string;
   slug: string;
   title: string;
+  price: number;
+  quantity: number;
   image: string;
 }
 
@@ -37,6 +39,6 @@ export interface ProductImage {
 }
 
 
-type Category = 'men'|'women'|'kid'|'unisex';
-export type Size = 'XS'|'S'|'M'|'L'|'XL'|'XXL'|'XXXL';
-export type Type = 'shirts'|'pants'|'hoodies'|'hats';
+type Category = 'men' | 'women' | 'kid' | 'unisex';
+export type Size = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | 'XXXL';
+export type Type = 'shirts' | 'pants' | 'hoodies' | 'hats';

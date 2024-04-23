@@ -1,8 +1,8 @@
 export const revalidate = 604800; //7 días
+
+
 import { Metadata, ResolvingMetadata } from "next";
-
 import { notFound } from "next/navigation";
-
 import { titleFont } from "@/config/fonts";
 import {
   ProductMobileSlideshow,
@@ -18,11 +18,14 @@ import { getProductBySlug } from "@/actions";
 import { AddToCart } from './ui/AddToCart';
 import { AddToFavorite } from "./ui/AddToFavorite";
 
+
+
 interface Props {
   params: {
     slug: string;
   };
 }
+
 
 export async function generateMetadata(
   { params }: Props,
@@ -50,12 +53,17 @@ export async function generateMetadata(
 }
 
 export default async function ProductBySlugPage({ params }: Props) {
+
+
   const { slug } = params;
   const product = await getProductBySlug(slug);
 
+
   if (!product) {
     notFound();
-  }
+  };
+
+
 
   return (
     <div className="mt-5 mb-20 grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -126,17 +134,17 @@ export default async function ProductBySlugPage({ params }: Props) {
 
                           // GUIA DE TALLAS PARA NIÑOS
                           : !product.title.includes('Long')
-                          && !product.title.includes('Jacket')
-                          && !product.title.includes('Onesie')
-                          && product.gender === 'kid'
-                          ? <TabsDefault />
-                          : product.title.includes('Long') && product.gender === 'kid'
-                            ? <TabsLongTee />
-                            : product.title.includes('Jacket') && product.gender === 'kid'
-                              ? <TabsHoodie />
-                              : product.title.includes('Onesie') && product.gender === 'kid'
-                                ? <TabsOnesie />
-                                : ''
+                            && !product.title.includes('Jacket')
+                            && !product.title.includes('Onesie')
+                            && product.gender === 'kid'
+                            ? <TabsDefault />
+                            : product.title.includes('Long') && product.gender === 'kid'
+                              ? <TabsLongTee />
+                              : product.title.includes('Jacket') && product.gender === 'kid'
+                                ? <TabsHoodie />
+                                : product.title.includes('Onesie') && product.gender === 'kid'
+                                  ? <TabsOnesie />
+                                  : ''
         }
 
       </div>
