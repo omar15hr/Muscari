@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 
 import Link from "next/link";
+import Image from "next/image";
 import { IoMailOutline ,IoCartOutline } from "react-icons/io5";
 
 import { titleFont } from "@/config/fonts";
@@ -27,7 +28,7 @@ export const TopMenu = () => {
       {/* Logo */}
       <Link href="/" className={styles.logoContainer}>
         <span>
-          <img src="/logo/muscari-logo.jpg" className={styles.logo} alt="muscari-logo" />
+          <Image src="/logo/muscari-logo.jpg" className={styles.logo} alt="muscari-logo" />
         </span>
         <span className={`${titleFont.className} antialiased font-bold hidden sm:inline-block`}>Muscari</span>
         <span className=" hidden sm:block" > | Clothing</span>

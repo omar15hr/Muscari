@@ -1,3 +1,7 @@
+import Image from "next/image";
+
+
+
 const features = [
   { name: 'Origin', description: 'Diseñado por Good Goods, Inc.' },
   { name: 'Material', description: 'Base de nogal macizo con imanes de tierras raras y cubierta de tarjeta de acero con recubrimiento en polvo' },
@@ -13,22 +17,22 @@ export default function ProductFeatures() {
       <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-10 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
 
         <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-          <img
+          <Image
             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
             alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
             className="rounded-lg bg-gray-100 shadow-md"
           />
-          <img
+          <Image
             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
             alt="Top down view of walnut card tray with embedded magnets and card groove."
             className="rounded-lg bg-gray-100 shadow-md"
           />
-          <img
+          <Image
             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
             alt="Side of walnut card tray with card groove and recessed card area."
             className="rounded-lg bg-gray-100 shadow-md"
           />
-          <img
+          <Image
             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
             alt="Walnut card tray filled with cards and card angled in dedicated groove."
             className="rounded-lg bg-gray-100 shadow-md"

@@ -1,6 +1,6 @@
 'use client'
 
-import { Footer, Input, SubmitButton, Select } from './components';
+import { Footer, Input, SubmitButton } from './components';
 import { createContext, useState } from 'react';
 
 type FormValues = Record<string, string>
