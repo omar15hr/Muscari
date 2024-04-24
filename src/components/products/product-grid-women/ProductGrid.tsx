@@ -62,6 +62,7 @@ export const ProductGridWomen = ({ products }: Props) => {
             type='range'
             id='filters-price'
             min='0'
+            defaultValue={0}
             max='300'
             className="bg-gray-300"
             onChange={handleChangeMinPrice}
@@ -82,7 +83,7 @@ export const ProductGridWomen = ({ products }: Props) => {
       </section>
 
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 mb-10">
+      <div className="grid grid-cols-3 sm:grid-cols-5 gap-10 mb-10">
         {
           filteredProducts.map(product => (
             <ProductGridItem

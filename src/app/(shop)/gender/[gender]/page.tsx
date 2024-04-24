@@ -41,7 +41,6 @@ export default async function GenderByPage({ params, searchParams }: Props) {
     'men': 'para hombres',
     'women': 'para mujeres',
     'kid': 'para niños',
-    'unisex': 'para todos'
   }
 
   // if ( id === 'kids' ) {
@@ -64,9 +63,9 @@ export default async function GenderByPage({ params, searchParams }: Props) {
         ? <ProductGrid products={ products }/>
         : <ProductGridKids products={ products }/>
       }
+{/* 
+      <Pagination totalPages={ totalPages }  /> */}
 
-      {/* <Pagination totalPages={ totalPages }  /> */}
-      
     </>
   );
 }

@@ -39,6 +39,8 @@ export const ProductGrid = ({ products }: Props) => {
   const handleChangeMinPrice = (event: any) => {
     setMinPrice(event.target.value);
 
+    console.log(products)
+
     setFilters((prevState: any) => ({
       ...prevState,
       minPrice: event.target.value
@@ -61,6 +63,7 @@ export const ProductGrid = ({ products }: Props) => {
           <input
             type='range'
             id='filters-price'
+            defaultValue={0}
             min='0'
             max='300'
             className="bg-gray-300"
@@ -76,14 +79,14 @@ export const ProductGrid = ({ products }: Props) => {
             <option value="Hoodie">Poleron</option>
             <option value="Sweatshirt">Sweater</option>
             <option value="Jacket">Chaqueta</option>
-            <option value="Jockey">Jockey</option>
+            <option value="Hat">Jockey</option>
           </select>
 
         </div>
       </section>
 
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 mb-10">
+      <div className="grid grid-cols-3 sm:grid-cols-5 gap-10 mb-10">
         {
           filteredProducts.map(product => (
             <ProductGridItem

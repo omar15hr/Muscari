@@ -12,7 +12,7 @@ export default async function ProfilePage() {
 
   return (
     <div>
-      <Title title="Perfil" />
+      <Title title="Perfil" className="mx-5" />
 
       <div className="mx-auto right-0 mt-2 w-60 mb-10">
         <div className="bg-white rounded overflow-hidden shadow-lg">
