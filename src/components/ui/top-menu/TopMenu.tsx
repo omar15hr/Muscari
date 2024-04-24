@@ -28,7 +28,7 @@ export const TopMenu = () => {
       {/* Logo */}
       <Link href="/" className={styles.logoContainer}>
         <span>
-          <Image src="/logo/muscari-logo.jpg" className={styles.logo} alt="muscari-logo" />
+          <Image src="/logo/muscari-logo.jpg" width={400} height={400} className={styles.logo} alt="muscari-logo" />
         </span>
         <span className={`${titleFont.className} antialiased font-bold hidden sm:inline-block`}>Muscari</span>
         <span className=" hidden sm:block" > | Clothing</span>

@@ -44,7 +44,7 @@ export default function SocialMedia() {
           {people.map((person) => (
             <li key={person.name}>
               <div className="flex items-center gap-x-6">
-                <Image className="h-16 w-16 rounded-full" src={person.imageUrl} alt="" />
+                <Image className="h-16 w-16 rounded-full" width={40} height={40} src={person.imageUrl} alt="" />
                 <div>
                   <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
                   <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>

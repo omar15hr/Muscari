@@ -27,6 +27,8 @@ export const placeOrder = async (
     };
   }
 
+  // console.log({ productIds, address, userId })
+
   // Obtener la información de los productos
   // Nota: recuerden que podemos llevar 2+ productos con el mismo ID
   const products = await prisma.product.findMany({
@@ -94,6 +96,9 @@ export const placeOrder = async (
         }
       });
 
+
+
+
       // 2. Crear la orden - Encabezado - Detalles
       const order = await tx.order.create({
         data: {
@@ -120,6 +125,11 @@ export const placeOrder = async (
 
       // Validar, si el price es cero, entonces, lanzar un error
 
+
+
+
+
+    
       // 3. Crear la direccion de la orden
       // Address
       const { country, ...restAddress } = address;
@@ -132,7 +142,7 @@ export const placeOrder = async (
       });
 
       return {
-        updatedProducts: updatedProducts,
+        updatedProducts: [],
         order: order,
         orderAddress: orderAddress,
       };
@@ -149,7 +159,7 @@ export const placeOrder = async (
   } catch (error: any) {
     return {
       ok: false,
-      message: error?.message,
+      message: error?.message
     };
   }
 };

@@ -62,10 +62,10 @@ export const AddressForm = ({ countries, userStoredAddress = {} }: Props) => {
 
   const onSubmit = async( data: FormInputs ) => {
     
-
     const { rememberAddress, ...restAddress } = data;
 
     setAddress(restAddress);
+    console.log(restAddress)
 
     if ( rememberAddress ) {
       await setUserAddress(restAddress, session!.user.id );
@@ -74,8 +74,7 @@ export const AddressForm = ({ countries, userStoredAddress = {} }: Props) => {
     }
 
     router.push('/checkout');
-
-  }
+  };
 
 
 

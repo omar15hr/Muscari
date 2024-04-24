@@ -73,7 +73,7 @@ export function TabsDefault() {
                     <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Mida desde donde la costura del hombro se une al cuello hasta el dobladillo.</dd>
                   </div>
                   <div className="flex justify-center">
-                    <Image src="/imgs/imagen-guia-talla.jpg" className="w-[200px] h-[280px]" alt="imagen-guia-talla" />
+                    <Image src="/imgs/imagen-guia-talla.jpg" width={400} height={400} className="w-[200px] h-[280px]" alt="imagen-guia-talla" />
                   </div>
                 </dl>
               </div>

@@ -1,8 +1,9 @@
 "use client";
 
+
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
-import clsx from 'clsx'; 
+import clsx from 'clsx';
 
 import { placeOrder } from '@/actions';
 import { useAddressStore, useCartStore } from "@/store";
@@ -41,20 +42,24 @@ export const PlaceOrder = () => {
     }))
 
 
+    console.log({address, productsToOrder})
+
+
     //! Server Action
     const resp = await placeOrder( productsToOrder, address);
+
+    console.log({resp})
+
     if ( !resp.ok ) {
       setIsPlacingOrder(false);
       setErrorMessage(resp.message);
       return;
-    }
+    };
 
     //* Todo salio bien!
     clearCart();
     router.replace('/orders/' + resp.order?.id );
-
-
-  }
+  };
 
 
 
@@ -125,8 +130,8 @@ export const PlaceOrder = () => {
           onClick={ onPlaceOrder }
           className={
             clsx({
-              'flex w-30 justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 my-5': !isPlacingOrder,
-              'flex w-30 justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600 my-5': isPlacingOrder
+              'flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600': !isPlacingOrder,
+              'flex w-full justify-center rounded-md bg-gray-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600': isPlacingOrder
             })
           }
         >

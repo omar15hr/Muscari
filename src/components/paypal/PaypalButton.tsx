@@ -16,7 +16,7 @@ export const PayPalButton = ({ orderId, amount }: Props) => {
 
   const [{ isPending }] = usePayPalScriptReducer();
 
-  const rountedAmount = (Math.round(amount * 100)) / 100; //123.23
+  // const rountedAmount = (Math.round(amount * 100)) / 100; //123.23
 
 
   if ( isPending ) {
@@ -36,12 +36,13 @@ export const PayPalButton = ({ orderId, amount }: Props) => {
         {
           invoice_id: orderId,
           amount: {
-            value: `${ rountedAmount }`,
+            value: '100.00',
           }
 
         }
       ]
     });
+    console.log({transactionId})
 
     const { ok } = await setTransactionId( orderId, transactionId );
     if ( !ok ) {
@@ -64,11 +65,9 @@ export const PayPalButton = ({ orderId, amount }: Props) => {
 
 
   return (
-    <div className="relative z-0">
-      <PayPalButtons 
-        createOrder={ createOrder }
-        onApprove={ onApprove }
-      />
-    </div>
+    <PayPalButtons 
+      createOrder={ createOrder }
+      onApprove={ onApprove }
+    />
   )
 }

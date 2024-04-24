@@ -31,6 +31,8 @@ const createOrReplaceAddress = async (address: Address, userId: string) => {
       where: { userId },
     });
 
+    
+
     const addressToSave = {
       userId: userId,
       address: address.address,
