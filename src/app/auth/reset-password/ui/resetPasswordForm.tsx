@@ -3,6 +3,7 @@
 import { Form } from '@/components/form';
 import { useAuthFetch } from '@/hooks/useAuthFetch';
 import { useLoading } from '@/hooks/useLoading';
+import { Toaster, toast } from 'sonner';
 
 export default function ResetPasswordForm() {
 
@@ -17,6 +18,10 @@ export default function ResetPasswordForm() {
       formData
     });
     finishLoading();
+    
+    if (formData) {
+      toast.success('Correo enviado exitosamente');
+    }
   }
 
   return (
@@ -43,6 +48,7 @@ export default function ResetPasswordForm() {
           link='/auth/login'
         />
       </Form>
+      <Toaster />
     </>
   )
 }

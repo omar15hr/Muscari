@@ -4,6 +4,9 @@ import { Title } from "@/components";
 import { ProductsInCart } from "./ui/ProductsInCart";
 import { PlaceOrder } from './ui/PlaceOrder';
 
+
+
+
 export default function CheckoutPage() {
   return (
     <div className="flex justify-center items-center mb-72 px-10 sm:px-0">

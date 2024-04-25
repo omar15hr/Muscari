@@ -8,6 +8,7 @@ import clsx from 'clsx';
 import { placeOrder } from '@/actions';
 import { useAddressStore, useCartStore } from "@/store";
 import { currencyFormat } from '@/utils';
+import { Toaster, toast } from 'sonner';
 
 export const PlaceOrder = () => {
 
@@ -53,6 +54,7 @@ export const PlaceOrder = () => {
     if ( !resp.ok ) {
       setIsPlacingOrder(false);
       setErrorMessage(resp.message);
+      toast.error(resp.message);
       return;
     };
 
@@ -123,7 +125,7 @@ export const PlaceOrder = () => {
         </p>
 
 
-        <p className="text-red-500">{ errorMessage }</p>
+        <Toaster />
 
         <button
           // href="/orders/123"

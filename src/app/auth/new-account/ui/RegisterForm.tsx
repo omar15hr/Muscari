@@ -6,6 +6,8 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 
 import { login, registerUser } from '@/actions';
 import { useState } from 'react';
+import { Toaster, toast } from 'sonner';
+
 
 
 type FormInputs = {
@@ -21,6 +23,9 @@ export const RegisterForm = () => {
   const [errorMessage, setErrorMessage] = useState('')
   const { register, handleSubmit, formState: {errors} } = useForm<FormInputs>();
 
+
+
+
   const onSubmit: SubmitHandler<FormInputs> = async(data) => {
     setErrorMessage('');
     const { name, email, password } = data;
@@ -30,14 +35,15 @@ export const RegisterForm = () => {
 
     if ( !resp.ok ) {
       setErrorMessage( resp.message );
+      toast.error('No se pudo crear el usuario');
       return;
+    } else {
+      toast.success('Cuenta creada exitosamente');
     }
 
     await login( email.toLowerCase(), password );
     window.location.replace('/');
-
-
-  }
+  };
 
 
   return (
@@ -92,9 +98,6 @@ export const RegisterForm = () => {
         type="password"
         { ...register('password', { required: true, minLength: 6 }) }
       />
-
-      
-        <span className="text-red-500">{ errorMessage } </span>
         
       
 
@@ -110,6 +113,8 @@ export const RegisterForm = () => {
       <Link href="/auth/login" className="flex w-full justify-center rounded-md bg-gray-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600">
         Volver a inicio de sesión
       </Link>
+
+      <Toaster />
     </form>
   );
 };

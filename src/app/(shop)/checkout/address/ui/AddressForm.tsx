@@ -65,7 +65,6 @@ export const AddressForm = ({ countries, userStoredAddress = {} }: Props) => {
     const { rememberAddress, ...restAddress } = data;
 
     setAddress(restAddress);
-    console.log(restAddress)
 
     if ( rememberAddress ) {
       await setUserAddress(restAddress, session!.user.id );
@@ -173,6 +172,7 @@ export const AddressForm = ({ countries, userStoredAddress = {} }: Props) => {
         >
           Siguiente
         </button>
+        
       </div>
     </form>
   );

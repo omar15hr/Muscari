@@ -5,7 +5,9 @@ import { useState } from "react";
 import { QuantitySelector, SizeSelector } from "@/components";
 import type { CartProduct, Product, Size } from "@/interfaces";
 import { useCartStore } from '@/store';
-import { IoCartOutline, IoHeartOutline } from "react-icons/io5";
+import { IoCartOutline } from "react-icons/io5";
+import { Toaster, toast } from 'sonner';
+
 
 interface Props {
   product: Product;
@@ -46,8 +48,8 @@ export const AddToCart = ({ product }: Props) => {
   return (
     <>
       {posted && !size && (
-        <span className="mt-2 text-red-500 fade-in">
-          Debe de seleccionar una talla*
+        <span className="mt-2 font-bold text-xl text-red-500 fade-in">
+          Debe de seleccionar una talla
         </span>
       )}
 

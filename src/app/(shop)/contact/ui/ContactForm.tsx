@@ -6,6 +6,8 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { userSchema, mappedPlans } from "../validations/userSchema";
 import { useAuthFetch } from "@/hooks/useAuthFetch";
+import { Toaster, toast } from 'sonner';
+
 
 
 type Inputs = {
@@ -44,6 +46,10 @@ export default function ContactForm() {
       formData
     });
 
+    if(formData) {
+      toast.success('Ticket de contacto enviado exitosamente');
+    }
+
   };
 
 
@@ -74,9 +80,9 @@ export default function ContactForm() {
                     type="text"
                     id="name"
                     {...register("name")}
-                    className="block w-80 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="block w-80 p-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
-                  {errors.name?.message && <p className="text-sm text-red-500">{errors.name?.message}</p>}
+                  {errors.name?.message && <p className="text-sm mt-2 text-red-500">{errors.name?.message}</p>}
                 </div>
               </div>
 
@@ -89,9 +95,9 @@ export default function ContactForm() {
                     type="text"
                     id="lastName"
                     {...register("lastName")}
-                    className="block w-80 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="block w-80 p-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
-                  {errors.lastName?.message && <p className="text-sm text-red-500">{errors.lastName?.message}</p>}
+                  {errors.lastName?.message && <p className="text-sm mt-2 text-red-500">{errors.lastName?.message}</p>}
                 </div>
               </div>
 
@@ -104,9 +110,9 @@ export default function ContactForm() {
                     id="email"
                     type="email"
                     {...register("email")}
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="block w-full p-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
-                  {errors.email?.message && <p className="text-sm text-red-500">{errors.email?.message}</p>}
+                  {errors.email?.message && <p className="text-sm mt-2 text-red-500">{errors.email?.message}</p>}
                 </div>
               </div>
 
@@ -118,11 +124,11 @@ export default function ContactForm() {
                   <select
                     id="contactReason"
                     {...register("contactReason")}
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                    className="block w-full p-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                   >
                     {contactReasons}
                   </select>
-                  {errors.contactReason?.message && <p className="text-sm text-red-500">{errors.contactReason?.message}</p>}
+                  {errors.contactReason?.message && <p className="text-sm mt-2 text-red-500">{errors.contactReason?.message}</p>}
                 </div>
               </div>
 
@@ -135,11 +141,11 @@ export default function ContactForm() {
                     id="comment"
                     rows={7}
                     maxLength={300}
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="block w-full p-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     defaultValue={''}
                     {...register("comment")}
                   />
-                  {errors.comment?.message && <p className="text-sm text-red-500">{errors.comment?.message}</p>}
+                  {errors.comment?.message && <p className="text-sm mt-2 text-red-500">{errors.comment?.message}</p>}
                 </div>
                 <p className="mt-3 text-sm leading-6 text-gray-600">Describe tu consulta.</p>
               </div>
@@ -157,6 +163,8 @@ export default function ContactForm() {
           </button>
         </div>
       </form>
+
+      <Toaster />
     </div>
   )
 }
