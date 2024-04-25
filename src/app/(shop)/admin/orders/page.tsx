@@ -6,7 +6,7 @@ import { Pagination, Title } from "@/components";
 
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { IoCardOutline, IoCheckmarkCircleSharp, IoCloseCircle } from "react-icons/io5";
+import { IoCardOutline } from "react-icons/io5";
 
 export default async function OrdersPage() {
   const { ok, orders = [] } = await getPaginatedOrders();
@@ -48,12 +48,6 @@ export default async function OrdersPage() {
               >
                 Opciones
               </th>
-              <th
-                scope="col"
-                className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
-              >
-                Estado de envio
-              </th>
             </tr>
           </thead>
           <tbody>
@@ -85,11 +79,6 @@ export default async function OrdersPage() {
                   <Link href={`/orders/${order.id}`} className="hover:underline">
                     Ver orden
                   </Link>
-                </td>
-                <td className="flex items-center text-sm  text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                  {/* <IoCloseCircle className="text-red-800" />
-                  <IoCheckmarkCircleSharp className="text-green-800" /> */}
-                  Pedido no enviado
                 </td>
               </tr>
             ))}
