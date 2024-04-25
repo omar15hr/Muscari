@@ -26,10 +26,10 @@ export const AddToFavorite = ({ product }: Props) => {
   let selectProductInFavorite = productsInFavorites.filter((favorite) => favorite.id === product.id);
   let uniqueProductInFavorite = selectProductInFavorite[0];
 
-  useEffect(() => {
-    setIsFavorite(!isFavorite);
+  // useEffect(() => {
+  //   setIsFavorite(!isFavorite);
   
-  }, [productsInFavorites])
+  // }, [productsInFavorites]);
 
 
   // Función para añadir el favorito
