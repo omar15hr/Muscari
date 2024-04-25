@@ -2,17 +2,13 @@
 
 
 import { signIn } from '@/auth.config';
-import { sleep } from '@/utils';
- 
-// ...
+
  
 export async function authenticate(
   prevState: string | undefined,
   formData: FormData,
 ) {
   try {
-
-    // await sleep(2);
     
     await signIn('credentials', {
       ...Object.fromEntries(formData),
@@ -26,8 +22,6 @@ export async function authenticate(
     console.log(error);
 
     return 'CredentialsSignin'
-
-
   }
 }
 
@@ -46,9 +40,6 @@ export const login = async(email:string, password: string) => {
       ok: false,
       message: 'No se pudo iniciar sesión'
     }
-    
   }
-
-
 }
 
