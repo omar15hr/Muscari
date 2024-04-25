@@ -7,7 +7,7 @@ import { Providers } from "@/components";
 export const metadata: Metadata = {
   title: {
     template: "%s - Muscari | Clothing",
-    default: "Home - Muscari | Clothing",
+    default: "Muscari | Clothing",
   },
   description: "Una tienda virtual de productos",
 };
