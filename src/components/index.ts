@@ -9,6 +9,8 @@ export * from './orders/OrderStatus';
 
 export * from './paypal/PaypalButton';
 
+export * from './dialog-size/DialogSize';
+
 
 export * from './providers/Providers';
 
@@ -23,10 +25,6 @@ export * from './product/stock-label/StockLabel';
 
 
 export * from './tabs-sizes/TabsDefault';
-export * from './tabs-sizes/TabsLongTee';
-export * from './tabs-sizes/TabsHoodie';
-export * from './tabs-sizes/TabsSweatshirt';
-export * from './tabs-sizes/TabsOnesie';
 
 export * from './table-sizes/CmTable';
 export * from './table-sizes/InTable';

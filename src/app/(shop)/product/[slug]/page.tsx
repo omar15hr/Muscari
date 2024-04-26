@@ -5,6 +5,7 @@ import { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
 import { titleFont } from "@/config/fonts";
 import {
+  DialogSize,
   ProductMobileSlideshow,
   ProductSlideshow,
   StockLabel,
@@ -101,52 +102,9 @@ export default async function ProductBySlugPage({ params }: Props) {
         <h3 className="font-bold text-sm">Descripción</h3>
         <p className="font-light">{product.description}</p>
 
-        {
-          // GUIA DE TALLAS PARA HOMBRES
-          !product.title.includes('Long')
-            && !product.title.includes('Hoodie')
-            && !product.title.includes('Sweatshirt')
-            && product.gender === 'men'
-            ? <TabsDefault />
-            : product.title.includes('Long') && product.gender === 'men'
-              ? <TabsLongTee />
-              : product.title.includes('Hoodie') && product.gender === 'men'
-                ? <TabsHoodie />
-                : product.title.includes('Sweatshirt') && product.gender === 'men'
-                  ? <TabsSweatshirt />
-
-
-
-                  // GUIA DE TALLAS PARA MUJERES
-                  : !product.title.includes('Long')
-                    && !product.title.includes('Jacket')
-                    && !product.title.includes('Sweatshirt')
-                    && product.gender === 'women'
-                    ? <TabsDefault />
-                    : product.title.includes('Long') && product.gender === 'women'
-                      ? <TabsLongTee />
-                      : product.title.includes('Jacket') && product.gender === 'women'
-                        ? <TabsHoodie />
-                        : product.title.includes('Sweatshirt') && product.gender === 'women'
-                          ? <TabsSweatshirt />
-
-
-
-                          // GUIA DE TALLAS PARA NIÑOS
-                          : !product.title.includes('Long')
-                            && !product.title.includes('Jacket')
-                            && !product.title.includes('Onesie')
-                            && product.gender === 'kid'
-                            ? <TabsDefault />
-                            : product.title.includes('Long') && product.gender === 'kid'
-                              ? <TabsLongTee />
-                              : product.title.includes('Jacket') && product.gender === 'kid'
-                                ? <TabsHoodie />
-                                : product.title.includes('Onesie') && product.gender === 'kid'
-                                  ? <TabsOnesie />
-                                  : ''
-        }
-
+        <div className="mt-5">
+          <DialogSize />
+        </div>
       </div>
     </div>
   );
