@@ -9,7 +9,7 @@ export * from './orders/OrderStatus';
 
 export * from './paypal/PaypalButton';
 
-export * from './dialog-size/DialogSize';
+export * from './dialog-size/DialogItem';
 
 
 export * from './providers/Providers';
@@ -22,12 +22,6 @@ export * from './product/product-image/ProductImage';
 export * from './product/quantity-selector/QuantitySelector';
 export * from './product/size-selector/SizeSelector';
 export * from './product/stock-label/StockLabel';
-
-
-export * from './tabs-sizes/TabsDefault';
-
-export * from './table-sizes/CmTable';
-export * from './table-sizes/InTable';
 
 export * from './ui/footer/Footer';
 export * from './ui/not-found/PageNotFound';

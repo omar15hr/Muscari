@@ -5,15 +5,10 @@ import { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
 import { titleFont } from "@/config/fonts";
 import {
-  DialogSize,
+  DialogItem,
   ProductMobileSlideshow,
   ProductSlideshow,
   StockLabel,
-  TabsDefault,
-  TabsHoodie,
-  TabsLongTee,
-  TabsOnesie,
-  TabsSweatshirt,
 } from "@/components";
 import { getProductBySlug } from "@/actions";
 import { AddToCart } from './ui/AddToCart';
@@ -103,7 +98,7 @@ export default async function ProductBySlugPage({ params }: Props) {
         <p className="font-light">{product.description}</p>
 
         <div className="mt-5">
-          <DialogSize />
+          <DialogItem />
         </div>
       </div>
     </div>
