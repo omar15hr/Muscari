@@ -1,4 +1,4 @@
-import { AU_inches, BR_inches, DE_inches, EU_inches, FR_inches, IT_inches, JP_inches, MX_inches, SG_inches, UK_inches, US_inches } from "../type-size/TypeOfSizeTableIn";
+import { AU_inches, BR_inches, DE_inches, EU_inches, FR_inches, IT_inches, JP_inches, MX_inches, SG_inches, UK_inches, US_inches } from "../../type-size/product/TypeOfSizeTableIn";
 
 
 

@@ -1,4 +1,4 @@
-import { AU, BR, DE, EU, FR, IT, JP, MX, SG, UK, US } from "../type-size/TypeOfSizeTableCm";
+import { AU, BR, DE, EU, FR, IT, JP, MX, SG, UK, US } from "../../type-size/product/TypeOfSizeTableCm";
 
 
 

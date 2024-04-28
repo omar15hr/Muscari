@@ -4,15 +4,18 @@ import React, { useState } from "react";
 import { DialogBody } from "@material-tailwind/react";
 import CountrySelect from "./components/selects/CountrySelect";
 import { Buttons } from "./components/Buttons";
-import { SizeTable } from "./components/tables/SizeTable";
+import { SizeTable } from "./components/tables/product/SizeTable";
 import UnitSelect from "./components/selects/UnitsSelect";
-import { SizeTableIn } from "./components/tables/SizeTableIn";
+import { SizeTableIn } from "./components/tables/product/SizeTableIn";
+import { SizeTableBody } from "./components/tables/body/SizeTableBody";
+import { SizeTableInBody } from "./components/tables/body/SizeTableInBody";
 
 
 export function DialogBodyItem() {
 
   const [country, setCountry] = useState('');
   const [unitsMeasurement, setUnitsMeasurement] = useState('');
+  const [typeOfMeasurement, setTypeOfMeasurement] = useState('');
 
   const countrySelected = (event: any) => {
     setCountry(event);
@@ -21,6 +24,11 @@ export function DialogBodyItem() {
   const unitsSelected = (event: any) => {
     setUnitsMeasurement(event);
   };
+
+  const typeOfMeasur = (event: any) => {
+    setTypeOfMeasurement(event);
+  };
+
 
   return (
     <>
@@ -36,11 +44,15 @@ export function DialogBodyItem() {
             <UnitSelect onUnitChange={unitsSelected} />
           </div>
 
-          <Buttons />
+          <Buttons onTypeOfMeasur={typeOfMeasur} />
           {
-            unitsMeasurement === 'CM'
-              ? <SizeTable countrySizes={country} />
-              : <SizeTableIn countrySizes={country} />
+            typeOfMeasurement === 'product'
+            ? (unitsMeasurement === 'IN'
+              ? <SizeTableIn countrySizes={country} />
+              : <SizeTable countrySizes={country} />)
+            : (unitsMeasurement === 'IN'
+              ? <SizeTableInBody countrySizes={country} />
+              : <SizeTableBody countrySizes={country} />)
           }
         </DialogBody>
     </>
