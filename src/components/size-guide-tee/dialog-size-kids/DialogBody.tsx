@@ -3,12 +3,13 @@
 import React, { useState } from "react";
 import { DialogBody } from "@material-tailwind/react";
 import CountrySelect from "./components/selects/CountrySelect";
-import { Buttons } from "./components/Buttons";
-import { SizeTable } from "./components/tables/product/SizeTable";
+import { ButtonsKids } from "./components/ButtonsKids";
+import { SizeTableKids } from "./components/tables/product/SizeTableKids";
 import UnitSelect from "./components/selects/UnitsSelect";
-import { SizeTableIn } from "./components/tables/product/SizeTableIn";
-import { SizeTableBody } from "./components/tables/body/SizeTableBody";
-import { SizeTableInBody } from "./components/tables/body/SizeTableInBody";
+import { SizeTableInKids } from "./components/tables/product/SizeTableInKids";
+import { SizeTableBodyKids } from "./components/tables/body/SizeTableBodyKids";
+import { SizeTableInBodyKids } from "./components/tables/body/SizeTableInBodyKids";
+import { Instructions } from "./components/InstructionsKids";
 
 
 export function DialogBodyItem() {
@@ -44,16 +45,18 @@ export function DialogBodyItem() {
             <UnitSelect onUnitChange={unitsSelected} />
           </div>
 
-          <Buttons onTypeOfMeasur={typeOfMeasur} />
+          <ButtonsKids onTypeOfMeasur={typeOfMeasur} />
           {
             typeOfMeasurement === 'product'
             ? (unitsMeasurement === 'IN'
-              ? <SizeTableIn countrySizes={country} />
-              : <SizeTable countrySizes={country} />)
+              ? <SizeTableInKids countrySizes={country} />
+              : <SizeTableKids countrySizes={country} />)
             : (unitsMeasurement === 'IN'
-              ? <SizeTableInBody countrySizes={country} />
-              : <SizeTableBody countrySizes={country} />)
+              ? <SizeTableInBodyKids countrySizes={country} />
+              : <SizeTableBodyKids countrySizes={country} />)
           }
+
+          <Instructions />
         </DialogBody>
     </>
   );

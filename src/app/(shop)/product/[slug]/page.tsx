@@ -13,6 +13,8 @@ import {
 import { getProductBySlug } from "@/actions";
 import { AddToCart } from './ui/AddToCart';
 import { AddToFavorite } from "./ui/AddToFavorite";
+import { DialogItemWomen } from "@/components/dialog-size-women/DialogItem";
+import { DialogItemKids } from "@/components/dialog-size-kids/DialogItem";
 
 
 
@@ -98,7 +100,15 @@ export default async function ProductBySlugPage({ params }: Props) {
         <p className="font-light">{product.description}</p>
 
         <div className="mt-5">
-          <DialogItem />
+          {
+            product.gender === 'men' && product.title.includes('Tee') && !product.title.includes('Long')
+            ? <DialogItem />
+            : product.gender === 'women' && product.title.includes('Tee') && !product.title.includes('Long')
+              ? <DialogItemWomen />
+              : product.gender === 'kid' && product.title.includes('Tee') && !product.title.includes('Long')
+                ? <DialogItemKids />
+                : ''
+          }
         </div>
       </div>
     </div>

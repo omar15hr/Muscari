@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 
-export function Buttons({onTypeOfMeasur}:any) {
-  const [boton1Activo, setBoton1Activo] = useState(true);
-  const [boton2Activo, setBoton2Activo] = useState(false);
+export function ButtonsKids({onTypeOfMeasur}:any) {
+  const [boton1Activo, setBoton1Activo] = useState(false);
+  const [boton2Activo, setBoton2Activo] = useState(true);
 
   const handleClickProduct = () => {
     onTypeOfMeasur('product');
@@ -24,13 +24,19 @@ export function Buttons({onTypeOfMeasur}:any) {
     <div className="flex flex-wrap gap-5 items-center justify-center mt-5">
       <button 
         onClick={handleClickProduct}
-        className={boton1Activo ? "bg-blue-500 rounded" : 'bg-blue-200 rounded'}
+        className={
+          boton1Activo 
+            ? "bg-blue-800 rounded p-3 text-white w-60" 
+            : 'bg-blue-200 rounded p-3 text-white w-60'}
       >
         Medidas del Producto
       </button>
       <button 
         onClick={handleClickBody}
-        className={boton2Activo ? "bg-red-500 rounded" : 'bg-red-200 rounded'}
+        className={
+          boton2Activo 
+            ? "bg-blue-800 rounded p-3 text-white w-60" 
+            : 'bg-blue-200 rounded p-3 text-white w-60'}
       >
         Medidas del Cuerpo
       </button>
