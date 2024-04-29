@@ -4,17 +4,12 @@ export const revalidate = 604800; //7 días
 import { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
 import { titleFont } from "@/config/fonts";
-import {
-  DialogItem,
-  ProductMobileSlideshow,
-  ProductSlideshow,
-  StockLabel,
-} from "@/components";
+import { ProductMobileSlideshow, ProductSlideshow, StockLabel } from "@/components";
 import { getProductBySlug } from "@/actions";
 import { AddToCart } from './ui/AddToCart';
 import { AddToFavorite } from "./ui/AddToFavorite";
-import { DialogItemWomen } from "@/components/dialog-size-women/DialogItem";
-import { DialogItemKids } from "@/components/dialog-size-kids/DialogItem";
+import { DialogItem, DialogItemWomen } from "@/components/size-guide-tee";
+import { DialogItemKids } from "@/components/size-guide-tee";
 
 
 

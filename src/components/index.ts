@@ -9,8 +9,6 @@ export * from './orders/OrderStatus';
 
 export * from './paypal/PaypalButton';
 
-export * from './dialog-size/DialogItem';
-
 
 export * from './providers/Providers';
 
