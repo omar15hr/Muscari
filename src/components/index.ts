@@ -6,6 +6,9 @@ export * from './products/product-grid-men/ProductGridItem';
 
 export * from './orders/OrderStatus';
 
+export * from './button-size/Buttons';
+
+export * from './instructions/Intructions';
 
 export * from './paypal/PaypalButton';
 

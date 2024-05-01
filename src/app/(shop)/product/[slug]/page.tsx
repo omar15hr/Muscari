@@ -8,8 +8,7 @@ import { ProductMobileSlideshow, ProductSlideshow, StockLabel } from "@/componen
 import { getProductBySlug } from "@/actions";
 import { AddToCart } from './ui/AddToCart';
 import { AddToFavorite } from "./ui/AddToFavorite";
-import { DialogItem, DialogItemWomen } from "@/components/size-guide-tee";
-import { DialogItemKids } from "@/components/size-guide-tee";
+import { DialogItem } from "@/components/dialog-size";
 
 
 
@@ -50,6 +49,7 @@ export default async function ProductBySlugPage({ params }: Props) {
 
   const { slug } = params;
   const product = await getProductBySlug(slug);
+  const dialogGender = product?.gender;
 
 
   if (!product) {
@@ -96,16 +96,20 @@ export default async function ProductBySlugPage({ params }: Props) {
 
         <div className="mt-5">
           {
+            // PRODUCTOS POLERAS MANGA CORTA
             product.gender === 'men' && product.title.includes('Tee') && !product.title.includes('Long')
-            ? <DialogItem />
-            : product.gender === 'women' && product.title.includes('Tee') && !product.title.includes('Long')
-              ? <DialogItemWomen />
-              : product.gender === 'kid' && product.title.includes('Tee') && !product.title.includes('Long')
-                ? <DialogItemKids />
-                : ''
+            ? <DialogItem dialogGender={dialogGender} />
+            : ''
           }
         </div>
       </div>
     </div>
   );
 }
+
+
+// product.gender === 'women' && product.title.includes('Tee') && !product.title.includes('Long')
+//               ? <DialogItemWomen />
+//               : product.gender === 'kid' && product.title.includes('Tee') && !product.title.includes('Long')
+//                 ? <DialogItemKids />
+//                 : ''
