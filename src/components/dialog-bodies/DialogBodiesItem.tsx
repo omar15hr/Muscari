@@ -8,7 +8,7 @@ import { titleFont } from "@/config/fonts";
 
 
 
-export function DialogItem({dialogGender}: any) {
+export function DialogBodiesItem({dialogGender}: any) {
 
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(!open);
@@ -67,7 +67,7 @@ export function DialogItem({dialogGender}: any) {
         >
           Guía de tallas
         </DialogHeader>
-       <DialogBodyItem dialogGender={dialogGender} />
+       <DialogBodyItem />
       </Dialog>
     </>
   );

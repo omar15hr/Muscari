@@ -1,5 +1,5 @@
 export * from './DialogBody';
-export * from './DialogItem';
+export * from './DialogOnesieItem';
 
 
 export * from '../selects/CountrySelect';

@@ -29,12 +29,12 @@ export default async function OrdersPage({ searchParams }: Props) {
 
       <div className="flex justify-end mb-5 mx-5">
         <Link href="/admin/product/new" className="flex w-50 justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-        <IoCardOutline />
+        <IoCardOutline className="mx-1 mt-1" />
           Nuevo Producto
         </Link>
       </div>
 
-      <div className="mb-10">
+      <div className="mt-10">
         <table className="min-w-full">
           <thead className="bg-gray-200 border-b">
             <tr>
@@ -105,7 +105,7 @@ export default async function OrdersPage({ searchParams }: Props) {
                 </td>
 
 
-                <td className="text-sm font-bold text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                   { currencyFormat( product.price )}
                 </td>
 
@@ -115,12 +115,12 @@ export default async function OrdersPage({ searchParams }: Props) {
                 </td>
 
 
-                <td className="text-sm font-bold text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                   { product.inStock }
                 </td>
 
 
-                <td className="text-sm font-bold text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                   { product.sizes.join(', ') }
                 </td>
                 

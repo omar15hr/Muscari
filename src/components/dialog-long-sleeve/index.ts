@@ -1,5 +1,5 @@
 export * from './DialogBody';
-export * from './DialogItem';
+export * from './DialogLongItem';
 
 
 export * from '../selects/CountrySelect';

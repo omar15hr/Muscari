@@ -6,15 +6,12 @@ import { Instructions } from "../instructions/Intructions";
 import CountrySelect from "../selects/CountrySelect";
 import React, { useState } from "react";
 import UnitSelect from "../selects/UnitsSelect";
-import { ProductTableMen } from "./tables/product/ProductTableMen";
-import { BodyTableMen } from "./tables/body/BodyTableMen";
-import { ProductTableWomen } from "./tables/product/ProductTableWomen";
-import { BodyTableWomen } from "./tables/body/BodyTableWomen";
-import { ProductTableKid } from "./tables/product/ProductTableKid";
-import { BodyTableKid } from "./tables/body/BodyTableKid";
+import { ProductTableMen, ProductTableKid, ProductTableWomen } from "./tables/product";
+import { BodyTableKid, BodyTableMen, BodyTableWomen } from './tables/body';
+import { InstructionsLongSleeve } from "../instructions/IntructionsLongSleeve";
 
 
-export function DialogBodyItem({ dialogGender }: any) {
+export function DialogBodyItem({dialogGender}: any) {
 
   const [country, setCountry] = useState('');
   const [unitsMeasurement, setUnitsMeasurement] = useState('');
@@ -35,22 +32,22 @@ export function DialogBodyItem({ dialogGender }: any) {
 
   return (
     <>
-      <DialogBody
-        className="h-[30rem] overflow-scroll"
-        placeholder={undefined}
-        onPointerEnterCapture={undefined}
-        onPointerLeaveCapture={undefined}
-      >
-        <div className="flex flex-wrap bg-gray-300 p-5 gap-5 items-center justify-center">
-          <h1 className="">Cambiar</h1>
-          <CountrySelect onCountryChange={countrySelected} />
-          <UnitSelect onUnitChange={unitsSelected} />
-        </div>
+        <DialogBody
+          className="h-[30rem] overflow-scroll"
+          placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
+        >
+          <div className="flex flex-wrap bg-gray-300 p-5 gap-5 items-center justify-center">
+            <h1 className="">Cambiar</h1>
+            <CountrySelect onCountryChange={countrySelected} />
+            <UnitSelect onUnitChange={unitsSelected} />
+          </div>
 
-        <Buttons onTypeOfMeasur={typeOfMeasur} />
+          <Buttons onTypeOfMeasur={typeOfMeasur} />
 
 
-        {
+          {
             dialogGender === 'men'
               ? (typeOfMeasurement === 'product'
                   ? <ProductTableMen countrySizes={country} unitsMeasurement={unitsMeasurement} />
@@ -65,8 +62,8 @@ export function DialogBodyItem({ dialogGender }: any) {
         }
 
 
-        <Instructions typeItem={typeOfMeasurement} />
-      </DialogBody>
+          <InstructionsLongSleeve typeItem={typeOfMeasurement} />
+        </DialogBody>
     </>
   );
 }

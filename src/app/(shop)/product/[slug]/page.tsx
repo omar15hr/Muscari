@@ -8,7 +8,9 @@ import { ProductMobileSlideshow, ProductSlideshow, StockLabel } from "@/componen
 import { getProductBySlug } from "@/actions";
 import { AddToCart } from './ui/AddToCart';
 import { AddToFavorite } from "./ui/AddToFavorite";
-import { DialogItem } from "@/components/dialog-size";
+import { DialogItem } from "@/components/dialog-short-sleeve";
+import { DialogLongItem } from "@/components/dialog-long-sleeve";
+import { DialogBodiesItem } from "@/components/dialog-bodies/DialogBodiesItem";
 
 
 
@@ -98,7 +100,45 @@ export default async function ProductBySlugPage({ params }: Props) {
           {
             // PRODUCTOS POLERAS MANGA CORTA
             product.gender === 'men' && product.title.includes('Tee') && !product.title.includes('Long')
-            ? <DialogItem dialogGender={dialogGender} />
+            ? <DialogItem dialogGender={'men'} />
+            : product.gender === 'women' && product.title.includes('Tee') && !product.title.includes('Long')
+            ? <DialogItem dialogGender={'women'} />
+            : product.gender === 'kid' && product.title.includes('Tee') && !product.title.includes('Long')
+            ? <DialogItem dialogGender={'kid'} />
+            
+            
+            // PRODUCTOS POLERAS MANGA LARGA, CHAQUETAS, HOODIE O SWEARTSHIRT
+            : product.gender === 'men' 
+              && product.title.includes('Tee') 
+              && product.title.includes('Long')
+              || product.title.includes('Hoodie')
+              || product.title.includes('Jacket')
+              || product.title.includes('Sweatshirt')
+
+            ? <DialogLongItem dialogGender={'men'} />
+            : product.gender === 'women' 
+              && product.title.includes('Tee') 
+              && product.title.includes('Long')
+              || product.title.includes('Hoodie')
+              || product.title.includes('Jacket')
+              || product.title.includes('Sweatshirt')
+
+
+            ? <DialogLongItem dialogGender={'women'} />
+            : product.gender === 'kid' 
+              && product.title.includes('Tee') 
+              && product.title.includes('Long')
+              || product.title.includes('Hoodie')
+              || product.title.includes('Jacket')
+              || product.title.includes('Sweatshirt')
+
+
+            ? <DialogLongItem dialogGender={'kid'} />
+            
+            
+            // PRODUCTOS BODIES PARA NIÑOS
+            : product.gender === 'kid' && product.title.includes('Onesie')
+            ? <DialogBodiesItem />
             : ''
           }
         </div>
@@ -106,10 +146,3 @@ export default async function ProductBySlugPage({ params }: Props) {
     </div>
   );
 }
-
-
-// product.gender === 'women' && product.title.includes('Tee') && !product.title.includes('Long')
-//               ? <DialogItemWomen />
-//               : product.gender === 'kid' && product.title.includes('Tee') && !product.title.includes('Long')
-//                 ? <DialogItemKids />
-//                 : ''

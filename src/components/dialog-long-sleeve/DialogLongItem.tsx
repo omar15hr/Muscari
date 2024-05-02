@@ -8,7 +8,7 @@ import { titleFont } from "@/config/fonts";
 
 
 
-export function DialogItem({dialogGender}: any) {
+export function DialogLongItem({dialogGender}: any) {
 
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(!open);

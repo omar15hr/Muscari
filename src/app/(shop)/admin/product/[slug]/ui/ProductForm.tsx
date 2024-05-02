@@ -114,7 +114,7 @@ export const ProductForm = ({ product, categories }: Props) => {
   return (
     <form onSubmit={ handleSubmit( onSubmit ) } className="grid px-5 mb-16 grid-cols-1 sm:px-0 sm:grid-cols-2 gap-3">
       {/* Textos */}
-      <div className="w-full">
+      <div className="w-100 mx-5">
         <div className="flex flex-col mb-2">
           <span>Título</span>
           <input type="text" className="p-2 border rounded-md bg-gray-200" {...register('title', { required: true })} />
@@ -167,7 +167,7 @@ export const ProductForm = ({ product, categories }: Props) => {
           </select>
         </div>
 
-        <button className="btn-primary w-full">
+        <button className="flex w-30 justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 my-5">
           Guardar
         </button>
       </div>
@@ -175,7 +175,7 @@ export const ProductForm = ({ product, categories }: Props) => {
       {/* Selector de tallas y fotos */}
       <div className="w-full">
 
-        <div className="flex flex-col mb-2">
+        <div className="flex flex-col mb-2 w-80">
           <span>Inventario</span>
           <input 
             type="number" 
@@ -214,7 +214,7 @@ export const ProductForm = ({ product, categories }: Props) => {
           </div>
 
 
-          <div className="flex flex-col mb-2">
+          <div className="flex flex-col mb-2 w-80">
 
             <span>Fotos</span>
             <input 
