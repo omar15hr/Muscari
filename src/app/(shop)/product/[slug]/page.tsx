@@ -4,7 +4,7 @@ export const revalidate = 604800; //7 días
 import { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
 import { titleFont } from "@/config/fonts";
-import { ProductMobileSlideshow, ProductSlideshow, StockLabel } from "@/components";
+import { BackButton, ProductMobileSlideshow, ProductSlideshow, StockLabel } from "@/components";
 import { getProductBySlug } from "@/actions";
 import { AddToCart } from './ui/AddToCart';
 import { AddToFavorite } from "./ui/AddToFavorite";
@@ -81,6 +81,8 @@ export default async function ProductBySlugPage({ params }: Props) {
 
       {/* Detalles */}
       <div className="col-span-1 px-5">
+        <BackButton path={`/gender/${dialogGender}`} />
+
         <StockLabel slug={product.slug} />
 
         <h1 className={` ${titleFont.className} antialiased font-bold text-xl`}>

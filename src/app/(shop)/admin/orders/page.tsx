@@ -2,7 +2,7 @@ export const revalidate = 0;
 
 // https://tailwindcomponents.com/component/hoverable-table
 import { getPaginatedOrders } from "@/actions";
-import { Pagination, Title } from "@/components";
+import { BackButton, Pagination, Title } from "@/components";
 
 import Link from "next/link";
 import { redirect } from "next/navigation";
@@ -18,6 +18,7 @@ export default async function OrdersPage() {
 
   return (
     <>
+      <BackButton path={'/'} />
       <Title title="Todas las orders" className="mx-5" />
 
       <div className="mb-10">

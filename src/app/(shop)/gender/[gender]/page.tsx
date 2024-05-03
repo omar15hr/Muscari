@@ -1,7 +1,7 @@
 export const revalidate = 60; // 60 segundos
 
 import { getPaginatedProductsWithImages } from '@/actions';
-import { Pagination, ProductGrid, Title } from '@/components';
+import { BackButton, Pagination, ProductGrid, Title } from '@/components';
 import { ProductGridKids } from '@/components/products/product-grid-kids/ProductGrid';
 import { ProductGridWomen } from '@/components/products/product-grid-women/ProductGrid';
 
@@ -52,9 +52,11 @@ export default async function GenderByPage({ params, searchParams }: Props) {
     <>
       <Title
         title={`Artículos ${ labels[gender] }`}
-        subtitle="Todos los productos"
+        subtitle="Todos los productos "
         className="mb-2 mx-4"
       />
+      
+      <BackButton path={'/'} />
 
       {
         labels[gender] === labels['women']
@@ -63,8 +65,6 @@ export default async function GenderByPage({ params, searchParams }: Props) {
         ? <ProductGrid products={ products }/>
         : <ProductGridKids products={ products }/>
       }
-{/* 
-      <Pagination totalPages={ totalPages }  /> */}
 
     </>
   );

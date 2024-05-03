@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 
 
-import { Title } from '@/components';
+import { BackButton, Title } from '@/components';
 import { ProductsInCart } from './ui/ProductsInCart';
 import { OrderSummary } from './ui/OrderSummary';
 
@@ -23,6 +23,7 @@ export default function CartPage() {
 
         <Title title='Carrito' />
 
+        <BackButton path={'/'} />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
 

@@ -2,7 +2,7 @@ export const revalidate = 0;
 
 // https://tailwindcomponents.com/component/hoverable-table
 import { getPaginatedProductsWithImages } from "@/actions";
-import { Pagination, ProductImage, Title } from "@/components";
+import { BackButton, Pagination, ProductImage, Title } from "@/components";
 import { currencyFormat } from "@/utils";
 
 import Link from "next/link";
@@ -25,6 +25,7 @@ export default async function OrdersPage({ searchParams }: Props) {
 
   return (
     <>
+      <BackButton path={'/'} />
       <Title title="Mantenimiento de productos" className="mx-5" />
 
       <div className="flex justify-end mb-5 mx-5">

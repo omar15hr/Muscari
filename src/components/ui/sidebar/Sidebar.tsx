@@ -111,7 +111,7 @@ export const Sidebar = () => {
         {true && (
           <Link
             href="/gender/men"
-            className=" block md:hidden flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+            className="md:hidden flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
             onClick={() => closeMenu()}
           >
             <span className="ml-3 text-l">Hombre</span>
@@ -121,7 +121,7 @@ export const Sidebar = () => {
         {true && (
           <Link
             href="/gender/women"
-            className=" block md:hidden flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+            className="md:hidden flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
             onClick={() => closeMenu()}
           >
             <span className="ml-3 text-l">Mujer</span>
@@ -131,7 +131,7 @@ export const Sidebar = () => {
         {true && (
           <Link
             href="/gender/kid"
-            className=" block md:hidden flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+            className="md:hidden flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
             onClick={() => closeMenu()}
           >
             <span className="ml-3 text-l">Niñ@s</span>

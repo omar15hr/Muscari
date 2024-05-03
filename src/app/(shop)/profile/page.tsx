@@ -1,5 +1,5 @@
 import { auth } from "@/auth.config";
-import { Title } from "@/components";
+import { BackButton, Title } from "@/components";
 import { redirect } from "next/navigation";
 
 export default async function ProfilePage() {
@@ -13,6 +13,7 @@ export default async function ProfilePage() {
   return (
     <div>
       <Title title="Perfil" className="mx-5" />
+      <BackButton path={'/'} />
 
       <div className="mx-auto right-0 mt-2 w-60 mb-10">
         <div className="bg-white rounded overflow-hidden shadow-lg">

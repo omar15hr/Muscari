@@ -10,6 +10,8 @@ export * from './button-size/Buttons';
 
 export * from './instructions/Intructions';
 
+export * from './back-button/BackButton';
+
 export * from './paypal/PaypalButton';
 
 
