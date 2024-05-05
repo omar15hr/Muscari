@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import { BackButton, Title } from '@/components';
 import { ProductsInFavorites } from './ui/ProductsInFavorites';
+import { redirect } from 'next/navigation';
 
 
 
@@ -11,7 +12,7 @@ import { ProductsInFavorites } from './ui/ProductsInFavorites';
 export default function FavoritePage() {
 
 
-  // redirect('/empty');
+  redirect('/empty');
 
 
 
