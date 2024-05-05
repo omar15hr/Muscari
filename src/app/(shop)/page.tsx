@@ -32,7 +32,7 @@ export default async function Home({ searchParams }: Props) {
   return (
     <div>
 
-      <HeroParallaxDemo />
+      {/* <HeroParallaxDemo /> */}
       <FirstPromo />
       <ProductFeatures />
       <CardsPromo />
