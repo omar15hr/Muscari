@@ -33,10 +33,10 @@ export default async function Home({ searchParams }: Props) {
     <div>
 
       {/* <HeroParallaxDemo /> */}
-      {/* <FirstPromo />
+      <FirstPromo />
       <ProductFeatures />
       <CardsPromo />
-      <SocialMedia /> */}
+      <SocialMedia />
 
     </div>
   );
