@@ -14,7 +14,7 @@ import { HeroParallaxDemo } from '@/components/ui/promo-section/ParallaxDemo';
 interface Props {
   searchParams: {
     page?: string;
-  }
+  } 
 }
 
 
