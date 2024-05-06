@@ -1,37 +1,37 @@
-// import Link from 'next/link';
+import Link from 'next/link';
 
 
 
-// import { BackButton, Title } from '@/components';
-// import { ProductsInFavorites } from './ui/ProductsInFavorites';
-// import { redirect } from 'next/navigation';
+import { BackButton, Title } from '@/components';
+import { ProductsInFavorites } from './ui/ProductsInFavorites';
+import { redirect } from 'next/navigation';
 
 
 
 
-// export default function FavoritePage() {
+export default function FavoritePage() {
 
 
-//   // redirect('/empty');
+  // redirect('/empty');
 
 
 
-//   return (
-//     <div className="flex justify-center items-center mb-72 px-10 sm:px-0">
+  return (
+    <div className="flex justify-center items-center mb-72 px-10 sm:px-0">
 
-//       <div className="flex flex-col w-[1000px]">
-//         <BackButton path={'/'} />
+      <div className="flex flex-col w-[1000px]">
+        <BackButton path={'/'} />
 
-//         <Title title='Favoritos' />
+        <Title title='Favoritos' />
 
-//         <div className="">
+        <div className="">
 
-//           <ProductsInFavorites />
+          <ProductsInFavorites />
 
-//         </div>
+        </div>
 
-//       </div>
+      </div>
 
-//     </div>
-//   );
-// }
+    </div>
+  );
+}
