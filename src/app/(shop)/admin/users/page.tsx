@@ -1,29 +1,29 @@
-export const revalidate = 0;
+// export const revalidate = 0;
 
-// https://tailwindcomponents.com/component/hoverable-table
-import { getPaginatedUsers } from "@/actions";
-import { BackButton, Pagination, Title } from "@/components";
+// // https://tailwindcomponents.com/component/hoverable-table
+// import { getPaginatedUsers } from "@/actions";
+// import { BackButton, Pagination, Title } from "@/components";
 
-import { redirect } from "next/navigation";
-import { UsersTable } from "./ui/UsersTable";
+// import { redirect } from "next/navigation";
+// import { UsersTable } from "./ui/UsersTable";
 
-export default async function OrdersPage() {
-  const { ok, users = [] } = await getPaginatedUsers();
+// export default async function OrdersPage() {
+//   const { ok, users = [] } = await getPaginatedUsers();
 
-  if (!ok) {
-    redirect("/auth/login");
-  }
+//   if (!ok) {
+//     redirect("/auth/login");
+//   }
 
-  return (
-    <>
-      <BackButton path={'/'} />
-      <Title className="mx-5" title="Mantenimiento de usuarios" />
+//   return (
+//     <>
+//       <BackButton path={'/'} />
+//       <Title className="mx-5" title="Mantenimiento de usuarios" />
 
-      <div className="mb-10">
-        <UsersTable users={ users } />
+//       <div className="mb-10">
+//         <UsersTable users={ users } />
 
-        <Pagination totalPages={ 1 } />
-      </div>
-    </>
-  );
-}
+//         <Pagination totalPages={ 1 } />
+//       </div>
+//     </>
+//   );
+// }

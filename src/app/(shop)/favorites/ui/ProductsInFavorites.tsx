@@ -15,9 +15,9 @@ export const ProductsInFavorites = () => {
   const productsInFavorites = useFavoriteStore( state => state.favorite );
 
 
-  // useEffect(() => {
-  //   setLoaded(true) ;
-  // }, []);
+  useEffect(() => {
+    setLoaded(true) ;
+  }, []);
 
 
 
