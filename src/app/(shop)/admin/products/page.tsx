@@ -133,6 +133,7 @@ export default async function OrdersPage({ searchParams }: Props) {
         </table>
 
         <Pagination totalPages={ totalPages } />
+
       </div>
     </>
   );

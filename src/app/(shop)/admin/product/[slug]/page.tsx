@@ -12,6 +12,8 @@ interface Props {
  
 
 export default async function ProductPage ({ params }: Props ) {
+  
+
 
   const { slug } = params;
 
@@ -32,6 +34,8 @@ export default async function ProductPage ({ params }: Props ) {
       <Title title={ title } />
 
       <ProductForm product={ product ?? {} } categories={ categories } />
+
+
     </>
   )
 }
