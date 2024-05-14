@@ -114,7 +114,10 @@ export const ProductForm = ({ product, categories }: Props) => {
 
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="grid px-5 mb-16 grid-cols-1 sm:px-0 sm:grid-cols-2 gap-3">
+    <form 
+      onSubmit={handleSubmit(onSubmit)} 
+      className="grid px-5 mb-16 grid-cols-1 sm:px-0 sm:grid-cols-2 gap-3"
+    >
       {/* Textos */}
       <div className="w-100 mx-5">
         <div className="flex flex-col mb-2">
