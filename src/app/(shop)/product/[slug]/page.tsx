@@ -4,10 +4,9 @@ export const revalidate = 604800; //7 días
 import { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
 import { titleFont } from "@/config/fonts";
-import { BackButton, ProductMobileSlideshow, ProductSlideshow, StockLabel } from "@/components";
+import { BackButton, ProductMobileSlideshow, ProductSlideshow } from "@/components";
 import { getProductBySlug } from "@/actions";
-import { AddToCart } from './ui/AddToCart';
-import { AddToFavorite } from "./ui/AddToFavorite";
+import { AddToCart, AddToFavorite } from './ui';
 import { DialogItem } from "@/components/dialog-short-sleeve";
 import { DialogLongItem } from "@/components/dialog-long-sleeve";
 import { DialogBodiesItem } from "@/components/dialog-bodies/DialogBodiesItem";
@@ -83,13 +82,13 @@ export default async function ProductBySlugPage({ params }: Props) {
       <div className="col-span-1 px-5">
         <BackButton path={`/gender/${dialogGender}`} />
 
-        <StockLabel slug={product.slug} />
-
         <h1 className={` ${titleFont.className} antialiased font-bold text-xl`}>
           {product.title}
         </h1>
 
+
         <p className="text-lg mb-5">${product.price}</p>
+
 
         <AddToCart product={product} />
         <AddToFavorite product={product} />
@@ -97,6 +96,10 @@ export default async function ProductBySlugPage({ params }: Props) {
         {/* Descripción */}
         <h3 className="font-bold text-sm">Descripción</h3>
         <p className="font-light">{product.description}</p>
+
+        {/* Origen */}
+        <h3 className="font-bold text-sm mt-4">Origen</h3>
+        <p className="font-light">Prenda manufacturada en Estados Unidos.</p>
 
         <div className="mt-5">
           {

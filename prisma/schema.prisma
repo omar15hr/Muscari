@@ -39,7 +39,12 @@ model Product {
   id          String   @id @default(uuid())
   title       String
   description String
-  inStock     Int
+  inStock_XS  Int
+  inStock_S   Int
+  inStock_M   Int
+  inStock_L   Int
+  inStock_XL  Int
+  inStock_XXL Int
   price       Float    @default(0)
   sizes       Size[]   @default([])
   slug        String   @unique

@@ -1,30 +1,30 @@
 'use client';
 
-import { useEffect } from 'react';
-import Link from "next/link";
-import { useFormState, useFormStatus } from "react-dom";
 
 import { authenticate } from "@/actions";
-import { IoInformationOutline } from "react-icons/io5";
+import { Toaster, toast } from 'sonner';
+import { useEffect } from 'react';
+import { useFormState, useFormStatus } from "react-dom";
 import clsx from 'clsx';
-// import { useRouter } from 'next/navigation';
+import Link from "next/link";
+
+
+
 
 export const LoginForm = () => {
-
 
   // const router = useRouter();
   const [state, dispatch] = useFormState(authenticate, undefined);
 
   useEffect(() => {
     if ( state === 'Success' ) {
-      // redireccionar
-      // router.replace('/');
       window.location.replace('/');
     }
 
   },[state]);
 
 
+  state === "CredentialsSignin" && (toast.error('Credenciales no son correctas'))
 
   return (
     <form action={dispatch} className="flex flex-col">
@@ -56,14 +56,7 @@ export const LoginForm = () => {
         aria-live="polite"
         aria-atomic="true"
       >
-        {state === "CredentialsSignin" && (
-          <div className="flex flex-row mb-2">
-            <IoInformationOutline className="h-5 w-5 text-red-500" />
-            <p className="text-sm text-red-500">
-              Credenciales no son correctas
-            </p>
-          </div>
-        )}
+        
       </div>
 
         <LoginButton />
@@ -81,6 +74,9 @@ export const LoginForm = () => {
       <Link href="/auth/new-account" className="flex w-full justify-center rounded-md bg-gray-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600 text-center">
         Crear una nueva cuenta
       </Link>
+
+      <Toaster />
+
     </form>
   );
 };

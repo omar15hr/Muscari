@@ -5,6 +5,7 @@ import { ProductImage } from "@/components";
 import { Category, Product, ProductImage as ProductWithImage } from "@/interfaces";
 import clsx from "clsx";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 
@@ -23,7 +24,12 @@ interface FormInputs {
   slug: string;
   description: string;
   price: number;
-  inStock: number;
+  inStock_XS: number;
+  inStock_S: number;
+  inStock_M: number;
+  inStock_L: number;
+  inStock_XL: number;
+  inStock_XXL: number;
   sizes: string[];
   tags: string;
   gender: 'men' | 'women' | 'kid' | 'unisex';
@@ -67,6 +73,7 @@ export const ProductForm = ({ product, categories }: Props) => {
 
     setValue('sizes', Array.from(sizes));
 
+
   }
 
 
@@ -80,15 +87,20 @@ export const ProductForm = ({ product, categories }: Props) => {
       formData.append('id', product.id ?? '');
     }
 
-    formData.append('title', productToSave.title);
-    formData.append('slug', productToSave.slug);
+    formData.append('title',       productToSave.title);
+    formData.append('slug',        productToSave.slug);
     formData.append('description', productToSave.description);
-    formData.append('price', productToSave.price.toString());
-    formData.append('inStock', productToSave.inStock.toString());
-    formData.append('sizes', productToSave.sizes.toString());
-    formData.append('tags', productToSave.tags);
-    formData.append('categoryId', productToSave.categoryId);
-    formData.append('gender', productToSave.gender);
+    formData.append('price',       productToSave.price.toString());
+    formData.append('inStock_XS',  productToSave.inStock_XS.toString());
+    formData.append('inStock_S',   productToSave.inStock_S.toString());
+    formData.append('inStock_M',   productToSave.inStock_M.toString());
+    formData.append('inStock_L',   productToSave.inStock_L.toString());
+    formData.append('inStock_XL',  productToSave.inStock_XL.toString());
+    formData.append('inStock_XXL', productToSave.inStock_XXL.toString());
+    formData.append('sizes',       productToSave.sizes.toString());
+    formData.append('tags',        productToSave.tags);
+    formData.append('categoryId',  productToSave.categoryId);
+    formData.append('gender',      productToSave.gender);
 
 
     if (images) {
@@ -114,8 +126,8 @@ export const ProductForm = ({ product, categories }: Props) => {
 
 
   return (
-    <form 
-      onSubmit={handleSubmit(onSubmit)} 
+    <form
+      onSubmit={handleSubmit(onSubmit)}
       className="grid px-5 mb-16 grid-cols-1 sm:px-0 sm:grid-cols-2 gap-3"
     >
       {/* Textos */}
@@ -180,16 +192,6 @@ export const ProductForm = ({ product, categories }: Props) => {
       {/* Selector de tallas y fotos */}
       <div className="w-full">
 
-        <div className="flex flex-col mb-2 w-80">
-          <span>Inventario</span>
-          <input
-            type="number"
-            className="p-2 border rounded-md bg-gray-200"
-            {...register('inStock', { required: true, min: 0 })}
-          />
-        </div>
-
-
         {/* As checkboxes */}
         <div className="flex flex-col">
 
@@ -218,6 +220,60 @@ export const ProductForm = ({ product, categories }: Props) => {
 
           </div>
 
+
+          <div className="flex flex-col mb-2 w-80">
+            <span>{`Inventario XS`}</span>
+            <input
+              type="number"
+              className="p-2 border rounded-md bg-gray-200"
+              {...register('inStock_XS', { required: true, min: 0 })}
+            />
+          </div>
+
+          <div className="flex flex-col mb-2 w-80">
+            <span>{`Inventario S`}</span>
+            <input
+              type="number"
+              className="p-2 border rounded-md bg-gray-200"
+              {...register('inStock_S', { required: true, min: 0 })}
+            />
+          </div>
+
+          <div className="flex flex-col mb-2 w-80">
+            <span>{`Inventario M`}</span>
+            <input
+              type="number"
+              className="p-2 border rounded-md bg-gray-200"
+              {...register('inStock_M', { required: true, min: 0 })}
+            />
+          </div>
+
+          <div className="flex flex-col mb-2 w-80">
+            <span>{`Inventario L`}</span>
+            <input
+              type="number"
+              className="p-2 border rounded-md bg-gray-200"
+              {...register('inStock_L', { required: true, min: 0 })}
+            />
+          </div>
+
+          <div className="flex flex-col mb-2 w-80">
+            <span>{`Inventario XL`}</span>
+            <input
+              type="number"
+              className="p-2 border rounded-md bg-gray-200"
+              {...register('inStock_XL', { required: true, min: 0 })}
+            />
+          </div>
+
+          <div className="flex flex-col mb-2 w-80">
+            <span>{`Inventario XXL`}</span>
+            <input
+              type="number"
+              className="p-2 border rounded-md bg-gray-200"
+              {...register('inStock_XXL', { required: true, min: 0 })}
+            />
+          </div>
 
           <div className="flex flex-col mb-2 w-80">
 

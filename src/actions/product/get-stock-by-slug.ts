@@ -9,10 +9,24 @@ export const getStockBySlug = async( slug: string ): Promise<number> => {
 
     const stock = await prisma.product.findFirst({
       where: { slug },
-      select: { inStock: true }
+      select: { 
+        inStock_XS: true, 
+        inStock_S: true, 
+        inStock_M: true, 
+        inStock_L: true, 
+        inStock_XL: true, 
+        inStock_XXL: true 
+      }
     });
 
-    return stock?.inStock ?? 0;
+    return stock?.inStock_XS 
+    ?? stock?.inStock_S 
+    ?? stock?.inStock_M
+    ?? stock?.inStock_L 
+    ?? stock?.inStock_XL 
+    ?? stock?.inStock_XXL 
+    ?? 0 ;
+  
 
   } catch (error) {
     return 0;

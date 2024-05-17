@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import type { FavoriteProduct, Product, Size } from "@/interfaces";
 import { useFavoriteStore } from '@/store';
@@ -17,7 +17,6 @@ export const AddToFavorite = ({ product }: Props) => {
   const productsInFavorites = useFavoriteStore(state => state.favorite);
 
 
-  const [isFavorite, setIsFavorite] = useState(false);
 
   const [size, setSize] = useState<Size | undefined>();
   const [quantity, setQuantity] = useState<number>(1);
@@ -25,12 +24,6 @@ export const AddToFavorite = ({ product }: Props) => {
 
   let selectProductInFavorite = productsInFavorites.filter((favorite) => favorite.id === product.id);
   let uniqueProductInFavorite = selectProductInFavorite[0];
-
-  // useEffect(() => {
-  //   setIsFavorite(!isFavorite);
-  
-  // }, [productsInFavorites]);
-
 
   // Función para añadir el favorito
   const addToFavorite = () => {

@@ -1,6 +1,5 @@
 "use server";
 
-
 import prisma from "@/lib/prisma";
 
 import { auth } from "@/auth.config";
@@ -26,8 +25,6 @@ export const placeOrder = async (
       message: "No hay sesión de usuario",
     };
   }
-
-  // console.log({ productIds, address, userId })
 
   // Obtener la información de los productos
   // Nota: recuerden que podemos llevar 2+ productos con el mismo ID
@@ -63,7 +60,6 @@ export const placeOrder = async (
 
   // Crear la transacción de base de datos
   try {
-
     const prismaTx = await prisma.$transaction(async (tx) => {
       // 1. Actualizar el stock de los productos
       const updatedProductsPromises = products.map((product) => {
@@ -76,14 +72,39 @@ export const placeOrder = async (
           throw new Error(`${product.id} no tiene cantidad definida`);
         }
 
+        let updateData = {};
+
+        productIds.map((item) => {
+          const { size } = item;
+          switch (size) {
+            case "XS":
+              updateData = { inStock_XS: { decrement: productQuantity } };
+              break;
+            case "S":
+              updateData = { inStock_S: { decrement: productQuantity } };
+              break;
+            case "M":
+              updateData = { inStock_M: { decrement: productQuantity } };
+              break;
+            case "L":
+              updateData = { inStock_L: { decrement: productQuantity } };
+              break;
+            case "XL":
+              updateData = { inStock_XL: { decrement: productQuantity } };
+              break;
+            case "XXL":
+              updateData = { inStock_XXL: { decrement: productQuantity } };
+              break;
+            default:
+              throw new Error(`Talla ${size} no reconocida`);
+          }
+        });
+
+        // Aquí ya puedes utilizar updateData como necesites
+
         return tx.product.update({
           where: { id: product.id },
-          data: {
-            // inStock: product.inStock - productQuantity // no hacer
-            inStock: {
-              decrement: productQuantity,
-            },
-          },
+          data: updateData,
         });
       });
 
@@ -91,13 +112,17 @@ export const placeOrder = async (
 
       // Verificar valores negativos en las existencia = no hay stock
       updatedProducts.forEach((product) => {
-        if (product.inStock < 0) {
+        if (
+          product.inStock_XS < 0 ||
+          product.inStock_S < 0 ||
+          product.inStock_M < 0 ||
+          product.inStock_L < 0 ||
+          product.inStock_XL < 0 ||
+          product.inStock_XXL < 0
+        ) {
           throw new Error(`${product.title} no tiene inventario suficiente`);
         }
       });
-
-
-
 
       // 2. Crear la orden - Encabezado - Detalles
       const order = await tx.order.create({
@@ -125,11 +150,6 @@ export const placeOrder = async (
 
       // Validar, si el price es cero, entonces, lanzar un error
 
-
-
-
-
-    
       // 3. Crear la direccion de la orden
       // Address
       const { country, ...restAddress } = address;
@@ -148,18 +168,15 @@ export const placeOrder = async (
       };
     });
 
-
     return {
       ok: true,
       order: prismaTx.order,
       prismaTx: prismaTx,
-    }
-
-
+    };
   } catch (error: any) {
     return {
       ok: false,
-      message: error?.message
+      message: error?.message,
     };
   }
 };

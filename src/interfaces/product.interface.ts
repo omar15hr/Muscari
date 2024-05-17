@@ -2,8 +2,13 @@ export interface Product {
   id: string;
   description: string;
   images: string[];
-  inStock: number;
   price: number;
+  inStock_XS: number;
+  inStock_S: number;
+  inStock_M: number;
+  inStock_L: number;
+  inStock_XL: number;
+  inStock_XXL: number;
   sizes: Size[];
   slug: string;
   tags: string[];
