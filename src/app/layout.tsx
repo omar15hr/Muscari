@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: "Una tienda virtual de productos",
 };
 
-export default function RootLayout({ s
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
