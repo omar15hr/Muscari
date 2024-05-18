@@ -117,7 +117,14 @@ export default async function OrdersPage({ searchParams }: Props) {
 
 
                 <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                  { product.inStock }
+                  {
+                    product.inStock_XS + 
+                    product.inStock_S + 
+                    product.inStock_M + 
+                    product.inStock_L + 
+                    product.inStock_XL + 
+                    product.inStock_XXL
+                  }
                 </td>
 
 
