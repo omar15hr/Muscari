@@ -27,7 +27,7 @@ export const getProductBySlug = async( slug: string ) => {
 
     
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     throw new Error('Error al obtener producto por slug');
   }
 
