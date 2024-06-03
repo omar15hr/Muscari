@@ -68,7 +68,7 @@ const products = [
   },
 ]
 
-export default async function CardsPromo() {
+export default function CardsPromo() {
 
   return (
     <div className="">

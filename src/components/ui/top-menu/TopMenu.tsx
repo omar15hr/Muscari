@@ -24,7 +24,7 @@ export const TopMenu = () => {
 
 
   return (
-    <nav className="flex px-5 justify-between items-center w-full">
+    <nav className="flex px-5 justify-between items-center w-full" aria-label="Top Menu"> 
       {/* Logo */}
       <Link href="/" className={styles.logoContainer}>
         <span>
@@ -59,8 +59,8 @@ export const TopMenu = () => {
       </div>
 
       {/* Search, Cart, Menu */}
-      <div className="flex items-center">
-        <Link href="/contact" className="mx-2">
+      <div className="flex items-center" >
+        <Link href="/contact" className="mx-2" aria-label="Mail Icon">
           <IoMailOutline />
         </Link>
 
@@ -68,7 +68,7 @@ export const TopMenu = () => {
           ((totalItemsInCart === 0) && loaded)
             ? '/empty'
             : "/cart"
-        } className="mx-2">
+        } className="mx-2" aria-label="Cart Icon">
           <div className="relative">
             {(loaded && totalItemsInCart > 0) && (
               <span className="fade-in absolute text-xs px-1 rounded-full font-bold -top-2 -right-2 bg-blue-700 text-white">

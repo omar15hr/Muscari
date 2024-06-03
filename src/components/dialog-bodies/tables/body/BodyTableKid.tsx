@@ -1,6 +1,6 @@
 
-import { countries_body_kids } from "@/utils/products/bodies/BodySizesCmKids";
-import { countries_inches_body_kids } from "@/utils/products/bodies/BodySizesInKids";
+import { countries_body_kids } from "../../../../utils/products/bodies/BodySizesCmKids";
+import { countries_inches_body_kids } from "../../../../utils/products/bodies/BodySizesInKids";
 
 const columnas = ["Talla", "Altura", "Pecho", "Contorno de cintura", "Contorno de caderas"];
 

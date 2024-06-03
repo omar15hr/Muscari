@@ -12,13 +12,10 @@ interface Props {
 }
 
 
-
 export const PayPalButton = ({ orderId, amount }: Props) => {
 
   const [{ isPending }] = usePayPalScriptReducer();
-
   const rountedAmount = (Math.round(amount * 100)) / 100; //123.23
-
 
   if ( isPending ) {
     return (
@@ -28,7 +25,6 @@ export const PayPalButton = ({ orderId, amount }: Props) => {
       </div>
     )
   }
-
 
   const createOrder = async(data: CreateOrderData, actions: CreateOrderActions): Promise<string> => {
 
@@ -63,8 +59,6 @@ export const PayPalButton = ({ orderId, amount }: Props) => {
     await paypalCheckPayment( details.id! );
 
   }
-
-
 
 
   return (

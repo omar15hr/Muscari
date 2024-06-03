@@ -1,8 +1,6 @@
 import Image from "next/image";
 
 
-
-
 export default function FirstPromo() {
   return (
     <div className="relative overflow-hidden">
@@ -31,7 +29,7 @@ export default function FirstPromo() {
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
                           alt=""
                           width={400} height={0}
-                          className="h-full w-full object-cover object-center shadow-md"
+                          className="promo-image-1 h-full w-full object-cover object-center shadow-md"
                         />
                       </div>
                       <div className="h-64 w-44 overflow-hidden rounded-lg shadow-md">
@@ -39,7 +37,7 @@ export default function FirstPromo() {
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
                           alt=""
                           width={400} height={40}
-                          className="h-full w-full object-cover object-center shadow-md"
+                          className="promo-image-2 h-full w-full object-cover object-center shadow-md"
                         />
                       </div>
                     </div>
@@ -49,7 +47,7 @@ export default function FirstPromo() {
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
                           alt=""
                           width={400} height={40}
-                          className="h-full w-full object-cover object-center shadow-md"
+                          className="promo-image-3 h-full w-full object-cover object-center shadow-md"
                         />
                       </div>
                       <div className="h-64 w-44 overflow-hidden rounded-lg shadow-md">
@@ -57,7 +55,7 @@ export default function FirstPromo() {
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
                           alt=""
                           width={400} height={40}
-                          className="h-full w-full object-cover object-center shadow-md"
+                          className="promo-image-4 h-full w-full object-cover object-center shadow-md"
                         />
                       </div>
                       <div className="h-64 w-44 overflow-hidden rounded-lg shadow-md">
@@ -65,7 +63,7 @@ export default function FirstPromo() {
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
                           alt=""
                           width={400} height={40}
-                          className="h-full w-full object-cover object-center shadow-md"
+                          className="promo-image-5 h-full w-full object-cover object-center shadow-md"
                         />
                       </div>
                     </div>
@@ -75,7 +73,7 @@ export default function FirstPromo() {
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
                           alt=""
                           width={400} height={40}
-                          className="h-full w-full object-cover object-center shadow-md"
+                          className="promo-image-6 h-full w-full object-cover object-center shadow-md"
                         />
                       </div>
                       <div className="h-64 w-44 overflow-hidden rounded-lg shadow-md">
@@ -83,7 +81,7 @@ export default function FirstPromo() {
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
                           alt=""
                           width={400} height={40}
-                          className="h-full w-full object-cover object-center shadow-md"
+                          className="promo-image-7 h-full w-full object-cover object-center shadow-md"
                         />
                       </div>
                     </div>

@@ -20,8 +20,6 @@ export function Buttons({onTypeOfMeasur}:any) {
   };
 
 
-
-
   return (
     <div className="flex flex-wrap gap-5 items-center justify-center mt-5">
       <button 

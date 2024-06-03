@@ -26,7 +26,6 @@ export const Pagination = ({ totalPages }: Props) => {
   }
  
 
-
   const allPages = generatePaginationNumbers(currentPage, totalPages);
 
 
@@ -39,25 +38,21 @@ export const Pagination = ({ totalPages }: Props) => {
     }
 
     if ( +pageNumber <= 0 ) {
-      return `${ pathname }`; //   href="/kid";
+      return `${ pathname }`; 
     }
 
-    if ( +pageNumber > totalPages ) { // Next > 
+    if ( +pageNumber > totalPages ) {
       return `${pathname}?${ params.toString() }`;
     }
 
     params.set('page', pageNumber.toString());
     return `${  pathname }?${ params.toString() }`;
-
   }
-
 
 
   return (
     <div className="flex text-center justify-center mt-10 mb-32">
-
       <nav aria-label="Page navigation example">
-
         <ul className="flex list-style-none">
           <li className="page-item">
             <Link
@@ -86,13 +81,8 @@ export const Pagination = ({ totalPages }: Props) => {
                   { page }
                 </Link>
               </li>
-
             ))
-
           }
-
-
-          
 
           <li className="page-item">
             <Link

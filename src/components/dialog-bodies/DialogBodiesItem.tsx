@@ -3,7 +3,7 @@
 import React from "react";
 import { Dialog, DialogHeader, IconButton} from "@material-tailwind/react";
 import { DialogBodyItem } from "./DialogBody";
-import { titleFont } from "@/config/fonts";
+import { titleFont } from "../../config/fonts";
 
 
 

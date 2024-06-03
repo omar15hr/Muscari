@@ -8,8 +8,6 @@ interface SubmitButtonProps {
 
 export function SubmitButton ({ buttonText, isLoading }: SubmitButtonProps) {
 
-
-
   return (
     <button 
       type='submit' 

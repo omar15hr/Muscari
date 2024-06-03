@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 
-
 const features = [
   { name: 'Origin', description: 'Diseñado por Good Goods, Inc.' },
   { name: 'Material', description: 'Base de nogal macizo con imanes de tierras raras y cubierta de tarjeta de acero con recubrimiento en polvo' },
@@ -51,8 +50,8 @@ export default function ProductFeatures() {
           <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
             {features.map((feature) => (
               <div key={feature.name} className="border-t border-gray-200 pt-4">
-                <dt className="font-medium text-gray-900">{feature.name}</dt>
-                <dd className="mt-2 text-sm text-gray-500">{feature.description}</dd>
+                <h3 className="font-medium text-gray-900">{feature.name}</h3>
+                <h5 className="mt-2 text-sm text-gray-500">{feature.description}</h5>
               </div>
             ))}
           </dl>
