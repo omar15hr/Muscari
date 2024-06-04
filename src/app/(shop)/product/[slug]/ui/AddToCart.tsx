@@ -9,8 +9,6 @@ import { IoCartOutline } from "react-icons/io5";
 import { Toaster, toast } from 'sonner';
 
 
-
-
 interface Props {
   product: Product;
 }
@@ -24,7 +22,6 @@ export const AddToCart = ({ product }: Props) => {
   const [posted, setPosted] = useState(false);
 
 
-
   let productByStock = 
   (
     size === 'XS' ? product.inStock_XS 
@@ -35,7 +32,6 @@ export const AddToCart = ({ product }: Props) => {
     : size === 'XXL' ? product.inStock_XXL
     : ''
   );
-
 
 
   const addToCart = () => {
@@ -62,9 +58,6 @@ export const AddToCart = ({ product }: Props) => {
   };
 
 
-
-
-
   return (
     <>
       {
@@ -79,7 +72,6 @@ export const AddToCart = ({ product }: Props) => {
         </span>
       )}
 
-
       {/* Selector de Tallas */}
       <SizeSelector
         selectedSize={size}
@@ -91,13 +83,14 @@ export const AddToCart = ({ product }: Props) => {
       <QuantitySelector quantity={quantity} onQuantityChanged={setQuantity} />
 
       {/* Button para carrito */}
-      <button onClick={addToCart} className="flex w-30 justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 my-5">
+      <button 
+        onClick={addToCart} 
+        className="flex w-30 justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 my-5"
+      >
         <IoCartOutline size={20} /> <span className="mx-2">Agregar al carrito</span>
       </button>
 
       <Toaster />
-
-
     </>
   );
 };
