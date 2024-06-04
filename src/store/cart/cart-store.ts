@@ -18,6 +18,8 @@ interface State {
   removeProduct: (product: CartProduct) => void;
 
   clearCart: () => void;
+
+  _mock: (store: Partial<State>) => void;
 }
 
 export const useCartStore = create<State>()(
@@ -103,6 +105,8 @@ export const useCartStore = create<State>()(
       clearCart: () => {
         set({ cart: [] });
       },
+
+      _mock: (store: Partial<State>) => set(store),
     }),
 
     {
