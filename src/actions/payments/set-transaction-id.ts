@@ -23,8 +23,6 @@ export const setTransactionId = async( orderId: string, transactionId: string ) 
 
 
   } catch (error) {
-    
-    console.log(error);
 
     return {
       ok: false,
