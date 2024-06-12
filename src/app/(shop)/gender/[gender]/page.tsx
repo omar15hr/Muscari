@@ -43,10 +43,6 @@ export default async function GenderByPage({ params, searchParams }: Props) {
     'kid': 'para niños',
   }
 
-  // if ( id === 'kids' ) {
-  //   notFound();
-  // }
-
 
   return (
     <>
@@ -65,7 +61,6 @@ export default async function GenderByPage({ params, searchParams }: Props) {
         ? <ProductGrid products={ products }/>
         : <ProductGridKids products={ products }/>
       }
-
     </>
   );
 }
