@@ -2,7 +2,7 @@
 
 
 import { useEffect, useState } from "react";
-import { useRouter } from 'next/navigation';
+import { redirect, useRouter } from 'next/navigation';
 import clsx from 'clsx';
 
 import { placeOrder } from '@/actions';
@@ -31,10 +31,13 @@ export const PlaceOrder = () => {
     setLoaded(true);
   }, []);
 
+  
+  if (itemsInCart < 1 ) {
+    redirect('/')
+  }
 
   const onPlaceOrder = async() => {
     setIsPlacingOrder(true);
-    // await sleep(2);
 
     const productsToOrder = cart.map( product => ({
       productId: product.id,

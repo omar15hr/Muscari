@@ -138,16 +138,12 @@ export const createUpdateProduct = async (formData: FormData) => {
       product: prismaTx.product
     }
 
-
   } catch (error) {
     return {
       ok: false,
       message: 'Revisar los logs, no se pudo actualizar/crear'
     }
   }
-
-
-
 }
 
 
@@ -167,7 +163,6 @@ const uploadImages = async (images: File[]) => {
           .then(r => r.secure_url);
 
       } catch (error) {
-        console.log(error);
         return null;
       }
     })
@@ -178,7 +173,6 @@ const uploadImages = async (images: File[]) => {
 
 
   } catch (error) {
-    console.log(error);
     return null;
   }
 }

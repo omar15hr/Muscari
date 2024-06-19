@@ -71,6 +71,7 @@ export const ProductGridKids = ({ products }: Props) => {
         </div>
 
         <div className='mb-10 mr-5'>
+          <label htmlFor="filters-title">Filtrar por título:</label>
           <select id="filters-title" className='btn btn-secondary dropdown-toggle' onChange={handleChangeTitle} >
             <option value="all">Todos</option>
             <option value="Tee">Polera</option>

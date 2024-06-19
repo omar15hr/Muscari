@@ -5,7 +5,6 @@ import { ProductImage } from "@/components";
 import { Category, Product, ProductImage as ProductWithImage } from "@/interfaces";
 import clsx from "clsx";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 
@@ -44,7 +43,6 @@ export const ProductForm = ({ product, categories }: Props) => {
 
   const router = useRouter();
 
-
   const {
     handleSubmit,
     register,
@@ -72,8 +70,6 @@ export const ProductForm = ({ product, categories }: Props) => {
     sizes.has(size) ? sizes.delete(size) : sizes.add(size);
 
     setValue('sizes', Array.from(sizes));
-
-
   }
 
 
@@ -117,9 +113,7 @@ export const ProductForm = ({ product, categories }: Props) => {
       return;
     }
 
-
     router.replace(`/admin/products`);
-
   }
 
 
@@ -134,12 +128,32 @@ export const ProductForm = ({ product, categories }: Props) => {
       <div className="w-100 mx-5">
         <div className="flex flex-col mb-2">
           <span>Título</span>
-          <input type="text" className="p-2 border rounded-md bg-gray-200" {...register('title', { required: true })} />
+          <input 
+            type="text" 
+            className="p-2 border rounded-md bg-gray-200" {...register('title', 
+            { 
+              required: true,
+              minLength: 10,
+              maxLength: 30,
+              validate: { onlyLetters: value => /^[A-Za-z\s]+$/.test(value)}
+            })} 
+          />
+        <span className='text-sm mt-1 italic mb-2'>(El título debe tener más de 9 letras)</span>
         </div>
 
         <div className="flex flex-col mb-2">
           <span>Slug</span>
-          <input type="text" className="p-2 border rounded-md bg-gray-200" {...register('slug', { required: true })} />
+          <input 
+            type="text" 
+            className="p-2 border rounded-md bg-gray-200" {...register('slug', 
+            { 
+              required: true,
+              minLength: 10,
+              maxLength: 30,
+              validate: { onlyLetters: value => /^[A-Za-z\s]+$/.test(value)}
+            })} 
+            />
+        <span className='text-sm mt-1 italic mb-2'>(El slug debe tener más de 9 letras)</span>
         </div>
 
         <div className="flex flex-col mb-2">
@@ -147,34 +161,72 @@ export const ProductForm = ({ product, categories }: Props) => {
           <textarea
             rows={5}
             className="p-2 border rounded-md bg-gray-200"
-            {...register('description', { required: true })}
-          ></textarea>
+            {...register('description', 
+              { 
+                required: true,
+                minLength: 10,
+                maxLength: 30,
+              })}
+          >
+          </textarea>
+          <span className='text-sm mt-1 italic mb-2'>(La descripción debe contener más de 10 caractéres)</span>
         </div>
 
         <div className="flex flex-col mb-2">
-          <span>Price</span>
-          <input type="number" className="p-2 border rounded-md bg-gray-200" {...register('price', { required: true, min: 0 })} />
+          <span>Precio</span>
+          <input 
+            type="number" 
+            className="p-2 border rounded-md bg-gray-200" {...register('price', 
+            { 
+              required: true,
+              min: 10,
+              validate: {
+                positiveInteger: value => Number.isInteger(Number(value)) && Number(value) > 0
+              }
+            })} 
+            />
+            <span className='text-sm mt-1 italic mb-2'>(El precio debe ser mayor a $9)</span>
         </div>
 
         <div className="flex flex-col mb-2">
           <span>Tags</span>
-          <input type="text" className="p-2 border rounded-md bg-gray-200" {...register('tags', { required: true })} />
+          <input 
+            type="text" 
+            className="p-2 border rounded-md bg-gray-200" {...register('tags', 
+            { 
+              required: true,
+              minLength: 10,
+              maxLength: 30, 
+            })} 
+            />
+            <span className='text-sm mt-1 italic mb-2'>(Los tags deben tener más de 9 letras)</span>
         </div>
 
         <div className="flex flex-col mb-2">
-          <span>Gender</span>
-          <select className="p-2 border rounded-md bg-gray-200" {...register('gender', { required: true })} >
+          <span>Género</span>
+          <select 
+            className="p-2 border rounded-md bg-gray-200" {...register('gender', 
+            { 
+              required: true
+            })} 
+            >
             <option value="">[Seleccione]</option>
             <option value="men">Men</option>
             <option value="women">Women</option>
             <option value="kid">Kid</option>
             <option value="unisex">Unisex</option>
           </select>
+          <span className='text-sm mt-1 italic mb-2'>(Debe seleccionar un género)</span>
         </div>
 
         <div className="flex flex-col mb-2">
           <span>Categoria</span>
-          <select className="p-2 border rounded-md bg-gray-200" {...register('categoryId', { required: true })} >
+          <select 
+            className="p-2 border rounded-md bg-gray-200" {...register('categoryId', 
+            { 
+              required: true
+            })} 
+            >
             <option value="">[Seleccione]</option>
             {
               categories.map(category => (
@@ -182,6 +234,7 @@ export const ProductForm = ({ product, categories }: Props) => {
               ))
             }
           </select>
+          <span className='text-sm mt-1 italic mb-2'>(Debe seleccionar una categoría)</span>
         </div>
 
         <button className="flex w-30 justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 my-5">
@@ -217,16 +270,16 @@ export const ProductForm = ({ product, categories }: Props) => {
                 </div>
               ))
             }
-
           </div>
+          <span className='text-sm mt-1 italic mb-3'>(Debe seleccionar una talla)</span>
 
-
+          <span className='text-sm mt-5 italic mb-2 '>(Debe ingresar un monto de stock para cada talla)</span>
           <div className="flex flex-col mb-2 w-80">
             <span>{`Inventario XS`}</span>
             <input
               type="number"
               className="p-2 border rounded-md bg-gray-200"
-              {...register('inStock_XS', { required: true, min: 0 })}
+              {...register('inStock_XS', { required: true, min: 10 })}
             />
           </div>
 
@@ -235,7 +288,7 @@ export const ProductForm = ({ product, categories }: Props) => {
             <input
               type="number"
               className="p-2 border rounded-md bg-gray-200"
-              {...register('inStock_S', { required: true, min: 0 })}
+              {...register('inStock_S', { required: true, min: 10 })}
             />
           </div>
 
@@ -244,7 +297,7 @@ export const ProductForm = ({ product, categories }: Props) => {
             <input
               type="number"
               className="p-2 border rounded-md bg-gray-200"
-              {...register('inStock_M', { required: true, min: 0 })}
+              {...register('inStock_M', { required: true, min: 10 })}
             />
           </div>
 
@@ -253,7 +306,7 @@ export const ProductForm = ({ product, categories }: Props) => {
             <input
               type="number"
               className="p-2 border rounded-md bg-gray-200"
-              {...register('inStock_L', { required: true, min: 0 })}
+              {...register('inStock_L', { required: true, min: 10})}
             />
           </div>
 
@@ -262,7 +315,7 @@ export const ProductForm = ({ product, categories }: Props) => {
             <input
               type="number"
               className="p-2 border rounded-md bg-gray-200"
-              {...register('inStock_XL', { required: true, min: 0 })}
+              {...register('inStock_XL', { required: true, min: 10})}
             />
           </div>
 
@@ -271,11 +324,11 @@ export const ProductForm = ({ product, categories }: Props) => {
             <input
               type="number"
               className="p-2 border rounded-md bg-gray-200"
-              {...register('inStock_XXL', { required: true, min: 0 })}
+              {...register('inStock_XXL', { required: true, min: 10})}
             />
           </div>
 
-          <div className="flex flex-col mb-2 w-80">
+          <div className="flex flex-col mb-2 w-80 mt-4">
 
             <span>Fotos</span>
             <input
@@ -285,7 +338,7 @@ export const ProductForm = ({ product, categories }: Props) => {
               className="p-2 border rounded-md bg-gray-200"
               accept="image/png, image/jpeg, image/avif"
             />
-
+            <span className='text-sm mt-1 italic mb-2'>(Suba una foto del producto)</span>
           </div>
 
 

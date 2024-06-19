@@ -39,8 +39,6 @@ export const ProductGrid = ({ products }: Props) => {
   const handleChangeMinPrice = (event: any) => {
     setMinPrice(event.target.value);
 
-    console.log(products)
-
     setFilters((prevState: any) => ({
       ...prevState,
       minPrice: event.target.value
@@ -59,7 +57,7 @@ export const ProductGrid = ({ products }: Props) => {
       <section className={styles.filters} >
 
         <div className='mb-10 mx-5'>
-          <label htmlFor="price">Precio a partir de:</label>
+          <label htmlFor="filters-price">Precio a partir de:</label>
           <input
             type='range'
             id='filters-price'
@@ -73,6 +71,7 @@ export const ProductGrid = ({ products }: Props) => {
         </div>
 
         <div className='mb-10 mr-5'>
+          <label htmlFor="filters-title">Filtrar por título:</label>
           <select id="filters-title" className='btn btn-secondary dropdown-toggle' onChange={handleChangeTitle} >
             <option value="all">Todos</option>
             <option value="Tee">Polera</option>

@@ -13,7 +13,6 @@ import Link from "next/link";
 
 export const LoginForm = () => {
 
-  // const router = useRouter();
   const [state, dispatch] = useFormState(authenticate, undefined);
 
   useEffect(() => {
@@ -60,9 +59,6 @@ export const LoginForm = () => {
       </div>
 
         <LoginButton />
-      {/* <button type="submit" className="btn-primary">
-        Ingresar
-      </button> */}
 
       {/* divisor l ine */}
       <div className="flex items-center my-5">

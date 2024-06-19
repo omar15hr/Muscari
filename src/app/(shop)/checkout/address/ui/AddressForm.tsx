@@ -76,42 +76,114 @@ export const AddressForm = ({ countries, userStoredAddress = {} }: Props) => {
   };
 
 
+  const validatePhone = (value: any) => {
+    // Verificar si el número de teléfono es una secuencia repetitiva o el mismo número repetido
+    if (/^(\d)\1+$/.test(value)) {
+      return '';
+    }
+    return true;
+  };
+
 
   return (
     <form onSubmit={ handleSubmit( onSubmit ) }  className="grid grid-cols-1 gap-2 sm:gap-5 sm:grid-cols-2">
       <div className="flex flex-col mb-2">
         <span>Nombres</span>
-        <input type="text" className="p-2 border rounded-md bg-gray-200" { ...register('firstName', { required: true  }) } />
+        <input 
+          type="text" 
+          className="p-2 border rounded-md bg-gray-200" 
+          { ...register('firstName', 
+            { required: true, 
+              minLength: 3, 
+              maxLength: 20, 
+              validate: { onlyLetters: value => /^[A-Za-z\s]+$/.test(value)}  
+            }) } 
+        />
+        <span className='text-sm mt-1 italic'>(El nombre debe tener más de 2 letras)</span>
       </div>
 
       <div className="flex flex-col mb-2">
         <span>Apellidos</span>
-        <input type="text" className="p-2 border rounded-md bg-gray-200" { ...register('lastName', { required: true  }) } />
+        <input 
+          type="text" 
+          className="p-2 border rounded-md bg-gray-200" 
+          { ...register('lastName', 
+            { 
+              required: true,
+              minLength: 3, 
+              maxLength: 20, 
+              validate: { onlyLetters: value => /^[A-Za-z\s]+$/.test(value)}
+            }) } 
+        />
+        <span className='text-sm mt-1 italic'>(El apellido debe tener más de 2 letras)</span>
       </div>
 
       <div className="flex flex-col mb-2">
         <span>Dirección</span>
-        <input type="text" className="p-2 border rounded-md bg-gray-200" { ...register('address', { required: true  }) } />
+        <input 
+          type="text" 
+          className="p-2 border rounded-md bg-gray-200" 
+          { ...register('address', 
+            { 
+              required: true,
+              minLength: 5, 
+              maxLength: 30, 
+            }) } 
+        />
+        <span className='text-sm mt-1 italic '>(La dirección debe contener más de 5 letras, tienes que ser específico)</span>
       </div>
 
       <div className="flex flex-col mb-2">
         <span>Dirección 2 (opcional)</span>
-        <input type="text" className="p-2 border rounded-md bg-gray-200" { ...register('address2') } />
+        <input 
+          type="text" 
+          className="p-2 border rounded-md bg-gray-200" 
+          { ...register('address2', 
+            {
+              minLength: 5,
+              maxLength: 30,
+            }) } 
+        />
+        <span className='text-sm mt-1 italic '>(La dirección debe contener más de 5 letras, tienes que ser específico)</span>
       </div>
 
       <div className="flex flex-col mb-2">
         <span>Código postal</span>
-        <input type="text" className="p-2 border rounded-md bg-gray-200" { ...register('postalCode', { required: true  }) } />
+        <input 
+          type="text" 
+          className="p-2 border rounded-md bg-gray-200" 
+          { ...register('postalCode', 
+            { 
+              required: true,
+              minLength: 4,
+              maxLength: 15,
+              pattern: /^[A-Za-z0-9]+$/
+            }) } 
+        />
+        <span className='text-sm mt-1 italic '>(El código postal debe contener más de 4 caractéres y menos de 15)</span>
       </div>
 
       <div className="flex flex-col mb-2">
         <span>Ciudad</span>
-        <input type="text" className="p-2 border rounded-md bg-gray-200" { ...register('city', { required: true  }) } />
+        <input 
+          type="text" 
+          className="p-2 border rounded-md bg-gray-200" 
+          { ...register('city', 
+            { 
+              required: true, 
+              minLength: 5,
+              maxLength: 30
+            }) } 
+        />
+        <span className='text-sm mt-1 italic '>(La ciudad debe contener más de 5 letras y menos de 30)</span>
       </div>
 
       <div className="flex flex-col mb-2">
         <span>País</span>
-        <select className="p-2 border rounded-md bg-gray-200" { ...register('country', { required: true  }) }>
+        <select 
+          className="p-2 border rounded-md bg-gray-200" 
+          { ...register('country', { required: true }) }
+        >
           <option value="">[ Seleccione ]</option>
           {
             countries.map( country => (
@@ -119,11 +191,25 @@ export const AddressForm = ({ countries, userStoredAddress = {} }: Props) => {
             ))
           }
         </select>
+        <span className='text-sm mt-1 italic '>(Debe seleccionar un país)</span>
       </div>
 
       <div className="flex flex-col mb-2">
         <span>Teléfono</span>
-        <input type="text" className="p-2 border rounded-md bg-gray-200" { ...register('phone', { required: true  }) } />
+        <input 
+          type="text" 
+          className="p-2 border rounded-md bg-gray-200" { ...register('phone', 
+          { 
+            required: true,
+            minLength: 9, 
+            maxLength: 9, 
+            validate: {
+              validPhone: validatePhone,
+              onlyNumbers: value => /^[0-9]+$/.test(value)
+            }
+          }) } 
+        />
+        <span className='text-sm mt-1 italic'>(El formato del telefono debe ser sin el +56)</span>
       </div>
 
       <div className="flex flex-col mb-2 sm:mt-1">

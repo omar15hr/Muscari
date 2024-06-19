@@ -29,7 +29,7 @@ export const RegisterForm = () => {
   const onSubmit: SubmitHandler<FormInputs> = async(data) => {
     setErrorMessage('');
     const { name, email, password } = data;
-    
+
     // Server action
     const resp = await registerUser( name, email, password );
 
@@ -46,21 +46,15 @@ export const RegisterForm = () => {
   };
 
 
+
   return (
     <form onSubmit={ handleSubmit( onSubmit ) }  className="flex flex-col">
-
-      {/* {
-        errors.name?.type === 'required' && (
-          <span className="text-red-500">* El nombre es obligatorio</span>
-        )
-      } */}
-
 
       <label htmlFor="email">Nombre completo</label>
       <input
         className={
           clsx(
-            "px-5 py-2 border bg-gray-300 rounded mb-5",
+            "px-5 py-2 border bg-gray-300 rounded",
             {
               'border-red-500': errors.name
             }
@@ -68,36 +62,48 @@ export const RegisterForm = () => {
         }
         type="text"
         autoFocus
-        { ...register('name', { required: true }) }
+        { ...register('name', 
+          { 
+            required: true, 
+            minLength: 6, 
+            maxLength: 30, 
+            validate: { onlyLetters: value => /^[A-Za-z\s]+$/.test(value)} 
+          }
+        )}
       />
+      <span className='mb-5 text-sm italic mt-1'>(El nombre debe contener más de 6 letras y menos de 30)</span>
+
 
       <label htmlFor="email">Correo electrónico</label>
       <input
         className={
           clsx(
-            "px-5 py-2 border bg-gray-300 rounded mb-5",
+            "px-5 py-2 border bg-gray-300 rounded",
             {
               'border-red-500': errors.email
             }
           )
         }
         type="email"
-        { ...register('email', { required: true, pattern: /^\S+@\S+$/i }) }
+        { ...register('email', { required: true, pattern: /^\S+@\S+$/i, minLength: 16, maxLength: 40 }) }
       />
+      <span className='mb-5 text-sm italic mt-1'>(El correo debe contener más de 6 letras y menos de 40)</span>
 
       <label htmlFor="email">Contraseña</label>
       <input
         className={
           clsx(
-            "px-5 py-2 border bg-gray-300 rounded mb-5",
+            "px-5 py-2 border bg-gray-300 rounded",
             {
               'border-red-500': errors.password
             }
           )
         }
         type="password"
-        { ...register('password', { required: true, minLength: 6 }) }
+        { ...register('password', { required: true, minLength: 6, maxLength: 30 }) }
       />
+      <span className='mb-5 text-sm italic mt-1'>(La contraseña debe contener más de 6 caractéres y menos de 30)</span>
+
         
       
 
