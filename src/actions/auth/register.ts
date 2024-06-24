@@ -8,7 +8,7 @@ export const registerUser = async( name: string, email: string, password: string
 
 
   try {
-    
+    // Creamos el usuario con prisma
     const user = await prisma.user.create({
       data: {
         name: name,
@@ -22,15 +22,15 @@ export const registerUser = async( name: string, email: string, password: string
       }
     })
 
+    // Devolvemos el mensaje y el usuario correctamente
     return {
       ok: true,
       user: user,
       message: 'Usuario creado'
     }
 
+    // Obtenemos el error en caso de
   } catch (error) {
-    // console.log(error);
-
     return {
       ok: false,
       message: 'No se pudo crear el usuario'

@@ -14,7 +14,11 @@ interface Props {
 
 export const ProductGridItem = ( { product }: Props ) => {
 
-  const [ displayImage, setDisplayImage ] = useState( product.images[ 0 ] );
+   // Proveer una URL por defecto si product.images[0] es undefined
+   const defaultImage = '/imgs/placeholder.jpg';
+   const initialImage = product.images[0] || defaultImage;
+
+  const [ displayImage, setDisplayImage ] = useState(initialImage);
 
   const isCloudinaryUrl = (url: string) => {
     return url.startsWith('https://res.cloudinary.com/');
@@ -30,8 +34,6 @@ export const ProductGridItem = ( { product }: Props ) => {
           className="w-full object-cover rounded"
           width={ 500 }
           height={ 500 }
-          onMouseEnter={ () => setDisplayImage( product.images[0] ) }
-          // onMouseLeave={ () => setDisplayImage( product.images[0] ) }
           priority={true}
         />
       </Link>

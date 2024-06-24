@@ -17,7 +17,7 @@ export const ProductGridItem = ( { product }: Props ) => {
   const [ displayImage, setDisplayImage ] = useState( product.images[ 0 ] );
 
   const isCloudinaryUrl = (url: string) => {
-    return url.startsWith('https://res.cloudinary.com/');
+    return url.includes('https://res.cloudinary.com/');
   };
 
   return (
@@ -29,8 +29,6 @@ export const ProductGridItem = ( { product }: Props ) => {
           className="w-full object-cover rounded"
           width={ 500 }
           height={ 500 }
-          onMouseEnter={ () => setDisplayImage( product.images[0] ) }
-          // onMouseLeave={ () => setDisplayImage( product.images[0] ) }
           priority={true}
         />
       </Link>
