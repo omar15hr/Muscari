@@ -7,7 +7,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { login, registerUser } from '@/actions';
 import { useState } from 'react';
 import { Toaster, toast } from 'sonner';
-
+import { checkEmailExists } from '@/actions';
 
 
 type FormInputs = {
@@ -29,6 +29,14 @@ export const RegisterForm = () => {
   const onSubmit: SubmitHandler<FormInputs> = async(data) => {
     setErrorMessage('');
     const { name, email, password } = data;
+
+    // Check if email already exists
+    const emailExists = await checkEmailExists(email);
+
+    if (emailExists) {
+      toast.error('El correo electrónico ya está registrado');
+      return;
+    }
 
     // Server action
     const resp = await registerUser( name, email, password );
