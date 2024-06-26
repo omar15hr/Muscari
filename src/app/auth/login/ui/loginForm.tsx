@@ -9,8 +9,6 @@ import clsx from 'clsx';
 import Link from "next/link";
 
 
-
-
 export const LoginForm = () => {
 
   const [state, dispatch] = useFormState(authenticate, undefined);

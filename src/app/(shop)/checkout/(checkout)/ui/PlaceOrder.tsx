@@ -31,10 +31,7 @@ export const PlaceOrder = () => {
     setLoaded(true);
   }, []);
 
-  
-  if (itemsInCart < 1 ) {
-    redirect('/')
-  }
+
 
   const onPlaceOrder = async() => {
     setIsPlacingOrder(true);
@@ -88,7 +85,7 @@ export const PlaceOrder = () => {
       {/* Divider */}
       <div className="w-full h-0.5 rounded bg-gray-200 mb-10" />
 
-      <h2 className="text-2xl mb-2">Resumen de orden</h2>
+      <h2 className="text-2xl mb-2">Resumen de órden</h2>
 
       <div className="grid grid-cols-2">
         <span>No. Productos</span>
@@ -112,7 +109,7 @@ export const PlaceOrder = () => {
         <p className="mb-5">
           {/* Disclaimer */}
           <span className="text-xs">
-            Al hacer clic en &quot;Colocar orden&quot;, aceptas nuestros{" "}
+            Al hacer clic en &quot;Colocar órden&quot;, aceptas nuestros{" "}
             <a href="#" className="underline">
               términos y condiciones
             </a>{" "}
@@ -136,7 +133,7 @@ export const PlaceOrder = () => {
             })
           }
         >
-          Colocar orden
+          Colocar órden
         </button>
       </div>
     </div>

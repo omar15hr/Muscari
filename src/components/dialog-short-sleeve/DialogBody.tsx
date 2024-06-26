@@ -3,8 +3,6 @@
 import { Buttons } from "../button-size/Buttons";
 import { DialogBody } from "@material-tailwind/react";
 import { Instructions } from "../instructions/Intructions";
-import UnitSelect from "../selects/UnitsSelect";
-import CountrySelect from "../selects/CountrySelect";
 import React, { useState } from "react";
 import { ProductTableMen } from "./tables/product/ProductTableMen";
 import { BodyTableMen } from "./tables/body/BodyTableMen";
@@ -12,6 +10,8 @@ import { ProductTableWomen } from "./tables/product/ProductTableWomen";
 import { BodyTableWomen } from "./tables/body/BodyTableWomen";
 import { ProductTableKid } from "./tables/product/ProductTableKid";
 import { BodyTableKid } from "./tables/body/BodyTableKid";
+import CountrySelect from "../selects/CountrySelect";
+import UnitSelect from "../selects/UnitsSelect";
 
 
 export function DialogBodyItem({ dialogGender }: any) {

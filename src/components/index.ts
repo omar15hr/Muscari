@@ -1,3 +1,5 @@
+import UnitSelect from './selects/UnitsSelect';
+
 export * from './email-template/email-template';
 export * from './email-template/email-contact-template';
 
@@ -14,8 +16,6 @@ export * from './back-button/BackButton';
 
 export * from './paypal/PaypalButton';
 
-export * from './selects/CountrySelect';
-export * from './selects/UnitsSelect';
 
 export * from './providers/Providers';
 

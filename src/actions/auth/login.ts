@@ -1,8 +1,6 @@
 'use server';
 
-
 import { signIn } from '@/auth.config';
-
  
 export async function authenticate(
   prevState: string | undefined,
@@ -19,8 +17,6 @@ export async function authenticate(
 
 
   } catch (error) {
-    console.log(error);
-
     return 'CredentialsSignin'
   }
 }
@@ -35,7 +31,6 @@ export const login = async(email:string, password: string) => {
     return {ok: true};
     
   } catch (error) {
-    console.log(error);
     return {
       ok: false,
       message: 'No se pudo iniciar sesión'

@@ -20,23 +20,27 @@ export default function ProductFeatures() {
             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
             alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
             width={400} height={400}
+            priority
             className="rounded-lg bg-gray-100 shadow-md"
           />
           <Image
             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
             width={400} height={400}
+            priority
             alt="Top down view of walnut card tray with embedded magnets and card groove."
             className="rounded-lg bg-gray-100 shadow-md"
           />
           <Image
             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
             width={400} height={400}
+            priority
             alt="Side of walnut card tray with card groove and recessed card area."
             className="rounded-lg bg-gray-100 shadow-md"
           />
           <Image
             src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
             width={400} height={400}
+            priority
             alt="Walnut card tray filled with cards and card angled in dedicated groove."
             className="rounded-lg bg-gray-100 shadow-md"
           />
