@@ -35,7 +35,7 @@ describe('BodyTableKid Component', () => {
     expect(rows).toHaveLength(mockProps.countrySizes[0].US.length + 1); // +1 for the header row
     
     // Check specific cell values
-    expect(screen.getByText('8 Years')).toBeInTheDocument();
+    expect(screen.getByText('XS - 8 Years')).toBeInTheDocument();
     expect(screen.getByText('122-128')).toBeInTheDocument();
     expect(screen.getByText('66.5-69.5')).toBeInTheDocument();
     expect(screen.getByText('59.5-62.5')).toBeInTheDocument();
@@ -50,7 +50,7 @@ describe('BodyTableKid Component', () => {
     expect(rows).toHaveLength(mockProps.countrySizes[0].US_inches.length + 1); // +1 for the header row
     
     // Check specific cell values for inches
-    expect(screen.getByText('8 Years')).toBeInTheDocument();
+    expect(screen.getByText('XS - 8 Years')).toBeInTheDocument();
     expect(screen.getByText('48-50.4')).toBeInTheDocument();
     expect(screen.getByText('26.2-27.4')).toBeInTheDocument();
     expect(screen.getByText('23.4-24.6')).toBeInTheDocument();
