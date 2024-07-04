@@ -1,7 +1,12 @@
+"use client";
+
+import { useSession } from "next-auth/react";
 import Image from "next/image";
 
-
 export default function FirstPromo() {
+  const { data: session } = useSession();
+  const isAuthenticated = !!session?.user;
+
   return (
     <div className="relative overflow-hidden">
       <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
@@ -11,7 +16,8 @@ export default function FirstPromo() {
               Los estilos de verano ya están aquí
             </h1>
             <p className="mt-4 text-xl text-gray-500">
-              Enfrenta los elementos con estilo este verano con nuestra nueva colección. Regístrate y adquiere nuestros diseños.
+              Enfrenta los elementos con estilo este verano con nuestra nueva
+              colección. Regístrate y adquiere nuestros diseños.
             </p>
           </div>
           <div>
@@ -29,7 +35,8 @@ export default function FirstPromo() {
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
                           alt=""
                           priority
-                          width={400} height={0}
+                          width={400}
+                          height={0}
                           className="promo-image-1 h-full w-full object-cover object-center shadow-md"
                         />
                       </div>
@@ -38,7 +45,8 @@ export default function FirstPromo() {
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
                           alt=""
                           priority
-                          width={400} height={40}
+                          width={400}
+                          height={40}
                           className="promo-image-2 h-full w-full object-cover object-center shadow-md"
                         />
                       </div>
@@ -49,7 +57,8 @@ export default function FirstPromo() {
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
                           alt=""
                           priority
-                          width={400} height={40}
+                          width={400}
+                          height={40}
                           className="promo-image-3 h-full w-full object-cover object-center shadow-md"
                         />
                       </div>
@@ -58,7 +67,8 @@ export default function FirstPromo() {
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
                           alt=""
                           priority
-                          width={400} height={40}
+                          width={400}
+                          height={40}
                           className="promo-image-4 h-full w-full object-cover object-center shadow-md"
                         />
                       </div>
@@ -67,7 +77,8 @@ export default function FirstPromo() {
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
                           alt=""
                           priority
-                          width={400} height={40}
+                          width={400}
+                          height={40}
                           className="promo-image-5 h-full w-full object-cover object-center shadow-md"
                         />
                       </div>
@@ -78,7 +89,8 @@ export default function FirstPromo() {
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
                           alt=""
                           priority
-                          width={400} height={40}
+                          width={400}
+                          height={40}
                           className="promo-image-6 h-full w-full object-cover object-center shadow-md"
                         />
                       </div>
@@ -87,7 +99,8 @@ export default function FirstPromo() {
                           src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
                           alt=""
                           priority
-                          width={400} height={40}
+                          width={400}
+                          height={40}
                           className="promo-image-7 h-full w-full object-cover object-center shadow-md"
                         />
                       </div>
@@ -96,16 +109,18 @@ export default function FirstPromo() {
                 </div>
               </div>
 
-              <a
-                href="/auth/login"
-                className="inline-block rounded-md border border-transparent bg-gray-500 px-8 py-3 text-center font-medium text-white hover:bg-gray-800"
-              >
-                Regístrate ya
-              </a>
+              {!isAuthenticated && (
+                <a
+                  href="/auth/login"
+                  className="inline-block rounded-md border border-transparent bg-gray-500 px-8 py-3 text-center font-medium text-white hover:bg-gray-800"
+                >
+                  Regístrate ya
+                </a>
+              )}
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

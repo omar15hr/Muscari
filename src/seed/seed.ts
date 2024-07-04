@@ -247,26 +247,6 @@ export const initialData: SeedData = {
       gender: 'men'
     },
     {
-      description: "Designed for fit, comfort and style, the Tesla T Logo Tee is made from 100% Peruvian cotton and features a silicone-printed T Logo on the left chest.",
-      images: [
-        '7652426-00-A_0_2000.jpg',
-        '7652426-00-A_1.jpg',
-      ],
-      inStock_XS: 30,
-      inStock_S: 25,
-      inStock_M: 20,
-      inStock_L: 20,
-      inStock_XL: 25,
-      inStock_XXL: 30,
-      price: 35,
-      sizes: ['XS', 'S'],
-      slug: "men_3d_t_logo_tee",
-      type: 'shirts',
-      tags: ['shirt'],
-      title: "Men's 3D T Logo Tee",
-      gender: 'men'
-    },
-    {
       description: "Designed for comfort and style in any size, the Tesla Small Wordmark Tee is made from 100% Peruvian cotton and features a 3D silicone-printed wordmark on the left chest.",
       images: [
         '8528839-00-A_0_2000.jpg',
@@ -404,46 +384,6 @@ export const initialData: SeedData = {
       type: 'shirts',
       tags: ['shirt'],
       title: "Men's S3XY Tee",
-      gender: 'men'
-    },
-    {
-      description: "Designed for fit, comfort and style, the Men's 3D Wordmark Long Sleeve Tee is made from 100% cotton and features an understated wordmark logo on the left chest.",
-      images: [
-        '8764813-00-A_0_2000.jpg',
-        '8764813-00-A_1.jpg',
-      ],
-      inStock_XS: 30,
-      inStock_S: 25,
-      inStock_M: 20,
-      inStock_L: 20,
-      inStock_XL: 25,
-      inStock_XXL: 30,
-      price: 40,
-      sizes: ['XL', 'XXL'],
-      slug: "men_3d_wordmark_long_sleeve_tee",
-      type: 'shirts',
-      tags: ['shirt'],
-      title: "Men's 3D Wordmark Long Sleeve Tee",
-      gender: 'men'
-    },
-    {
-      description: "Designed for fit, comfort and style, the Men's 3D T Logo Long Sleeve Tee is made from 100% cotton and features an understated T logo on the left chest.",
-      images: [
-        '8529198-00-A_0_2000.jpg',
-        '8529198-00-A_1.jpg',
-      ],
-      inStock_XS: 30,
-      inStock_S: 25,
-      inStock_M: 20,
-      inStock_L: 20,
-      inStock_XL: 25,
-      inStock_XXL: 30,
-      price: 40,
-      sizes: ['XS', 'XXL'],
-      slug: "men_3d_t_logo_long_sleeve_tee",
-      type: 'shirts',
-      tags: ['shirt'],
-      title: "Men's 3D T Logo Long Sleeve Tee",
       gender: 'men'
     },
     {
