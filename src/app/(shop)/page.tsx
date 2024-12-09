@@ -12,8 +12,8 @@ export default async function Home() {
 
   return (
     <div>
-      <FirstPromo />
-      <ProductFeatures />
+      {/* <FirstPromo /> */}
+      {/* <ProductFeatures /> */}
       <CardsPromo />
       <SocialMedia />
     </div>
