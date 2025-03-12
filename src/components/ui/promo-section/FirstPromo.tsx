@@ -2,6 +2,16 @@
 
 import { useSession } from "next-auth/react";
 import Image from "next/image";
+import blackShirt from "../../../../public/products/100042301_0_2000.jpg";
+import blackShirtZoom from "../../../../public/products/100042301_alt.jpg";
+import redShirt from "../../../../public/products/100042307_0_2000.jpg";
+import bodyBaby from "../../../../public/products/1473814-00-A_1_2000.jpg";
+import hat from "../../../../public/products/1657916-00-A_1.jpg";
+import grayShirt from "../../../../public/products/8765130-00-A_1.jpg";
+import blackShirtSquare from "../../../../public/products/1549268-00-A_2.jpg";
+import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button"
+
 
 export default function FirstPromo() {
   const { data: session } = useSession();
@@ -12,7 +22,7 @@ export default function FirstPromo() {
       <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
         <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
           <div className="sm:max-w-lg">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            <h1 className="clash text-4xl semi-bold tracking-tight text-gray-950 sm:text-6xl">
               Los estilos de verano ya están aquí
             </h1>
             <p className="mt-4 text-xl text-gray-500">
@@ -32,7 +42,7 @@ export default function FirstPromo() {
                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                       <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100 shadow-md">
                         <Image
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
+                          src={blackShirt}
                           alt=""
                           priority
                           width={400}
@@ -42,7 +52,7 @@ export default function FirstPromo() {
                       </div>
                       <div className="h-64 w-44 overflow-hidden rounded-lg shadow-md">
                         <Image
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
+                          src={blackShirtZoom}
                           alt=""
                           priority
                           width={400}
@@ -54,7 +64,7 @@ export default function FirstPromo() {
                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                       <div className="h-64 w-44 overflow-hidden rounded-lg shadow-md">
                         <Image
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
+                          src={redShirt}
                           alt=""
                           priority
                           width={400}
@@ -64,7 +74,7 @@ export default function FirstPromo() {
                       </div>
                       <div className="h-64 w-44 overflow-hidden rounded-lg shadow-md">
                         <Image
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
+                          src={bodyBaby}
                           alt=""
                           priority
                           width={400}
@@ -74,7 +84,7 @@ export default function FirstPromo() {
                       </div>
                       <div className="h-64 w-44 overflow-hidden rounded-lg shadow-md">
                         <Image
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
+                          src={grayShirt}
                           alt=""
                           priority
                           width={400}
@@ -86,7 +96,7 @@ export default function FirstPromo() {
                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8 shadow-md">
                       <div className="h-64 w-44 overflow-hidden rounded-lg">
                         <Image
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
+                          src={hat}
                           alt=""
                           priority
                           width={400}
@@ -96,7 +106,7 @@ export default function FirstPromo() {
                       </div>
                       <div className="h-64 w-44 overflow-hidden rounded-lg shadow-md">
                         <Image
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
+                          src={blackShirtSquare}
                           alt=""
                           priority
                           width={400}
@@ -110,12 +120,7 @@ export default function FirstPromo() {
               </div>
 
               {!isAuthenticated && (
-                <a
-                  href="/auth/login"
-                  className="inline-block rounded-md border border-transparent bg-gray-500 px-8 py-3 text-center font-medium text-white hover:bg-gray-800"
-                >
-                  Regístrate ya
-                </a>
+                <Link href="/auth/login" className={buttonVariants({ variant: "secondary", size: 'lg' })}>Registrate ya</Link>
               )}
             </div>
           </div>

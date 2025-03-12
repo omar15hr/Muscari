@@ -1,4 +1,8 @@
 import Image from "next/image";
+import blackShirtSquare from "../../../../public/products/1549268-00-A_2.jpg";
+import grayShirt from "../../../../public/products/8765130-00-A_1.jpg";
+import hat from "../../../../public/products/1657916-00-A_1.jpg";
+import bodyBaby from "../../../../public/products/1473814-00-A_1_2000.jpg";
 
 
 const features = [
@@ -17,28 +21,28 @@ export default function ProductFeatures() {
 
         <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
           <Image
-            src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
+            src={blackShirtSquare}
             alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
             width={400} height={400}
             priority
             className="rounded-lg bg-gray-100 shadow-md"
           />
           <Image
-            src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
+            src={grayShirt}
             width={400} height={400}
             priority
             alt="Top down view of walnut card tray with embedded magnets and card groove."
             className="rounded-lg bg-gray-100 shadow-md"
           />
           <Image
-            src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
+            src={hat}
             width={400} height={400}
             priority
             alt="Side of walnut card tray with card groove and recessed card area."
             className="rounded-lg bg-gray-100 shadow-md"
           />
           <Image
-            src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
+            src={bodyBaby}
             width={400} height={400}
             priority
             alt="Walnut card tray filled with cards and card angled in dedicated groove."
@@ -46,7 +50,7 @@ export default function ProductFeatures() {
           />
         </div>
         <div>
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Conoce nuestros productos</h2>
+          <h2 className="clash text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">Conoce nuestros productos</h2>
           <p className="mt-4 text-gray-500">
           En Muscari Clothing, nos apasionan los textiles de alta calidad. Nos enorgullecemos de ofrecer una amplia gama de productos para satisfacer todas tus necesidades, desde ropa suave y acogedora hasta telas duraderas.
           </p>
