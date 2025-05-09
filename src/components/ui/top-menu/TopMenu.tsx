@@ -4,14 +4,26 @@ import { useEffect, useState } from 'react';
 import Link from "next/link";
 import Image from "next/image";
 import { IoMailOutline ,IoCartOutline } from "react-icons/io5";
-
 import { titleFont } from "@/config/fonts";
 import { useCartStore, useUIStore } from "@/store";
-
 import styles from './styles.module.scss';
 
-export const TopMenu = () => {
+const links = [
+  {
+    href: '/gender/men',
+    label: 'Hombres'
+  },
+  {
+    href: '/gender/women',
+    label: 'Mujeres'
+  },
+  {
+    href: '/gender/kid',
+    label: 'Niños'
+  }
+]
 
+export const TopMenu = () => {
   const openSideMenu = useUIStore((state) => state.openSideMenu);
   const totalItemsInCart = useCartStore((state) => state.getTotalItems());
 
@@ -21,10 +33,8 @@ export const TopMenu = () => {
     setLoaded(true);
   }, [])
 
-
-
   return (
-    <nav className="flex px-5 justify-between items-center w-full" aria-label="Top Menu"> 
+    <nav className="flex px-5 justify-between items-center w-full shadow-md" aria-label="Top Menu"> 
       {/* Logo */}
       <Link href="/" className={styles.logoContainer}>
         <span>
@@ -35,33 +45,23 @@ export const TopMenu = () => {
         <span className=" block sm:hidden"> <span className={`${titleFont.className} block antialiased font-bold `}>Muscari</span>| Clothing</span>
       </Link>
 
-
-      {/* Center Menu */}
       <div className=" hidden md:block">
-        <Link
-          className="m-2 p-2 rounded-md transition-all hover:bg-gray-100"
-          href="/gender/men"
-        >
-          Hombres
-        </Link>
-        <Link
-          className="m-2 p-2 rounded-md transition-all hover:bg-gray-100"
-          href="/gender/women"
-        >
-          Mujeres
-        </Link>
-        <Link
-          className="m-2 p-2 rounded-md transition-all hover:bg-gray-100"
-          href="/gender/kid"
-        >
-          Niños
-        </Link>
+        {links.map((link) => (
+          <Link
+            key={link.href}
+            className="m-2 p-2 rounded-md relative group"
+            href={link.href}
+          >
+            {link.label}
+            <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-primary transform scale-x-0 transition-transform duration-300 ease-in-out origin-left group-hover:scale-x-100"></span>
+          </Link>
+        ))}
       </div>
 
       {/* Search, Cart, Menu */}
       <div className="flex items-center" >
-        <Link href="/contact" className="mx-2" aria-label="Mail Icon">
-          <IoMailOutline />
+        <Link href="/contact" className="mx-2 hover:scale-110 transition duration-300 ease-in-out cursor-pointer" aria-label="Mail Icon">
+          <IoMailOutline className='w-6 h-6' />
         </Link>
 
         <Link href={
@@ -75,15 +75,16 @@ export const TopMenu = () => {
                 {totalItemsInCart}
               </span>
             )}
-            <IoCartOutline className="w-5 h-5" />
+            <IoCartOutline className="w-6 h-6 hover:scale-110 transition duration-300 ease-in-out cursor-pointer" />
           </div>
         </Link>
 
         <button
           onClick={openSideMenu}
-          className="m-2 p-2 rounded-md transition-all hover:bg-gray-100"
+          className="m-2 p-2 rounded-md relative group"
         >
           Menú
+          <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-primary transform scale-x-0 transition-transform duration-300 ease-in-out origin-left group-hover:scale-x-100"></span>
         </button>
       </div>
     </nav>
