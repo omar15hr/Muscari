@@ -82,7 +82,7 @@ export default function CardsPromo() {
       viewport={{ once: true, amount: 0.3 }}
       className="mx-auto max-w-2xl px-4 py-5 sm:px-6 sm:py-10 lg:max-w-7xl lg:px-8"
     >
-      <h2 className="text-2xl font-bold tracking-tight text-gray-900">
+      <h2 className="clash text-3xl font-semibold tracking-tight text-gray-900">
         Productos más vendidos
       </h2>
 
