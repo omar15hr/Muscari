@@ -1,52 +1,78 @@
 'use client';
 
-
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 import { Product } from '@/interfaces';
 import { useState } from 'react';
+import { cn } from '@/lib/utils';
 
 interface Props {
   product: Product;
 }
 
+export const ProductGridItem = ({ product }: Props) => {
+  // Proveer una URL por defecto si product.images[0] es undefined
+  const defaultImage = '/imgs/placeholder.jpg';
+  const initialImage = product.images[0] || defaultImage;
 
-export const ProductGridItem = ( { product }: Props ) => {
-
-   // Proveer una URL por defecto si product.images[0] es undefined
-   const defaultImage = '/imgs/placeholder.jpg';
-   const initialImage = product.images[0] || defaultImage;
-
-  const [ displayImage, setDisplayImage ] = useState(initialImage);
+  const [displayImage, setDisplayImage] = useState(initialImage);
 
   const isCloudinaryUrl = (url: string) => {
     return url.startsWith('https://res.cloudinary.com/');
   };
 
-
   return (
-    <div className="rounded-md overflow-hidden fade-in">
-      <Link href={ `/product/${ product.slug }` }>
-        <Image
-          src={isCloudinaryUrl(displayImage) ? displayImage : `/products/${displayImage}`}
-          alt={ product.title }
-          className="w-full object-cover rounded"
-          width={ 500 }
-          height={ 500 }
-          priority={true}
-        />
-      </Link>
-
-      <div className="p-4 flex flex-col">
-        <Link
-          className="hover:text-blue-600"
-          href={ `/product/${ product.slug }` }>
-          { product.title }
+    <motion.div 
+      className="group relative rounded-lg overflow-hidden bg-background shadow-sm border border-border hover:shadow-md transition-all duration-300 fade-in"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+      whileHover={{ y: -5 }}
+    >
+      <div className="relative aspect-square overflow-hidden rounded-t-lg">
+        <Link href={`/product/${product.slug}`} className="block overflow-hidden">
+          <motion.div
+            className="w-full h-full"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.4, ease: 'easeOut' }}
+          >
+            <Image
+              src={isCloudinaryUrl(displayImage) ? displayImage : `/products/${displayImage}`}
+              alt={product.title}
+              className="w-full h-full object-cover transition-all duration-300"
+              width={500}
+              height={500}
+              priority={true}
+            />
+          </motion.div>
+          <motion.div 
+            className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            whileHover={{ opacity: 1 }}
+          />
         </Link>
-        <span className="font-bold">${ product.price }</span>
       </div>
 
-    </div>
+      <div className="p-4 space-y-2">
+        <Link
+          className="block font-medium text-foreground hover:text-primary transition-colors duration-200 line-clamp-1"
+          href={`/product/${product.slug}`}
+        >
+          {product.title}
+        </Link>
+        <div className="flex justify-between items-center">
+          <span className="font-bold text-lg">${product.price}</span>
+          <motion.button 
+            className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            aria-label="Add to cart"
+          >
+            Ver detalles
+          </motion.button>
+        </div>
+      </div>
+    </motion.div>
   );
 };
