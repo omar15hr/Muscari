@@ -6,6 +6,7 @@ import Image from "next/image";
 import { IoMailOutline ,IoCartOutline } from "react-icons/io5";
 import { titleFont } from "@/config/fonts";
 import { useCartStore, useUIStore } from "@/store";
+import { usePathname } from "next/navigation";
 import styles from './styles.module.scss';
 
 const links = [
@@ -26,6 +27,7 @@ const links = [
 export const TopMenu = () => {
   const openSideMenu = useUIStore((state) => state.openSideMenu);
   const totalItemsInCart = useCartStore((state) => state.getTotalItems());
+  const pathname = usePathname();
 
   const [loaded, setLoaded] = useState(false);
 
@@ -46,16 +48,25 @@ export const TopMenu = () => {
       </Link>
 
       <div className=" hidden md:block">
-        {links.map((link) => (
-          <Link
-            key={link.href}
-            className="m-2 p-2 rounded-md relative group"
-            href={link.href}
-          >
-            {link.label}
-            <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-primary transform scale-x-0 transition-transform duration-300 ease-in-out origin-left group-hover:scale-x-100"></span>
-          </Link>
-        ))}
+        {links.map((link) => {
+          const isActive = pathname.startsWith(link.href);
+          return (
+            <Link
+              key={link.href}
+              className={`m-2 p-2 rounded-md relative group ${isActive ? 'font-bold text-primary' : ''}`}
+              href={link.href}
+            >
+              {link.label}
+              <span 
+                className={`absolute left-0 right-0 bottom-0 h-0.5 bg-primary transform transition-transform duration-300 ease-in-out origin-left ${
+                  isActive 
+                    ? 'scale-x-100' 
+                    : 'scale-x-0 group-hover:scale-x-100'
+                }`}
+              ></span>
+            </Link>
+          );
+        })}
       </div>
 
       {/* Search, Cart, Menu */}
