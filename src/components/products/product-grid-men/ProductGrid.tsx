@@ -3,7 +3,6 @@
 import { Product } from "@/interfaces";
 import { ProductGridItem } from "./ProductGridItem";
 import { useState } from "react";
-
 import styles from "@/components/filters/styles.module.scss";
 import {
   Select,
@@ -45,10 +44,10 @@ export const ProductGrid = ({ products }: Props) => {
     }));
   };
 
-  const handleChangeTitle = (event: any) => {
+  const handleChangeTitle = (value: string) => {
     setFilters((prevState: any) => ({
       ...prevState,
-      title: event.target.value,
+      title: value,
     }));
   };
 
